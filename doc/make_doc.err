@@ -1,0 +1,163 @@
+warning: Tag `DETAILS_AT_TOP' at line 173 of file doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `SHOW_DIRECTORIES' at line 454 of file doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `HTML_ALIGN_MEMBERS' at line 762 of file doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+When enabling GENERATE_HTMLHELP the tree view (GENERATE_TREEVIEW) should be disabled. I'll do it for you.
+When enabling GENERATE_HTMLHELP the search engine (SEARCHENGINE) should be disabled. I'll do it for you.
+warning: the dot tool could not be found at L:\Programme\Graphviz\bin
+Warning: The selected output language "german" has not been updated
+since release 1.8.2.  As a result some sentences may appear in English.
+
+F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/lib/time.c:121: warning: argument 'dauer' of command @param is not found in the argument list of Msleep(unsigned int ms)
+F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/lib/time.c:121: warning: The following parameters of Msleep(unsigned int ms) are not documented:
+  parameter 'ms'
+F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/lib/time.c:121: warning: argument 'dauer' of command @param is not found in the argument list of Msleep(unsigned int ms)
+F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/lib/time.c:121: warning: The following parameters of Msleep(unsigned int ms) are not documented:
+  parameter 'ms'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00034.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00034.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00036.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00036.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00032.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00032.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00033.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00033.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00035.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00035.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00037.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00037.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00038.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00038.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00040.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00040.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00039.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00039.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00042.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00042.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00041.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00041.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00044.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00044.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00046.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00046.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00043.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00043.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00045.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00045.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00047.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00047.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00049.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00049.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00048.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00048.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00052.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00052.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00051.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00051.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00050.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00050.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00053.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00053.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00054.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00054.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00056.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00056.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00055.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00055.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00057.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00057.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00058.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00058.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00059.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00059.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00061.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00061.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00063.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00063.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00064.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00064.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00062.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00062.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00065.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00065.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00060.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00060.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/dir_e28231055b5b43926a736e18480856e7_dep.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/dir_e28231055b5b43926a736e18480856e7_dep.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/graph_legend.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/graph_legend.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.png"'
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00032.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00033.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00034.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00035.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00036.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00037.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00038.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00039.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00040.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00041.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00042.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00043.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00044.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00045.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00046.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00047.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00048.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00049.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00050.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00051.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00052.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00053.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00054.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00055.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00056.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00057.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00058.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00059.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00060.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00061.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00062.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00063.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00064.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/a00065.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/dir_e28231055b5b43926a736e18480856e7_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

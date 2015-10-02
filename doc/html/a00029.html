@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: ultrasonic.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_e28231055b5b43926a736e18480856e7.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">ultrasonic.h-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00064.png" border="0" usemap="#ultrasonic_8hdep" alt=""/></div>
+<map name="ultrasonic_8hdep" id="ultrasonic_8hdep">
+</map>
+</div>
+</div>
+<p><a href="a00029_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a7d9b2ccd81b0a129b53ee41165562555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#a7d9b2ccd81b0a129b53ee41165562555">InitUltrasonics</a> (void)</td></tr>
+<tr class="separator:a7d9b2ccd81b0a129b53ee41165562555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cfd1d30b550ac59160dd64c1065967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#a33cfd1d30b550ac59160dd64c1065967">RestoreAsuro</a> (void)</td></tr>
+<tr class="separator:a33cfd1d30b550ac59160dd64c1065967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307a648b506e379a7cfb5fd3f1ca0f22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#a307a648b506e379a7cfb5fd3f1ca0f22">Chirp</a> (void)</td></tr>
+<tr class="separator:a307a648b506e379a7cfb5fd3f1ca0f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a307a648b506e379a7cfb5fd3f1ca0f22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Chirp </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Rückgabe</dt><dd>distance in cm </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00028_source.html#l00103">103</a> der Datei <a class="el" href="a00028_source.html">ultrasonic.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sleeptime = 0, dist = 0;</div>
+<div class="line"></div>
+<div class="line">        <a class="code" href="a00028.html#a7d9b2ccd81b0a129b53ee41165562555">InitUltrasonics</a>();</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// chirpen:</span></div>
+<div class="line">        <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a> = 0;</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">while</span>(<a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a> != 20) {</div>
+<div class="line">                OCR2 = 100 + 20 / 2 - <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>;</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2A = _BV(WGM21);</div>
+<div class="line">  TCCR2B = _BV(CS20);</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor"></span>        TCCR2   = _BV(WGM21) | _BV(CS20);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span>  OCR2  = 100;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// analyse echoes:</span></div>
+<div class="line">        <span class="keywordflow">while</span>(<a class="code" href="a00004.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>) {</div>
+<div class="line">                <a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a>(1);</div>
+<div class="line">                sleeptime++;</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">if</span>((ACSR &amp; _BV(ACI))) {</div>
+<div class="line">                        dist = (<span class="keywordtype">unsigned</span> int) ((<span class="keywordtype">long</span>) ((344L * ((sleeptime * 1000L) / 72L) / 10000L) / 2L));</div>
+<div class="line">                        ACSR |= _BV(ACI);</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line">                }</div>
+<div class="line">                </div>
+<div class="line">                ACSR |= _BV(ACI);</div>
+<div class="line">                </div>
+<div class="line">                <span class="keywordflow">if</span>(sleeptime &gt; 3500) {</div>
+<div class="line">                        <span class="keywordflow">return</span> -1;</div>
+<div class="line">                }</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        <a class="code" href="a00028.html#a33cfd1d30b550ac59160dd64c1065967">RestoreAsuro</a>();</div>
+<div class="line">        <span class="keywordflow">return</span> dist;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7d9b2ccd81b0a129b53ee41165562555"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitUltrasonics </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initialises the Ultrasonic module this function is automaticly called by Chirp </p>
+
+<p>Definiert in Zeile <a class="el" href="a00028_source.html#l00034">34</a> der Datei <a class="el" href="a00028_source.html">ultrasonic.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="comment">// Change Oscillator-frequency of Timer 2</span></div>
+<div class="line">        <span class="comment">// to 40kHz, no toggling of IO-pin:</span></div>
+<div class="line">  cli();</div>
+<div class="line"><span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="comment">// fast PWM, set OC2A on compare match, clear OC2A at bottom, clk/1</span></div>
+<div class="line">  TCCR2A = _BV(WGM21);</div>
+<div class="line">  TCCR2B = _BV(CS20);</div>
+<div class="line">  <span class="comment">// interrupt on timer overflow</span></div>
+<div class="line">  TIMSK2 &amp;= ~_BV(TOIE2); </div>
+<div class="line">  TIMSK2 |= _BV(OCIE2A); </div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2  = _BV(WGM21) | _BV(CS20);</div>
+<div class="line">  TIMSK &amp;= ~_BV(TOIE2); </div>
+<div class="line">        TIMSK |= _BV(OCIE2);       <span class="comment">// OCIE2:  Timer/Counter2 Output Compare Match Interrupt Enable</span></div>
+<div class="line"><span class="preprocessor">#endif  </span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="comment">// 40kHz carrier/timer</span></div>
+<div class="line">  OCR2 = 100;</div>
+<div class="line"></div>
+<div class="line">  ADCSRA = 0;      <span class="comment">// deactivate ADC</span></div>
+<div class="line">        ACSR  |= _BV(ACIS1);       <span class="comment">// Comparator Interrupt on Falling Output Edge</span></div>
+<div class="line"></div>
+<div class="line">        ADMUX  = 0x03;             <span class="comment">// connect ADC3-input with comparator</span></div>
+<div class="line"><span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><span class="preprocessor"></span>        ADCSRB |= _BV(ACME);        <span class="comment">// connect ADC multiplexer to comparator</span></div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor"></span>        SFIOR |= _BV(ACME);        <span class="comment">// connect ADC multiplexer to comparator</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span>  DDRD  &amp;= ~_BV(6);          <span class="comment">// use Port D Pin 6 as input (AIN0)</span></div>
+<div class="line">  sei();</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a33cfd1d30b550ac59160dd64c1065967"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RestoreAsuro </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>restores the hardware after using the Ultrasonic module this function is called automaticly after a Chirp </p>
+
+<p>Definiert in Zeile <a class="el" href="a00028_source.html#l00071">71</a> der Datei <a class="el" href="a00028_source.html">ultrasonic.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  cli();</div>
+<div class="line"><span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="comment">// fast PWM, set OC2A on compare match, clear OC2A at bottom, clk/1</span></div>
+<div class="line">  TCCR2A = _BV(WGM20) | _BV(WGM21) | _BV(COM2A0) | _BV(COM2A1);</div>
+<div class="line">  TCCR2B = _BV(CS20);</div>
+<div class="line">  TIMSK2 &amp;= ~_BV(OCIE2A); </div>
+<div class="line">  <span class="comment">// interrupt on timer overflow</span></div>
+<div class="line">  TIMSK2 |= _BV(TOIE2); </div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2 = _BV(WGM20) | _BV(WGM21) | _BV(COM20) | _BV(COM21) | _BV(CS20);</div>
+<div class="line">        TIMSK &amp;= ~_BV(OCIE2);     <span class="comment">// OCIE2:  Timer/Counter2 Output Compare Match Interrupt Disable</span></div>
+<div class="line">  <span class="comment">// interrupt on timer overflow</span></div>
+<div class="line">  TIMSK |= _BV(TOIE2); </div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="comment">// 36kHz carrier/timer</span></div>
+<div class="line">        OCR2  = 0x91;              <span class="comment">// duty cycle for 36kHz</span></div>
+<div class="line"></div>
+<div class="line">  ADCSRA = _BV(ADEN) | _BV(ADPS2) | _BV(ADPS1); <span class="comment">// clk/64</span></div>
+<div class="line">        ACSR  &amp;= ~_BV(ACIS1);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span>(<a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a>) {</div>
+<div class="line">                <a class="code" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit</a>();</div>
+<div class="line">        }</div>
+<div class="line">        sei();</div>
+<div class="line">        <a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a>(1);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

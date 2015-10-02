@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: adc.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">adc.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funktionen zum Auslesen der ADC-Wandler.<br/>
+ Gruppiert in die zusammenhaengenden Hardwareeinheiten.<br/>
+ (Batterie, Liniensensoren, Radsensoren)<br/>
+ Die Switches (Taster) werden in der Datei <a class="el" href="a00025.html" title="Funktionen zum lesen der Taster und um den &#39;Interrupt-Betrieb&#39; ein-  und auszuschalten. Im &#39;Interrupt-Betrieb&#39; wird die globale Variable  switched gesetzt beim betaetigen irgendeines Tasters.">switches.c</a> bearbeitet.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r adc.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00032.png" border="0" usemap="#adc_8c" alt=""/></div>
+<map name="adc_8c" id="adc_8c">
+</map>
+</div>
+</div>
+<p><a href="a00001_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a4c2d40230ff34890339336c7de6da218"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a4c2d40230ff34890339336c7de6da218">Battery</a> (void)</td></tr>
+<tr class="memdesc:a4c2d40230ff34890339336c7de6da218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest die Batteriespannung und gibt sie zurueck.<br/>
+ Es erfolgt keine Konvertierung in einen Spannungswert.  <a href="#a4c2d40230ff34890339336c7de6da218"></a><br/></td></tr>
+<tr class="separator:a4c2d40230ff34890339336c7de6da218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0b1c791142ce2a81ee6694a1ab59db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a0c0b1c791142ce2a81ee6694a1ab59db">LineData</a> (unsigned int *data)</td></tr>
+<tr class="memdesc:a0c0b1c791142ce2a81ee6694a1ab59db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest die Daten der beiden Linienverfolgungssensoren.<br/>
+ Die Linien-Beleuchtungs-LED kann sowohl an- als auch ausgeschaltet sein.  <a href="#a0c0b1c791142ce2a81ee6694a1ab59db"></a><br/></td></tr>
+<tr class="separator:a0c0b1c791142ce2a81ee6694a1ab59db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695cf1f1e807499e06c3e85287580c3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#a695cf1f1e807499e06c3e85287580c3d">OdometryData</a> (unsigned int *data)</td></tr>
+<tr class="memdesc:a695cf1f1e807499e06c3e85287580c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest die Daten der beiden Odometriesensoren (Radsensoren).<br/>
+ Diese Funktion schaltet die Odometrie-LED's immer an.<br/>
+ Diese Funktion schaltet die Back-LED's immer aus.  <a href="#a695cf1f1e807499e06c3e85287580c3d"></a><br/></td></tr>
+<tr class="separator:a695cf1f1e807499e06c3e85287580c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Funktionen zum Auslesen der ADC-Wandler.<br/>
+ Gruppiert in die zusammenhaengenden Hardwareeinheiten.<br/>
+ (Batterie, Liniensensoren, Radsensoren)<br/>
+ Die Switches (Taster) werden in der Datei <a class="el" href="a00025.html" title="Funktionen zum lesen der Taster und um den &#39;Interrupt-Betrieb&#39; ein-  und auszuschalten. Im &#39;Interrupt-Betrieb&#39; wird die globale Variable  switched gesetzt beim betaetigen irgendeines Tasters.">switches.c</a> bearbeitet. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Defines fuer die Auswahl der ADC-Kanaele in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ <a class="el" href="a00004.html#aa166a7eb75c6a068aaa40873a2ddc58a">BATTERIE</a>, <a class="el" href="a00004.html#a195bd11b05780db950588032e99591cb">IR_LEFT</a>, <a class="el" href="a00004.html#a282f4557df06f675f8800bf24f71cf06">IR_RIGHT</a>, <a class="el" href="a00004.html#a264bd2d371afa11900d69cc549bbe46e">WHEEL_LEFT</a>, <a class="el" href="a00004.html#a19f8ef9313a09ac75f34cac1162f40a5">WHEEL_RIGHT</a><br/>
+ Der Kanal <a class="el" href="a00004.html#ac279a93dfd1f02dac2359cfaa1422b93">SWITCH</a> wird hier <b>nicht</b> bearbeitet.</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 22.01.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 20.02.2007 - m.a.r.v.i.n<br/>
+ In Battery und OdometryData Funktion autoencode temporaer abschalten </dd>
+<dd>
+V004 - 06.04.2007 - m.a.r.v.i.n<br/>
+ Batterie und OdometrieData Funktionen umbenannt in Battery und OdometryData.<br/>
+ Alte Funktionsnamen ueber Defines beibehalten </dd>
+<dd>
+V005 - 20.01.2008 - m.a.r.v.i.n<br/>
+ A/D Wandler Abfrage ueber ReadADC Funktion </dd>
+<dd>
+V005 - 29.03.2009 - rossir<br/>
+ A/D Wandler Abfrage ueber Interrupt </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00001_source.html">adc.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a4c2d40230ff34890339336c7de6da218"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Battery </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liest die Batteriespannung und gibt sie zurueck.<br/>
+ Es erfolgt keine Konvertierung in einen Spannungswert. </p>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>10-Bit-Wert der Batteriespannung (Bereich 0..1023)</dd></dl>
+<dl class="section user"><dt>Die Spannung in Volt kann mit folgende Formel berechnet werden:</dt><dd>Umess[V] = (Uref / 2 ^ ADC-Bitsanzahl) * Batterie ()<br/>
+ Ubat[V] = ((R1 + R2) * Umess) / R2</dd></dl>
+<p>Dabei sind: </p>
+<dl class="section user"><dt></dt><dd>Uref = 2.56 Volt<br/>
+ ADC-Bitsanzahl = 10 Bit<br/>
+ R1 = 12000 Ohm auf der ASURO-Platine<br/>
+ R2 = 10000 Ohm auf der ASURO-Platine</dd></dl>
+<p>Oder einfach: </p>
+<dl class="section user"><dt></dt><dd>Ubat[V] = 0,0055 * Battery ()</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// In Variable wert den 10-Bit-Bateriespannungswert lesen</span></div>
+<div class="line"><span class="comment">// und bei Unterschreitung von 810 eine alles_stop-Funktion</span></div>
+<div class="line"><span class="comment">// aufrufen.</span></div>
+<div class="line"><span class="keywordtype">int</span> wert;</div>
+<div class="line">wert = <a class="code" href="a00001.html#a4c2d40230ff34890339336c7de6da218" title="Liest die Batteriespannung und gibt sie zurueck.  Es erfolgt keine Konvertierung in einen Spannungswe...">Battery</a>();</div>
+<div class="line"><span class="keywordflow">if</span> (wert &lt; 810)             <span class="comment">// 810 entsprechen ca. 4,455 Volt</span></div>
+<div class="line">  alles_stop ();            <span class="comment">// Spannung zu klein, Akkus schonen</span></div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00001_source.html#l00084">84</a> der Datei <a class="el" href="a00001_source.html">adc.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">int</span>   data = 28*<a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#aa166a7eb75c6a068aaa40873a2ddc58a">BATTERIE</a>, 10)/25; <span class="comment">// data=1,12*x dann stimmt Wert von Interrupt ADC mit Poll ADC überein</span></div>
+<div class="line">  <span class="comment">// Rückwärtskompatibel?!</span></div>
+<div class="line">  <span class="keywordflow">return</span> data;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0c0b1c791142ce2a81ee6694a1ab59db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineData </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liest die Daten der beiden Linienverfolgungssensoren.<br/>
+ Die Linien-Beleuchtungs-LED kann sowohl an- als auch ausgeschaltet sein. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>Zeiger auf die gelesenen Daten:<br/>
+ data[0] linker Sensor (Bereich 0..1023)<br/>
+ data[1] rechter Sensor (Bereich 0..1023)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Siehe auch</dt><dd>Die globale Variable <a class="el" href="a00004.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> wird temporaer auf <a class="el" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a> gesetzt und am Ende<br/>
+ der Funktion mit dem alten Wert restauriert.</dd></dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Die Linien-Beleuchtungs-LED kann vorher mit der Funktion <a class="el" href="a00015.html#a6172056141d8849a882e557e4440f1b7" title="Steuert die vorne, nach unten zeigende, Front-LED.">FrontLED()</a><br/>
+ im aufrufenden Programmteil an- bzw. ausgeschaltet werden.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> data [2];</div>
+<div class="line"><a class="code" href="a00015.html#a6172056141d8849a882e557e4440f1b7" title="Steuert die vorne, nach unten zeigende, Front-LED.">FrontLED</a> (<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>);</div>
+<div class="line"><a class="code" href="a00001.html#a0c0b1c791142ce2a81ee6694a1ab59db" title="Liest die Daten der beiden Linienverfolgungssensoren.  Die Linien-Beleuchtungs-LED kann sowohl an- al...">LineData</a> (data);</div>
+<div class="line"><span class="keywordflow">if</span> (data [0] &gt; 100)         <span class="comment">// 0 ist der linke Sensor ...</span></div>
+<div class="line">  tu_diese ();              <span class="comment">// linker Sensor &gt; 100</span></div>
+<div class="line"><span class="keywordflow">if</span> (data [1] &lt; 50)          <span class="comment">// ... 1 ist der rechte Sensor</span></div>
+<div class="line">  tu_das ();                <span class="comment">// rechter Sensor &lt; 50</span></div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00001_source.html#l00125">125</a> der Datei <a class="el" href="a00001_source.html">adc.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     Linken Linien-Sensor lesen</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  data[<a class="code" href="a00004.html#a437ef08681e7210d6678427030446a54">LEFT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a195bd11b05780db950588032e99591cb">IR_LEFT</a>, 0);</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     Rechten Linien-Sensor lesen</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  data[<a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a282f4557df06f675f8800bf24f71cf06">IR_RIGHT</a>, 0);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a695cf1f1e807499e06c3e85287580c3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OdometryData </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liest die Daten der beiden Odometriesensoren (Radsensoren).<br/>
+ Diese Funktion schaltet die Odometrie-LED's immer an.<br/>
+ Diese Funktion schaltet die Back-LED's immer aus. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>Zeiger auf die gelesenen Daten:<br/>
+ data[0] linker Sensor,<br/>
+ data[1] rechter Sensor. (Bereich 0..1023)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Die Odometrie-Beleuchtungs-LED's muessen zur Messung der Odometrie-<br/>
+ sensoren wegen der Hardware im ASURO immer eingeschaltet sein.<br/>
+ Die Hardware ist so ausgelegt, dass dadurch allerdings die hinteren<br/>
+ Back-LED's ausgeschaltet werden.<br/>
+ Da die Odometrie-Beleuchtungs-LED's in dieser Funktion EIN-geschaltet<br/>
+ werden, funktionieren dann die Back-LED's nicht mehr. Sie koennen im<br/>
+ Programm nach dieser Funktion mit <a class="el" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED()</a> bei Bedarf wieder<br/>
+ eingeschaltet werden.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> data [2];</div>
+<div class="line"><a class="code" href="a00001.html#a695cf1f1e807499e06c3e85287580c3d" title="Liest die Daten der beiden Odometriesensoren (Radsensoren).  Diese Funktion schaltet die Odometrie-LE...">OdometryData</a> (data);</div>
+<div class="line"><span class="keywordflow">if</span> (data [0] &gt; data [1])    <span class="comment">// 0 linker Sensor; 1 ist rechter Sensor</span></div>
+<div class="line">  fahre_links ();           <span class="comment">// Ein bisschen nach links fahren</span></div>
+<div class="line"><span class="keywordflow">if</span> (data [0] &lt; data [1])</div>
+<div class="line">  fahre_rechts ();          <span class="comment">// Ein bisschen nach rechts fahren</span></div>
+<div class="line"><a class="code" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED</a> (<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);          <span class="comment">// linke Back-LED mal wieder anschalten</span></div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00001_source.html#l00174">174</a> der Datei <a class="el" href="a00001_source.html">adc.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     Vorbereitung zum lesen der Odometrie-Sensoren.</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  DDRC &amp;= ~((1 &lt;&lt; PC0) | (1 &lt;&lt; PC1));   <span class="comment">// Port auf Input=&gt;Back-LEDs gehen aus</span></div>
+<div class="line">  <a class="code" href="a00004.html#acc3bde0465346259ff3610da21d22330">ODOMETRIE_LED_ON</a>;                     <span class="comment">// Odometrie-LED&#39;s einschalten</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     Linken Odometrie-Sensor lesen</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  data[<a class="code" href="a00004.html#a437ef08681e7210d6678427030446a54">LEFT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a264bd2d371afa11900d69cc549bbe46e">WHEEL_LEFT</a>, 0);</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     Rechten Odometrie-Sensor lesen</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  data[<a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a19f8ef9313a09ac75f34cac1162f40a5">WHEEL_RIGHT</a>, 0);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

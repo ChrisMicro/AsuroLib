@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: rc5.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<div class="title">rc5.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00023_source.html">rc5.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für rc5.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00056.png" border="0" usemap="#rc5_8c" alt=""/></div>
+<map name="rc5_8c" id="rc5_8c">
+</map>
+</div>
+</div>
+<p><a href="a00022_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:ab60dbc9ddce61a6ad6c2e719ac2f177e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ab60dbc9ddce61a6ad6c2e719ac2f177e">IR_SAMPLES_PER_BIT</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:ab60dbc9ddce61a6ad6c2e719ac2f177e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7aa95a61a10e3ad7e9ab36ce6633e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#adf7aa95a61a10e3ad7e9ab36ce6633e7">IR_SAMPLES_PER_BIT_EARLY</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:adf7aa95a61a10e3ad7e9ab36ce6633e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6504b3d83c629f18a664c248e46fe23f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a6504b3d83c629f18a664c248e46fe23f">IR_SAMPLES_PER_BIT_LATE</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a6504b3d83c629f18a664c248e46fe23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d375a2bad1cf703cc427a84e8ebde7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a7d375a2bad1cf703cc427a84e8ebde7c">IR_SAMPLES_PER_BIT_MIN</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a7d375a2bad1cf703cc427a84e8ebde7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ebb774774e3ca5175db4ffc3a1e532"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ad7ebb774774e3ca5175db4ffc3a1e532">IR_PAUSE_SAMPLES</a>&#160;&#160;&#160;250</td></tr>
+<tr class="separator:ad7ebb774774e3ca5175db4ffc3a1e532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0972fb4233a75389009c71422db388"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#acd0972fb4233a75389009c71422db388">IR_PORT</a>&#160;&#160;&#160;PORTD</td></tr>
+<tr class="separator:acd0972fb4233a75389009c71422db388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd725c6dce514313a266c014cb2c79e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#afd725c6dce514313a266c014cb2c79e7">IR_DDR</a>&#160;&#160;&#160;DDRD</td></tr>
+<tr class="separator:afd725c6dce514313a266c014cb2c79e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e936060be78a2b970f0bd9750ca18f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ad6e936060be78a2b970f0bd9750ca18f">IR_PINR</a>&#160;&#160;&#160;PIND</td></tr>
+<tr class="separator:ad6e936060be78a2b970f0bd9750ca18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0a1d1d72b10a9c0c95adeb235d19f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a3b0a1d1d72b10a9c0c95adeb235d19f4">IR_PIN</a>&#160;&#160;&#160;PD0</td></tr>
+<tr class="separator:a3b0a1d1d72b10a9c0c95adeb235d19f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a82f7cf4c5d2b9d496d9096da8b55194e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a82f7cf4c5d2b9d496d9096da8b55194e">IsrRC5</a> (void)</td></tr>
+<tr class="memdesc:a82f7cf4c5d2b9d496d9096da8b55194e"><td class="mdescLeft">&#160;</td><td class="mdescRight">RC5 interrupt service routine<br/>
+ called by timer overflow isr ever 27,7 micro seconds.  <a href="#a82f7cf4c5d2b9d496d9096da8b55194e"></a><br/></td></tr>
+<tr class="separator:a82f7cf4c5d2b9d496d9096da8b55194e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee88e0be3b5b4dcc6d647da20085af0d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#aee88e0be3b5b4dcc6d647da20085af0d">ReadRC5</a> (void)</td></tr>
+<tr class="memdesc:aee88e0be3b5b4dcc6d647da20085af0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read last received RC5 Data.  <a href="#aee88e0be3b5b4dcc6d647da20085af0d"></a><br/></td></tr>
+<tr class="separator:aee88e0be3b5b4dcc6d647da20085af0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27cc4bf2cbcdef81f5a0f9e316d978f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a27cc4bf2cbcdef81f5a0f9e316d978f9">InitRC5</a> (void)</td></tr>
+<tr class="memdesc:a27cc4bf2cbcdef81f5a0f9e316d978f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RC5 Receiver.  <a href="#a27cc4bf2cbcdef81f5a0f9e316d978f9"></a><br/></td></tr>
+<tr class="separator:a27cc4bf2cbcdef81f5a0f9e316d978f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a6b755c083e267023577e917e1217acbe"><td class="memItemLeft" align="right" valign="top">volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a6b755c083e267023577e917e1217acbe">RC5data</a> = 0</td></tr>
+<tr class="separator:a6b755c083e267023577e917e1217acbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49943364865bc7a58812133b53eb988"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ae49943364865bc7a58812133b53eb988">enableRC5</a> = 0</td></tr>
+<tr class="separator:ae49943364865bc7a58812133b53eb988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a class="anchor" id="afd725c6dce514313a266c014cb2c79e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_DDR&#160;&#160;&#160;DDRD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DDR of Port D </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00061">61</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7ebb774774e3ca5175db4ffc3a1e532"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_PAUSE_SAMPLES&#160;&#160;&#160;250</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Startbit ist erst nach 200 Samples ohne </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00053">53</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b0a1d1d72b10a9c0c95adeb235d19f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_PIN&#160;&#160;&#160;PD0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pin 0 </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00063">63</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6e936060be78a2b970f0bd9750ca18f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_PINR&#160;&#160;&#160;PIND</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Port D input </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00062">62</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd0972fb4233a75389009c71422db388"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_PORT&#160;&#160;&#160;PORTD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Port D </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00060">60</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab60dbc9ddce61a6ad6c2e719ac2f177e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_SAMPLES_PER_BIT&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>/file <a class="el" href="a00022.html">rc5.c</a> /brief Funktionen fuer die Dekodierung von RC5-Fernbedienungs-Codes /author Benjamin Benz (<a href="#" onclick="location.href='mai'+'lto:'+'bbe'+'@h'+'eis'+'e.'+'de'; return false;">bbe@h<span style="display: none;">.nosp@m.</span>eise<span style="display: none;">.nosp@m.</span>.de</a>),<br/>
+ m.a.r.v.i.n</p>
+<p>/version V001 - 20.12.2005 - Benjamin Benz (<a href="#" onclick="location.href='mai'+'lto:'+'bbe'+'@h'+'eis'+'e.'+'de'; return false;">bbe@h<span style="display: none;">.nosp@m.</span>eise<span style="display: none;">.nosp@m.</span>.de</a>)<br/>
+ Version fuer den c't-Bot /version V002 - 11.02.2007 - m.a.r.v.i.n<br/>
+ portiert fuer den ASURO /version V003 - 22.01.2008 - m.a.r.v.i.n<br/>
+ Ovr2IntFunc Variable als Zeiger auf die Funktion IsrRC5<br/>
+ Wird von der Timer Overflow Interrupt Funtkion aus angesprungen. 8 Samples per Bit </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00049">49</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf7aa95a61a10e3ad7e9ab36ce6633e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_SAMPLES_PER_BIT_EARLY&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flanke fruehestens nach 7 Samples </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00050">50</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6504b3d83c629f18a664c248e46fe23f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_SAMPLES_PER_BIT_LATE&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flanke spaetestens nach 9 Samples </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00051">51</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d375a2bad1cf703cc427a84e8ebde7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_SAMPLES_PER_BIT_MIN&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flanke vor 3 Samples -&gt; paket verwerfen </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00052">52</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a27cc4bf2cbcdef81f5a0f9e316d978f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitRC5 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the RC5 Receiver. </p>
+<p>Init IR-System </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00185">185</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00022.html#afd725c6dce514313a266c014cb2c79e7">IR_DDR</a>  &amp;= ~<a class="code" href="a00022.html#a3b0a1d1d72b10a9c0c95adeb235d19f4">IR_PIN</a>;   <span class="comment">// Pin auf Input</span></div>
+<div class="line">  <a class="code" href="a00022.html#acd0972fb4233a75389009c71422db388">IR_PORT</a> |= <a class="code" href="a00022.html#a3b0a1d1d72b10a9c0c95adeb235d19f4">IR_PIN</a>;    <span class="comment">// Pullup an</span></div>
+<div class="line">  <a class="code" href="a00022.html#ae49943364865bc7a58812133b53eb988">enableRC5</a> = 1;</div>
+<div class="line">  <a class="code" href="a00007.html#ab3982e6520803bb438468a0352755a28" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">Ovr2IntFunc</a> = <a class="code" href="a00022.html#a82f7cf4c5d2b9d496d9096da8b55194e" title="RC5 interrupt service routine  called by timer overflow isr ever 27,7 micro seconds.">IsrRC5</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a82f7cf4c5d2b9d496d9096da8b55194e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrRC5 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RC5 interrupt service routine<br/>
+ called by timer overflow isr ever 27,7 micro seconds. </p>
+<p>Interrupt Serviceroutine wird alle 27.7us aufgerufen </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00079">79</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="comment">// sample lesen</span></div>
+<div class="line">  uint8_t sample = 1;</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code" href="a00022.html#ae49943364865bc7a58812133b53eb988">enableRC5</a> &amp;&amp; !(<a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a> % 8)) </div>
+<div class="line">  {  </div>
+<div class="line">    <span class="keywordflow">if</span> ((<a class="code" href="a00022.html#ad6e936060be78a2b970f0bd9750ca18f">IR_PINR</a> &amp; (1&lt;&lt;<a class="code" href="a00022.html#a3b0a1d1d72b10a9c0c95adeb235d19f4">IR_PIN</a>)) != 0)</div>
+<div class="line">    {</div>
+<div class="line">      sample = 0;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// bittimer erhoehen (bleibt bei 255 stehen)</span></div>
+<div class="line">    <span class="keywordflow">if</span> (RC5bittimer&lt;255)</div>
+<div class="line">    {</div>
+<div class="line">      RC5bittimer++;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// flankenerkennung</span></div>
+<div class="line">    <span class="keywordflow">if</span> ( RC5lastsample != sample)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">if</span> (RC5bittimer&lt;=<a class="code" href="a00022.html#a7d375a2bad1cf703cc427a84e8ebde7c">IR_SAMPLES_PER_BIT_MIN</a>)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="comment">// flanke kommt zu frueh: paket verwerfen</span></div>
+<div class="line">        RC5bitcount=0;</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">      {</div>
+<div class="line">        <span class="comment">// Startbit</span></div>
+<div class="line">        <span class="keywordflow">if</span> (RC5bitcount==0)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">if</span> ( (sample==1) &amp;&amp; (RC5bittimer&gt;<a class="code" href="a00022.html#ad7ebb774774e3ca5175db4ffc3a1e532">IR_PAUSE_SAMPLES</a>) )</div>
+<div class="line">          {</div>
+<div class="line">            <span class="comment">// Startbit speichern</span></div>
+<div class="line">            RC5data_tmp = 1;</div>
+<div class="line">            RC5bitcount++;</div>
+<div class="line">          }</div>
+<div class="line">          <span class="keywordflow">else</span></div>
+<div class="line">          {</div>
+<div class="line">            <span class="comment">// error</span></div>
+<div class="line">            RC5data_tmp = 0;</div>
+<div class="line">          }</div>
+<div class="line"></div>
+<div class="line">          <span class="comment">// bittimer-reset</span></div>
+<div class="line">          RC5bittimer = 0;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// Bits 2..14: nur Flanken innerhalb des Bits beruecksichtigen</span></div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">if</span> (RC5bittimer &gt;= <a class="code" href="a00022.html#adf7aa95a61a10e3ad7e9ab36ce6633e7">IR_SAMPLES_PER_BIT_EARLY</a>)</div>
+<div class="line">          {</div>
+<div class="line">            <span class="keywordflow">if</span> (RC5bittimer&lt;=<a class="code" href="a00022.html#a6504b3d83c629f18a664c248e46fe23f">IR_SAMPLES_PER_BIT_LATE</a>)</div>
+<div class="line">            {</div>
+<div class="line">              <span class="comment">// Bit speichern</span></div>
+<div class="line">              RC5data_tmp = (RC5data_tmp&lt;&lt;1) | sample;</div>
+<div class="line">              RC5bitcount++;</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">              <span class="comment">// zu spaet: paket verwerfen</span></div>
+<div class="line">              RC5bitcount = 0;</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// bittimer-reset</span></div>
+<div class="line">            RC5bittimer = 0;</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line"></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">      <span class="comment">// keine flanke innerhalb bitzeit?</span></div>
+<div class="line">      <span class="keywordflow">if</span> (RC5bittimer &gt; <a class="code" href="a00022.html#a6504b3d83c629f18a664c248e46fe23f">IR_SAMPLES_PER_BIT_LATE</a>)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="comment">// 14 bits gelesen?</span></div>
+<div class="line">        <span class="keywordflow">if</span> (RC5bitcount==14)</div>
+<div class="line">        {</div>
+<div class="line">          <a class="code" href="a00022.html#a6b755c083e267023577e917e1217acbe">RC5data</a> = RC5data_tmp;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="comment">// paket verwerfen</span></div>
+<div class="line">        RC5bitcount = 0;</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// sample im samplepuffer ablegen</span></div>
+<div class="line">    RC5lastsample = sample;</div>
+<div class="line">  }</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aee88e0be3b5b4dcc6d647da20085af0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ReadRC5 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read last received RC5 Data. </p>
+<p>IR-Daten lesen </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>wert von ir_data, loescht anschliessend ir_data </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00175">175</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  uint16_t retvalue = <a class="code" href="a00022.html#a6b755c083e267023577e917e1217acbe">RC5data</a>;</div>
+<div class="line">  <a class="code" href="a00022.html#a6b755c083e267023577e917e1217acbe">RC5data</a> = 0;</div>
+<div class="line">  <span class="keywordflow">return</span> retvalue;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a class="anchor" id="ae49943364865bc7a58812133b53eb988"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t enableRC5 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>schaltet die RC5 Abfrage ein/aus </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00073">73</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b755c083e267023577e917e1217acbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint16_t RC5data = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>letztes komplett gelesenes RC5-paket </p>
+
+<p>Definiert in Zeile <a class="el" href="a00022_source.html#l00072">72</a> der Datei <a class="el" href="a00022_source.html">rc5.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: globals.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<div class="title">globals.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Globale Variablen der Asuro Library.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für globals.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00039.png" border="0" usemap="#globals_8c" alt=""/></div>
+<map name="globals_8c" id="globals_8c">
+</map>
+</div>
+</div>
+<p><a href="a00007_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a3f85635d367e540986605ba72db6f950"><td class="memItemLeft" align="right" valign="top">volatile int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a3f85635d367e540986605ba72db6f950">switched</a></td></tr>
+<tr class="memdesc:a3f85635d367e540986605ba72db6f950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste<br/>
+ ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.<br/>
+ Kann im eigenen Programm immer <b>abgefragt</b> werden.  <a href="#a3f85635d367e540986605ba72db6f950"></a><br/></td></tr>
+<tr class="separator:a3f85635d367e540986605ba72db6f950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60e52bf003ad9b344c264c5bf8c71e3"><td class="memItemLeft" align="right" valign="top">volatile int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3">encoder</a> [2]</td></tr>
+<tr class="memdesc:ab60e52bf003ad9b344c264c5bf8c71e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odometriesensor Zaehler bei Interrupt Betrieb.<br/>
+ encoder[0] = links; encoder[1] = rechts.  <a href="#ab60e52bf003ad9b344c264c5bf8c71e3"></a><br/></td></tr>
+<tr class="separator:ab60e52bf003ad9b344c264c5bf8c71e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61610ea211b4bea5cc5ce6136c3fa4f8"><td class="memItemLeft" align="right" valign="top">volatile unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8">count36kHz</a></td></tr>
+<tr class="memdesc:a61610ea211b4bea5cc5ce6136c3fa4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter fuer 36kHz.  <a href="#a61610ea211b4bea5cc5ce6136c3fa4f8"></a><br/></td></tr>
+<tr class="separator:a61610ea211b4bea5cc5ce6136c3fa4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f07cc475f4e813c344e44a6efce8bc2"><td class="memItemLeft" align="right" valign="top">volatile unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a8f07cc475f4e813c344e44a6efce8bc2">timebase</a></td></tr>
+<tr class="memdesc:a8f07cc475f4e813c344e44a6efce8bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sytemzeit in ms.  <a href="#a8f07cc475f4e813c344e44a6efce8bc2"></a><br/></td></tr>
+<tr class="separator:a8f07cc475f4e813c344e44a6efce8bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76207f3fd37582724c51dc31b0e729b"><td class="memItemLeft" align="right" valign="top">volatile int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b">autoencode</a></td></tr>
+<tr class="memdesc:ae76207f3fd37582724c51dc31b0e729b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.  <a href="#ae76207f3fd37582724c51dc31b0e729b"></a><br/></td></tr>
+<tr class="separator:ae76207f3fd37582724c51dc31b0e729b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3982e6520803bb438468a0352755a28"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="a00004.html#a44181537ab6ea5631069dcd97b51bcff">voidFuncPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#ab3982e6520803bb438468a0352755a28">Ovr2IntFunc</a></td></tr>
+<tr class="memdesc:ab3982e6520803bb438468a0352755a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.  <a href="#ab3982e6520803bb438468a0352755a28"></a><br/></td></tr>
+<tr class="separator:ab3982e6520803bb438468a0352755a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2dd119fea212b6ce56cd76e1076825"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="a00004.html#a44181537ab6ea5631069dcd97b51bcff">voidFuncPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#acb2dd119fea212b6ce56cd76e1076825">AdcIntFunc</a></td></tr>
+<tr class="memdesc:acb2dd119fea212b6ce56cd76e1076825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.  <a href="#acb2dd119fea212b6ce56cd76e1076825"></a><br/></td></tr>
+<tr class="separator:acb2dd119fea212b6ce56cd76e1076825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Globale Variablen der Asuro Library. </p>
+<dl class="section user"><dt>Hinweis:</dt><dd>Diese Variablen sind immer in allen Stellen im Programm nutzbar.</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 22.01.2007 - Sternthaler<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 11.07.2007 - Sternthaler<br/>
+ Variable encoder als volatile definiert, da sie im Interrupt SIGNAL (SIG_ADC) benutzt wird. </dd>
+<dd>
+V004 - 15.11.2007 - m.a.r.v.i.n<br/>
+ Variable switched als volatile definiert, da sie im Interrupt SIGNAL (SIG_INTERRUPT1) benutzt wird. </dd>
+<dd>
+V005 - 27.01.2008 - m.a.r.v.i.n<br/>
+ Zeiger auf User Funktionen, die von Interrupt Funktionen<br/>
+ aufgerufen werden </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+</div><h2 class="groupheader">Variablen-Dokumentation</h2>
+<a class="anchor" id="acb2dd119fea212b6ce56cd76e1076825"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile <a class="el" href="a00004.html#a44181537ab6ea5631069dcd97b51bcff">voidFuncPtr</a> AdcIntFunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_ADC) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit()</a> in <a class="el" href="a00006.html" title="Low Level Funktionen f�r Radencoder und Odometrie.">encoder_low.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00126">126</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae76207f3fd37582724c51dc31b0e729b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile int autoencode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_ADC) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit()</a>, <a class="el" href="a00006.html#a34c90b4e28ee14ebcc656361b55a115e" title="Den Interrupt Betrieb der Odometriesensoren-Messung starten.">EncoderStart()</a>, <a class="el" href="a00006.html#a4559ec3982822e3e90bae56809df2efa" title="Den Interrupt Betrieb der Odometriesensoren-Messung anhalten.">EncoderStop()</a> in <a class="el" href="a00006.html" title="Low Level Funktionen f�r Radencoder und Odometrie.">encoder_low.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00104">104</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61610ea211b4bea5cc5ce6136c3fa4f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile unsigned char count36kHz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counter fuer 36kHz. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_OVERFLOW2) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00026.html#a68ae1ca3314f529719933f506ebdd49d" title="Gibt die aktuelle Zeit in ms zurueck.">Gettime()</a>, <a class="el" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep()</a> in <a class="el" href="a00026.html" title="Zeit- und Delay Funktionen.">time.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00078">78</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab60e52bf003ad9b344c264c5bf8c71e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile int encoder[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odometriesensor Zaehler bei Interrupt Betrieb.<br/>
+ encoder[0] = links; encoder[1] = rechts. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_ADC) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit()</a>, <a class="el" href="a00006.html#a4559ec3982822e3e90bae56809df2efa" title="Den Interrupt Betrieb der Odometriesensoren-Messung anhalten.">EncoderStop()</a>, <a class="el" href="a00006.html#a34c90b4e28ee14ebcc656361b55a115e" title="Den Interrupt Betrieb der Odometriesensoren-Messung starten.">EncoderStart()</a>, <a class="el" href="a00006.html#adf0ae5bf0ead1a658440216580887777" title="Interruptbetriebene Odometriesensoren Werte vorbelegen.">EncoderSet()</a>, <a class="el" href="a00004.html#a3235d3952c9fdc085d027a48b895e72a">Go()</a>,<br/>
+ <a class="el" href="a00004.html#ad75fc80537113bbf229e230c5f65669d">Turn()</a> in <a class="el" href="a00005.html" title="Funktionen zur Vorgabe von Fahrstrecken und Drehungen.">encoder.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00065">65</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3982e6520803bb438468a0352755a28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile <a class="el" href="a00004.html#a44181537ab6ea5631069dcd97b51bcff">voidFuncPtr</a> Ovr2IntFunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_OVERFLOW2) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00022.html#a27cc4bf2cbcdef81f5a0f9e316d978f9" title="Initialize the RC5 Receiver.">InitRC5()</a>, in <a class="el" href="a00022.html">rc5.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00115">115</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f85635d367e540986605ba72db6f950"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile int switched</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste<br/>
+ ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.<br/>
+ Kann im eigenen Programm immer <b>abgefragt</b> werden. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_INTERRUPT1) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00025.html#abf97cc0efc9c27e63adda461bf02babf" title="&#39;Interrupt-Betrieb&#39; zur Tastsensor Abfrage einschalten.">StartSwitch()</a>, <a class="el" href="a00025.html#a84b9f2c4a7e61a649f152ea3207277de" title="Die globale Variable switched wird nicht mehr automatisch bei einem  Tastendruck gesetzt.">StopSwitch()</a>, <a class="el" href="a00025.html#ad72f0f577f984a84d7e5a2c685b9bb6f" title="Tastsensor Abfrage im &#39;Polling-Betrieb&#39;.">PollSwitch()</a> in <a class="el" href="a00025.html" title="Funktionen zum lesen der Taster und um den &#39;Interrupt-Betrieb&#39; ein-  und auszuschalten. Im &#39;Interrupt-Betrieb&#39; wird die globale Variable  switched gesetzt beim betaetigen irgendeines Tasters.">switches.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00050">50</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f07cc475f4e813c344e44a6efce8bc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile unsigned long timebase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sytemzeit in ms. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Interruptfunktion <a class="el" href="a00003.html#a3411350ac14105d620aa51ece56602c2">SIGNAL</a> (SIG_OVERFLOW2) in <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a><br/>
+ <a class="el" href="a00026.html#a68ae1ca3314f529719933f506ebdd49d" title="Gibt die aktuelle Zeit in ms zurueck.">Gettime()</a> in <a class="el" href="a00026.html" title="Zeit- und Delay Funktionen.">time.c</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00007_source.html#l00091">91</a> der Datei <a class="el" href="a00007_source.html">globals.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

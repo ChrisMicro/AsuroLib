@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: adc.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">adc.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00001.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*   This program is free software; you can redistribute it and/or modify     *</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">*   it under the terms of the GNU General Public License as published by     *</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">*   the Free Software Foundation; either version 2 of the License, or        *</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">*   any later version.                                                       *</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="a00004.html#a4c2d40230ff34890339336c7de6da218">   84</a></span>&#160;<span class="keywordtype">int</span>   <a class="code" href="a00001.html#a4c2d40230ff34890339336c7de6da218" title="Liest die Batteriespannung und gibt sie zurueck.  Es erfolgt keine Konvertierung in einen Spannungswe...">Battery</a> (</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">int</span>   data = 28*<a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#aa166a7eb75c6a068aaa40873a2ddc58a">BATTERIE</a>, 10)/25; <span class="comment">// data=1,12*x dann stimmt Wert von Interrupt ADC mit Poll ADC überein</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// Rückwärtskompatibel?!</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="a00004.html#a0c0b1c791142ce2a81ee6694a1ab59db">  125</a></span>&#160;<span class="keywordtype">void</span>  <a class="code" href="a00001.html#a0c0b1c791142ce2a81ee6694a1ab59db" title="Liest die Daten der beiden Linienverfolgungssensoren.  Die Linien-Beleuchtungs-LED kann sowohl an- al...">LineData</a> (</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  *data)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">     Linken Linien-Sensor lesen</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  data[<a class="code" href="a00004.html#a437ef08681e7210d6678427030446a54">LEFT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a195bd11b05780db950588032e99591cb">IR_LEFT</a>, 0);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">     Rechten Linien-Sensor lesen</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  data[<a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a282f4557df06f675f8800bf24f71cf06">IR_RIGHT</a>, 0);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="code" href="a00004.html#a695cf1f1e807499e06c3e85287580c3d">  174</a></span>&#160;<span class="keywordtype">void</span>  <a class="code" href="a00001.html#a695cf1f1e807499e06c3e85287580c3d" title="Liest die Daten der beiden Odometriesensoren (Radsensoren).  Diese Funktion schaltet die Odometrie-LE...">OdometryData</a> (</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  *data)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">     Vorbereitung zum lesen der Odometrie-Sensoren.</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  DDRC &amp;= ~((1 &lt;&lt; PC0) | (1 &lt;&lt; PC1));   <span class="comment">// Port auf Input=&gt;Back-LEDs gehen aus</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <a class="code" href="a00004.html#acc3bde0465346259ff3610da21d22330">ODOMETRIE_LED_ON</a>;                     <span class="comment">// Odometrie-LED&#39;s einschalten</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">     Linken Odometrie-Sensor lesen</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  data[<a class="code" href="a00004.html#a437ef08681e7210d6678427030446a54">LEFT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a264bd2d371afa11900d69cc549bbe46e">WHEEL_LEFT</a>, 0);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">     Rechten Odometrie-Sensor lesen</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  data[<a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>] = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#a19f8ef9313a09ac75f34cac1162f40a5">WHEEL_RIGHT</a>, 0);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

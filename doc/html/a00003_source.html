@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: asuro.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">asuro.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00003.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">*   This program is free software; you can redistribute it and/or modify     *</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">*   it under the terms of the GNU General Public License as published by     *</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">*   the Free Software Foundation; either version 2 of the License, or        *</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">*   any later version.                                                       *</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a>&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00019.html" title="Benutzerspezische Definitionen der ASURO Bibliothek.">myasuro.h</a>&quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="a00003.html#ad4455691936f92fdd6c37566fc58ba1f">   70</a></span>&#160;<span class="preprocessor">#define BAUD_RATE   2400</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/***************************************************************************</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">  \brief </span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">  Speicher für die ADC Werte aus IsrStandard().</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">  Hierauf greifen die nichtinterrupt-Funktionen PollSwitch(), LineData(..) etc. zu.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="a00004.html#a5aaef381c94b91b652e31452572ece01">   78</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>   <a class="code" href="a00003.html#a96d1662336df94f7822af3790984c9b8">adcValue</a>[6];</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/***************************************************************************</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">  \brief </span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">  Interrupt-Funktion fuer den AD-Wandler. Kann auch, ueber autoencode gesteuert, </span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">  die Odometrie-Zaehler in encoder hochzaehlen.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">  Bemerkung: </span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">  Alle ADC Werte kommen durch die ADC hardware pipeline 2 Interrupts später an. </span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">  \param </span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">  keine </span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">  \return </span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">  nichts </span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">  \see </span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">  Die globale Variable autoencode wird hier ausgewertet. Ist sie nicht FALSE,\n </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">  dann wird der AD-Wandler-Wert zum Zaehlen der Odometriewerte in der globalen\n </span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">  Variablen encoder benutzt.\n </span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">  Es wird auch der AD-Wandler-Kanal auf die &#39;andere&#39; Seite der Odometrie\n </span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">  umgeschaltete und der AD-Wandler neu gestartet.\n </span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">  Somit wird erreicht, dass zumindest die Odometriemessung automatisch erfolgt. </span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">        Anmerkungen zu encoder:</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">        1) </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">        In avg wird ein gleitender Mittelwert mitgeführt: a(n+1) = (a(n)+sensor)/4</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">        (Ich shifte um 2 und habe damit einen Teiler von 4.)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">        2) </span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">        Ich wollte der Interruptroutine Platz und Zeit ersparen und habe deshalb </span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">        auf eine Initialisierung von avg verzichtet. Durch den kleinen Teiler 4 </span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">        passt sich avg sehr rapide den ADC-Werten an. Und verliert in der Realität </span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">        auch &quot;nie&quot; den ersten Tick. (So muss ASURO auch meist erst mal anfahren.) </span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">        3) </span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">        Allerdings - und hier habe ich noch nicht probiert - könnte es mit ein Teiler von 8 </span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">        zum ersten mal gelingen, bei Tageslicht, auch ohne eingeschaltetem Encoder-LED, </span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">        Ticks zu sammeln (allerdings verrauscht). Und das spart immerhin Energie - </span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">        falls es wirklich darauf ankommt. </span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">  * ADC_vect: handles all ADC and odometry ticking</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">  \par  Beispiel: </span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">int main(void) { </span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">   int lSoll=60, rSoll=30, lPwm=lSoll, rPwm=rSoll, delta=50; </span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">   Init();    </span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">   EncoderInit(); </span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">   EncoderStart();    </span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">   while(1) { </span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">      int lIst=encoder[LEFT],   rIst=encoder[RIGHT]; </span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">      EncoderSet(0, 0);    </span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">       </span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">      lPwm+=(delta*lSoll - 1000*lIst)/300;       </span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">      rPwm+=(delta*rSoll - 1000*rIst)/300; </span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">       </span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">      SetMotorPower(lPwm, rPwm); </span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">      Msleep(delta);       </span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">   } </span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">} </span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">*****************************************************************************/</span> </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="a00003.html#acfda1442e71f6d530ce46f93061edb64">  138</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#acfda1442e71f6d530ce46f93061edb64">IsrStandard</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> sign[2]={1,1}, avg[2], adc_cnt = 0;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> mux[]={</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#a282f4557df06f675f8800bf24f71cf06">IR_RIGHT</a>,     <span class="comment">// AVCC reference with external capacitor</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#a195bd11b05780db950588032e99591cb">IR_LEFT</a>,      <span class="comment">// AVCC reference with external capacitor</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#ac279a93dfd1f02dac2359cfaa1422b93">SWITCH</a>,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#aa166a7eb75c6a068aaa40873a2ddc58a">BATTERIE</a> | _BV(REFS1),        <span class="comment">// internal 2.56V reference with external capacitor</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#a19f8ef9313a09ac75f34cac1162f40a5">WHEEL_RIGHT</a>,  <span class="comment">// AVCC reference with external capacitor</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#a264bd2d371afa11900d69cc549bbe46e">WHEEL_LEFT</a>,   <span class="comment">// AVCC reference with external capacitor</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        };</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">// Vielleicht hat Rakke ja Recht: </span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// ADCL muss zuerst gelesen werden! Sonst können sich zwei Wandlungen überschneiden.</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sensor = ADCL | (ADCH &lt;&lt; 8);       </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="a00003.html#a96d1662336df94f7822af3790984c9b8">adcValue</a>[adc_cnt]=sensor;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a>)          <span class="comment">// Aus Kompatibilitätsgründen wird autoencode weiter benutzt</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keywordflow">if</span>(adc_cnt&lt;2) { <span class="comment">// WHEEL_RIGHT || WHEEL_LEFT</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordtype">int</span> s=(sensor &gt;&gt; 8); </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    <span class="comment">// In avg wird ein gleitender Mittelwert mitgeführt: a(n+1) = 0.75*a(n)+0.25*s</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    avg[adc_cnt] += (s-avg[adc_cnt])&gt;&gt;2; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                        <span class="comment">// Schneidet die aktuelle Sensorkurve den gleitenden Mittelwert? Konkret:</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                    <span class="comment">// Weicht der aktuelle Sensorwert um mehr als +/- 2 vom gleitenden Mittelwert ab? </span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                    <span class="keywordflow">if</span> (sign[adc_cnt]*(s-avg[adc_cnt]) &gt; 2) </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    { </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                       <span class="comment">// Dann zähle einen Tick weiter. </span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                       <span class="comment">// Und nächster Tick erst wieder bei -/+ 2 Abweichung vom gleitenden Mittelwert. </span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                       <a class="code" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a>[adc_cnt^<a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>]++; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                       sign[adc_cnt] = -sign [adc_cnt]; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    } </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">if</span>(adc_cnt==<a class="code" href="a00004.html#ac279a93dfd1f02dac2359cfaa1422b93">SWITCH</a>) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a>=<a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a> || sensor&lt;(<a class="code" href="a00019.html#a7ddcb43da228c2c40e2fb42fc8505ff7">MY_SWITCH_THRESHHOLD</a>&lt;&lt;6);  <span class="comment">// Es wurde (ganz sicher) eine Taste gedrückt</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        ADMUX = mux[adc_cnt];</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        adc_cnt=(adc_cnt+1) % <span class="keyword">sizeof</span>(mux);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="code" href="a00004.html#a7ce0a14b6e7779fbb2d9a05333792c41">  228</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init</a> (</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">    Timer2, zum Betrieb mit der seriellen Schnittstelle, fuer die</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">    IR-Kommunikation auf 36 kHz eingestellt.</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor"></span>  <span class="comment">// fast PWM, set OC2A on compare match, clear OC2A at bottom, clk/1</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  TCCR2A = _BV(WGM20) | _BV(WGM21) | _BV(COM2A0) | _BV(COM2A1);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  TCCR2B = _BV(CS20);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">// interrupt on timer overflow</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  TIMSK2 |= _BV(TOIE2); </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor"></span>  <span class="comment">// fast PWM, set OC2A on compare match, clear OC2A at bottom, clk/1</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  TCCR2 = _BV(WGM20) | _BV(WGM21) | _BV(COM20) | _BV(COM21) | _BV(CS20);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">// interrupt on timer overflow</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  TIMSK |= _BV(TOIE2); </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor"></span>  <span class="comment">// 36kHz carrier/timer</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  OCR2  = 0x91;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">    Die serielle Schnittstelle wurde waerend der Boot-Phase schon</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">    programmiert und gestartet. Hier werden die Parameter auf 2400 1N8 gesetzt.</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor"></span>   UBRR0L = (uint8_t)(F_CPU/(<a class="code" href="a00003.html#ad4455691936f92fdd6c37566fc58ba1f">BAUD_RATE</a>*16L)-1);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;   UBRR0H = (F_CPU/(<a class="code" href="a00003.html#ad4455691936f92fdd6c37566fc58ba1f">BAUD_RATE</a>*16L)-1) &gt;&gt; 8;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   UCSR0B = (1&lt;&lt;RXEN0) | (1&lt;&lt;TXEN0);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;   UCSR0C = (1&lt;&lt;UCSZ00) | (1&lt;&lt;UCSZ01);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor"></span>  UBRRH = (((F_CPU/<a class="code" href="a00003.html#ad4455691936f92fdd6c37566fc58ba1f">BAUD_RATE</a>)/16)-1)&gt;&gt;8;        <span class="comment">// set baud rate</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  UBRRL = (((F_CPU/<a class="code" href="a00003.html#ad4455691936f92fdd6c37566fc58ba1f">BAUD_RATE</a>)/16)-1);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  UCSRB = (1&lt;&lt;RXEN)|(1&lt;&lt;TXEN);  <span class="comment">// enable Rx &amp; Tx</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  UCSRC = (1&lt;&lt;URSEL)|(1&lt;&lt;UCSZ1)|(1&lt;&lt;UCSZ0);  <span class="comment">// config USART; 8N1</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">    Datenrichtung der I/O-Ports festlegen. Dies ist durch die Beschaltung der</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment">    Asuro-Hardware nicht aenderbar.</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">    Port B: Seriell Senden; Richtungsvorgabe Motor links; Takt fuer die</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">            Geschwindigkeit beider Motoren; Grueneanteil-Status-LED</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">    Port D: Richtungsvorgabe Motor rechts; Vordere LED;</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">            Odometrie-LED (Radsensor); Rotanteil-Status-LED</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  DDRB = <a class="code" href="a00004.html#ab6f754da67bdaa2a24c0395b79dd577d">IRTX</a> | <a class="code" href="a00004.html#a280580881770229c533faab28f235a05">RIGHT_DIR</a> | <a class="code" href="a00004.html#a538e3ec60828cfabae7e3011d73d2093">PWM</a> | <a class="code" href="a00004.html#a01649d652fa50957c6ef3c32b1238038">GREEN_LED</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  DDRD = <a class="code" href="a00004.html#a748e2ff253570331d3cd8f51ccc17f03">LEFT_DIR</a> | <a class="code" href="a00004.html#ad9567ac44225342551d4e5adcf2dd81a">FRONT_LED</a> | <a class="code" href="a00004.html#a176882b8d1388d28d08cfd08e09f7c42">ODOMETRIE_LED</a> | <a class="code" href="a00004.html#a073dbcb7f5bc4f4b45dc048b55eaff3d">RED_LED</a> | <a class="code" href="a00004.html#a982e6a0873b4ed1df90a1f963e49a551">SWITCHES</a>;  <span class="comment">// Port-Bits als Output</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">    PWM-Kanaele OC1A und OC1B auf 8-Bit einstellen.</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">    Sie werden fuer die Geschwindigkeitsvorgaben der Motoren benutzt.</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  TCCR1A = _BV(WGM10) | _BV(COM1A1) | _BV(COM1B1);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  TCCR1B = _BV(CS11);                 <span class="comment">// tmr1-Timer mit MCU-Takt/8 betreiben.</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">    Sonstige Vorbereitungen.</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">    - Alle LED&#39;s ausschalten</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">    - Motoren stoppen und schon mal auf Vorwaerts einstellen.</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">    - Globale Variable autoencoder ausschalten.</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <a class="code" href="a00015.html#a6172056141d8849a882e557e4440f1b7" title="Steuert die vorne, nach unten zeigende, Front-LED.">FrontLED</a> (<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <a class="code" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED</a> (<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <a class="code" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED</a> (<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <a class="code" href="a00015.html#a93d71b825dd56c077d5abcc1c8eec078" title="Steuert die (lustige) mehrfarbige Status-LED.">StatusLED</a> (<a class="code" href="a00004.html#acfbc006ea433ad708fdee3e82996e721">GREEN</a>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="a00004.html#a3027aae495fb6502790df1ed3aa8d133">SWITCH_ON</a>; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <a class="code" href="a00017.html#a561935d5de881e56c9ad4592514cf47f" title="Steuert die Drehrichtung der Motoren.">MotorDir</a> (<a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>, <a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (0, 0);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> = <a class="code" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <a class="code" href="a00007.html#ab3982e6520803bb438468a0352755a28" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">Ovr2IntFunc</a> = 0;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="a00007.html#acb2dd119fea212b6ce56cd76e1076825" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">AdcIntFunc</a> = <a class="code" href="a00003.html#acfda1442e71f6d530ce46f93061edb64">IsrStandard</a>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">   * Vorbereitung für WHEEL-Interrupts (Encoder)</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">    Port C als Input =&gt; dadurch gehen die Back-LED aus ...</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  DDRC &amp;= ~ (_BV(PC0) | _BV(PC1));</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">    ... aber nun koennen die LED&#39;s am Rad eingeschaltet werden, und die</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment">        Sensoren koennen gemessen werden.</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <a class="code" href="a00004.html#acc3bde0465346259ff3610da21d22330">ODOMETRIE_LED_ON</a>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">    Linken Odometrie-Sensor auswaehlen. (AVCC ref. with external capacitor)</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  ADMUX = _BV(ADLAR) | _BV(REFS0) | <a class="code" href="a00004.html#a264bd2d371afa11900d69cc549bbe46e">WHEEL_LEFT</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">    AD-Wandler einschalten, Parameter einstellen und Starten. (clk/128)</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">    Startet den ADC im &#39;free running&#39;-Mode (ADFR). Das heisst, der Wandler</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">    nach einer Messung automatisch wieder neu startet.</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  ADCSRA = _BV(ADEN) | _BV(ADFR) | _BV(ADIE) | _BV(ADSC) | _BV(ADPS0) | _BV(ADPS1) | _BV(ADPS2);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">    Funktion zum ALLGEMEINEN ZULASSEN von Interrupts.</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  sei ();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">  \brief</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">  Interrupt-Funktion fuer Timer-2-Ueberlauf.</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">  \see</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">  count36kHz, timebase</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">  \par</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">  Der zum Timer gehoerende Zaehler TCNT2 wird so justiert, dass damit die\n</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">  gewuenschten 36 kHz erreicht werden.\n</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">  Fuer die Zeitfunktionen werden die globalen Variablen count36kHz und\n</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">  timebase hochgezaehlt.</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">  \par </span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">  Die Variable Ovr2IntFunc kann als Zeiger auf eine User Funktion benutzt werden\n</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">  und wird dann, falls ungleich 0, von der Interrupt Funktion aus angesprungen.</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">  \par  Beispiel:</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">  (Nicht vorhanden)</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="code" href="a00003.html#a695028df1fc0b1724dd9e5efed5c47cf">  356</a></span>&#160;<a class="code" href="a00003.html#a695028df1fc0b1724dd9e5efed5c47cf">SIGNAL</a> (TIMER2_OVF_vect)</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;{</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  TCNT2 += 0x25;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a> ++;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>)</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <a class="code" href="a00007.html#a8f07cc475f4e813c344e44a6efce8bc2" title="Sytemzeit in ms.">timebase</a> ++;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="a00007.html#ab3982e6520803bb438468a0352755a28" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">Ovr2IntFunc</a>)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="a00007.html#ab3982e6520803bb438468a0352755a28" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">Ovr2IntFunc</a>();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor"></span><a class="code" href="a00003.html#a695028df1fc0b1724dd9e5efed5c47cf">SIGNAL</a>(TIMER2_COMPA_vect)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor"></span><a class="code" href="a00003.html#a695028df1fc0b1724dd9e5efed5c47cf">SIGNAL</a>(TIMER2_COMP_vect) </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor"></span>{</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>++;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="a00007.html#a8f07cc475f4e813c344e44a6efce8bc2" title="Sytemzeit in ms.">timebase</a> ++;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">  \brief</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">  Interrupt-Funktion fuer den AD-Wandler. Kann ueber autoencode gesteuert\n</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">  die Odometrie-Zaehler in encoder hochzaehlen.</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">  \see</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">  Die globale Variable autoencode wird hier ausgewertet. Ist sie nicht FALSE,\n</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">  dann wird der AD-Wandler-Wert zum Zaehlen der Odometriewerte in der globalen\n</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">  Variablen encoder benutzt.\n</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">  Es wird auch der AD-Wandler-Kanal auf die &#39;andere&#39; Seite der Odometrie\n</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment">  umgeschaltete und der AD-Wandler neu gestartet.\n</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment">  Somit wird erreicht, dass zumindest die Odometriemessung automatisch erfolgt.</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment">  \par </span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">  Die Variable AdcIntFunc kann als Zeiger auf eine User Funktion benutzt werden\n</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment">  und wird dann, falls ungleich 0, von der Interrupt Funktion aus angesprungen.</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="comment">  \par  Beispiel:</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="comment">  (Nicht vorhanden)</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno"><a class="code" href="a00003.html#a3411350ac14105d620aa51ece56602c2">  403</a></span>&#160;<a class="code" href="a00003.html#a695028df1fc0b1724dd9e5efed5c47cf">SIGNAL</a> (ADC_vect)</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;{</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <a class="code" href="a00007.html#acb2dd119fea212b6ce56cd76e1076825" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">AdcIntFunc</a>();</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

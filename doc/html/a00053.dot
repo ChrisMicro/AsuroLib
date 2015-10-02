@@ -1,0 +1,25 @@
+digraph "myasuro.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="myasuro.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="asuro.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00003.html",tooltip="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="encoder.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00005.html",tooltip="Funktionen zur Vorgabe von Fahrstrecken und Drehungen."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="encoder_low.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00006.html",tooltip="Low Level Funktionen für Radencoder und Odometrie."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="my_motor_low.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00018.html",tooltip="Low Level Funktionen zur Steuerung der Motoren."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="switches.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00025.html",tooltip="Funktionen zum lesen der Taster und um den &#39;Interrupt-Betrieb&#39; ein-  und auszuschalten. Im &#39;Interrupt-Betrieb&#39; wird die globale Variable  switched gesetzt beim betaetigen irgendeines Tasters."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="i2c.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00009.html",tooltip="Definitionen und Funktionen zum I2C Bus."];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="i2c.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00008.html",tooltip="Funktionen zum Emulieren der I2C Bus.  Dabei werden die Pins C2 und C3 genutzt als SCL und SDA..."];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="lcd.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00011.html",tooltip="Funktionen zur Ansteurung eines LCD Moduls ueber die I2C Schnittstelle. Diese Bibliothek unterstützt HD4..."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="lcd.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00012.html"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

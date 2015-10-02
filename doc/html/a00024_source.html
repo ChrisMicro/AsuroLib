@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: sound.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sound.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00024.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*   This program is free software; you can redistribute it and/or modify     *</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*   it under the terms of the GNU General Public License as published by     *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*   the Free Software Foundation; either version 2 of the License, or        *</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">*   any later version.                                                       *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="a00004.html#a6a68f5a43ba51458c7c22a767cf266fc">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00024.html#a6a68f5a43ba51458c7c22a767cf266fc" title="Soundausgabe ueber die Motoren.">Sound</a> (</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  uint16_t freq,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  uint16_t duration_msec,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  uint8_t  amplitude)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  uint16_t wait_tics;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  uint32_t n,k,period_usec,dauer_usec;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  period_usec = 1000000L / freq;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  dauer_usec = 1000 * (uint32_t) duration_msec;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  k = dauer_usec / period_usec;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">//IR Interuptfreq=36KHz</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">//Wavefreq=18KHz</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  wait_tics = 18000 / freq;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (amplitude, amplitude);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">for</span> (n = 0; n &lt; k; n++)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="a00017.html#a561935d5de881e56c9ad4592514cf47f" title="Steuert die Drehrichtung der Motoren.">MotorDir</a> (<a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>, <a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a> (wait_tics);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="a00017.html#a561935d5de881e56c9ad4592514cf47f" title="Steuert die Drehrichtung der Motoren.">MotorDir</a> (<a class="code" href="a00004.html#a0c3c1353638d84aafe3b0f52882c540f">RWD</a>, <a class="code" href="a00004.html#a0c3c1353638d84aafe3b0f52882c540f">RWD</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a> (wait_tics);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (0, 0);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="a00024.html#a1ceb0e81b845fdcd1b8371e92229a13b">   94</a></span>&#160;<span class="preprocessor">#define BEEP sound (1000, 100, 255)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

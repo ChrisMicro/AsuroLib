@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: switches.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">switches.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funktionen zum lesen der Taster und um den 'Interrupt-Betrieb' ein-<br/>
+ und auszuschalten. Im 'Interrupt-Betrieb' wird die globale Variable<br/>
+ switched gesetzt beim betaetigen irgendeines Tasters.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00019_source.html">myasuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r switches.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00060.png" border="0" usemap="#switches_8c" alt=""/></div>
+<map name="switches_8c" id="switches_8c">
+</map>
+</div>
+</div>
+<p><a href="a00025_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:ad72f0f577f984a84d7e5a2c685b9bb6f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#ad72f0f577f984a84d7e5a2c685b9bb6f">PollSwitch</a> (void)</td></tr>
+<tr class="memdesc:ad72f0f577f984a84d7e5a2c685b9bb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tastsensor Abfrage im 'Polling-Betrieb'.  <a href="#ad72f0f577f984a84d7e5a2c685b9bb6f"></a><br/></td></tr>
+<tr class="separator:ad72f0f577f984a84d7e5a2c685b9bb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf97cc0efc9c27e63adda461bf02babf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#abf97cc0efc9c27e63adda461bf02babf">StartSwitch</a> (void)</td></tr>
+<tr class="memdesc:abf97cc0efc9c27e63adda461bf02babf"><td class="mdescLeft">&#160;</td><td class="mdescRight">'Interrupt-Betrieb' zur Tastsensor Abfrage einschalten.  <a href="#abf97cc0efc9c27e63adda461bf02babf"></a><br/></td></tr>
+<tr class="separator:abf97cc0efc9c27e63adda461bf02babf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b9f2c4a7e61a649f152ea3207277de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a84b9f2c4a7e61a649f152ea3207277de">StopSwitch</a> (void)</td></tr>
+<tr class="memdesc:a84b9f2c4a7e61a649f152ea3207277de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die globale Variable switched wird nicht mehr automatisch bei einem<br/>
+ Tastendruck gesetzt.  <a href="#a84b9f2c4a7e61a649f152ea3207277de"></a><br/></td></tr>
+<tr class="separator:a84b9f2c4a7e61a649f152ea3207277de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Funktionen zum lesen der Taster und um den 'Interrupt-Betrieb' ein-<br/>
+ und auszuschalten. Im 'Interrupt-Betrieb' wird die globale Variable<br/>
+ switched gesetzt beim betaetigen irgendeines Tasters. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Define fuer die Auswahl des ADC-Kanals in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ <a class="el" href="a00004.html#ac279a93dfd1f02dac2359cfaa1422b93">SWITCH</a></dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 22.01.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 18.02.2007 - Sternthaler<br/>
+ +++ <a class="el" href="a00025.html#abf97cc0efc9c27e63adda461bf02babf" title="&#39;Interrupt-Betrieb&#39; zur Tastsensor Abfrage einschalten.">StartSwitch()</a> Korrektur im Code-Beispiel </dd>
+<dd>
+V004 - 20.02.2007 - m.a.r.v.i.n<br/>
+ Korrekturfaktur aus <a class="el" href="a00019.html" title="Benutzerspezische Definitionen der ASURO Bibliothek.">myasuro.h</a> verwenden </dd>
+<dd>
+V005 - 20.01.2008 - m.a.r.v.i.n<br/>
+ ReadADC Funktion zum Auslesen des A/D Wandlers verwenden<br/>
+ Anpassungen an ATmega168 </dd>
+<dd>
+V006 - 21.04.2008 - m.a.r.v.i.n<br/>
+ Bug Report von RN-User thowil<br/>
+<ul>
+<li>Bugfix in PollSwitch Funktion fuehrt zu staendig neuen Interrupts<br/>
+ bei Verwendung mit StartSwitch<br/>
+</li>
+<li>PollSwitch kehrt jetzt sofort ohne A/D Wandlung zurueck<br/>
+ wenn keine Taste gedrueckt wurde </li>
+</ul>
+</dd>
+<dd>
+V007 - 29.03.2009 - rossir<br/>
+ A/D Wandler Abfrage ueber Interrupt </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00025_source.html">switches.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="ad72f0f577f984a84d7e5a2c685b9bb6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char PollSwitch </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tastsensor Abfrage im 'Polling-Betrieb'. </p>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>Tastenwert bitorientiert, K1 = Bit5, K2 = Bit4, K3 = Bit3, K4 = Bit2, K5 = Bit1, K6 = Bit0</dd></dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>In dieser Funktion ist ein <a class="el" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep()</a> Aufruf vorhanden. Der wird benoetigt<br/>
+ damit <a class="el" href="a00003.html#acfda1442e71f6d530ce46f93061edb64">IsrStandard()</a> genügend Zeit bekommt so, dass der zweite PollSwitch aufruf auch garantiert einen neuen Wert zur Verfügung hat.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line">uint8_t t1, t2;</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> text [16];</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">while</span> (1)</div>
+<div class="line">{</div>
+<div class="line">  t1 = <a class="code" href="a00025.html#ad72f0f577f984a84d7e5a2c685b9bb6f" title="Tastsensor Abfrage im &#39;Polling-Betrieb&#39;.">PollSwitch</a> ();</div>
+<div class="line">  t2 = <a class="code" href="a00025.html#ad72f0f577f984a84d7e5a2c685b9bb6f" title="Tastsensor Abfrage im &#39;Polling-Betrieb&#39;.">PollSwitch</a> ();</div>
+<div class="line">  <span class="comment">// 2x PollSwitch aufrufen und beide Rueckgabewerte auf Gleichheit ueberpruefen</span></div>
+<div class="line">  <span class="keywordflow">if</span> (t1 &amp;&amp; t2 &amp;&amp; t1 == t2)           <span class="comment">// irgendeine Taste gedrueckt </span></div>
+<div class="line">  {</div>
+<div class="line">    itoa (t1, text, 10);              <span class="comment">// Tastenwert senden </span></div>
+<div class="line">    <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (text);</div>
+<div class="line">    <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (<span class="stringliteral">&quot;\r\n&quot;</span>);                <span class="comment">// Zeilenvorschub </span></div>
+<div class="line">  }</div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a> (500);                       <span class="comment">// 0,5 sek warten</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00025_source.html#l00088">88</a> der Datei <a class="el" href="a00025_source.html">switches.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i;</div>
+<div class="line">  </div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a>) <span class="keywordflow">return</span> 0;        <span class="comment">// Kehrt sofort zurück, falls kein Taster gedrueckt ist </span></div>
+<div class="line">  </div>
+<div class="line">  i = <a class="code" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae" title="Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals .">ReadADC</a>(<a class="code" href="a00004.html#ac279a93dfd1f02dac2359cfaa1422b93">SWITCH</a>, 15);  <span class="comment">// sleep 15 ms -&gt; Rückwärtskompatibel?! und wg. timing da draussen und drinnen (IsrStandard())</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (i&gt;=<a class="code" href="a00019.html#a7ddcb43da228c2c40e2fb42fc8505ff7">MY_SWITCH_THRESHHOLD</a>) <span class="keywordflow">return</span> 0;        <span class="comment">// Eher rauschen -&gt; raus hier!</span></div>
+<div class="line">  </div>
+<div class="line">  <span class="comment">// Es wurde &quot;ganz sicher&quot; eine Taste gedrückt.</span></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    Die Original Umrechenfunktion von Jan Grewe - DLR wurde ersetzt durch</span></div>
+<div class="line"><span class="comment">    eine Rechnung ohne FLOAT-Berechnungen.</span></div>
+<div class="line"><span class="comment">  return  ((unsigned char) ((( 1024.0/(float)i - 1.0)) * 61.0 + 0.5));</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"><span class="comment">    Wert 61L evtl. anpasssen, falls fuer K1 falsche Werte zurueckgegebn werden.</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  <span class="keywordflow">return</span> ((10240000L / (<span class="keywordtype">long</span>)i - 10000L) * <a class="code" href="a00019.html#aa933e55c37e6cf701d7daf50a43c27ae">MY_SWITCH_VALUE</a> + 5000L) / 10000;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abf97cc0efc9c27e63adda461bf02babf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartSwitch </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>'Interrupt-Betrieb' zur Tastsensor Abfrage einschalten. </p>
+<dl class="section user"><dt>Hinweis:</dt><dd>Ueber die globale Variable switched kann nach diesem Funktionsaufruf im<br/>
+ Hauptprogramm geprueft werden, ob eine Taste gedrueckt wurde und kann dann<br/>
+ bei Bedarf die Funktion <a class="el" href="a00025.html#ad72f0f577f984a84d7e5a2c685b9bb6f" title="Tastsensor Abfrage im &#39;Polling-Betrieb&#39;.">PollSwitch()</a> aufrufen.<br/>
+</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><a class="code" href="a00025.html#abf97cc0efc9c27e63adda461bf02babf" title="&#39;Interrupt-Betrieb&#39; zur Tastsensor Abfrage einschalten.">StartSwitch</a> ();</div>
+<div class="line"><span class="keywordflow">while</span> (!<a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a>)         <span class="comment">// wartet auf Tastendruck</span></div>
+<div class="line">  ;</div>
+<div class="line"><span class="comment">// an dieser Stelle kann mit Pollswitch geprüft werden</span></div>
+<div class="line"><span class="comment">// welche Taste gedrückt wurde, wenn nötig.</span></div>
+<div class="line"><a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a> = <a class="code" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>;         <span class="comment">// Vorbereitung für neuen Aufruf von StartSwitch()</span></div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00025_source.html#l00132">132</a> der Datei <a class="el" href="a00025_source.html">switches.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="comment">// ADC Wert von Switchen wird immer abgefragt</span></div>
+<div class="line">        <span class="comment">// siehe ISRStandard() dort auch das handling von switched=TRUE</span></div>
+<div class="line">        cli ();</div>
+<div class="line">        <a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a> = <a class="code" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>;</div>
+<div class="line">        sei (); </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a84b9f2c4a7e61a649f152ea3207277de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopSwitch </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Die globale Variable switched wird nicht mehr automatisch bei einem<br/>
+ Tastendruck gesetzt. </p>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nicht vorhanden) </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00025_source.html#l00153">153</a> der Datei <a class="el" href="a00025_source.html">switches.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="comment">// ADC Wert von Switchen wird immer abgefragt</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

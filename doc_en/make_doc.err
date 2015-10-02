@@ -1,0 +1,46 @@
+warning: Tag `DETAILS_AT_TOP' at line 173 of file doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `SHOW_DIRECTORIES' at line 454 of file doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `HTML_ALIGN_MEMBERS' at line 759 of file doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+When enabling GENERATE_HTMLHELP the tree view (GENERATE_TREEVIEW) should be disabled. I'll do it for you.
+When enabling GENERATE_HTMLHELP the search engine (SEARCHENGINE) should be disabled. I'll do it for you.
+warning: the dot tool could not be found at L:\Programme\Graphviz\bin
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00014.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00014.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00013.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00013.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00010.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00010.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00012.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00012.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00011.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00011.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00016.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00016.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/graph_legend.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/graph_legend.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00015.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00015.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/dir_e28231055b5b43926a736e18480856e7_dep.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/dir_e28231055b5b43926a736e18480856e7_dep.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.dot" -Tpng -o "F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.png"'
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00010.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00011.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00012.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00013.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00014.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00015.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/a00016.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/dir_e28231055b5b43926a736e18480856e7_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file F:/Users/Peter/Downloads/asuro-code-212-tags-2.8.0-rc2/doc_en/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

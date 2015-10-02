@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: uart.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">uart.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funktionen zur seriellen Kommunikation.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für uart.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00062.png" border="0" usemap="#uart_8c" alt=""/></div>
+<map name="uart_8c" id="uart_8c">
+</map>
+</div>
+</div>
+<p><a href="a00027_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a35162012d08a613f2915b2885a42aed3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#a35162012d08a613f2915b2885a42aed3">SerWrite</a> (unsigned char *data, unsigned char length)</td></tr>
+<tr class="memdesc:a35162012d08a613f2915b2885a42aed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Senden von Daten ueber die serielle Schnittstelle.  <a href="#a35162012d08a613f2915b2885a42aed3"></a><br/></td></tr>
+<tr class="separator:a35162012d08a613f2915b2885a42aed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15e5d278daf4cdbd6e27eefb52d2e01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#aa15e5d278daf4cdbd6e27eefb52d2e01">SerRead</a> (unsigned char *data, unsigned char length, unsigned int timeout)</td></tr>
+<tr class="memdesc:aa15e5d278daf4cdbd6e27eefb52d2e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lesen von Daten ueber die serielle Schnittstelle.  <a href="#aa15e5d278daf4cdbd6e27eefb52d2e01"></a><br/></td></tr>
+<tr class="separator:aa15e5d278daf4cdbd6e27eefb52d2e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Funktionen zur seriellen Kommunikation. </p>
+<pre class="fragment">      Senden und empfangen von Daten ueber die seriellen Schnittstelle.\n
+      Diese Funktionen benoetigen einen laufenden Timer 2-Interrupt, da\n
+      die Hardware vom Asuro und die 'Gegenstelle' getaktete Signale\n
+      ben�tigen um sie als gueltig zu erkennen. Dieser Takt muss bei der\n
+      verwendeten Hardware 36 kHz betragen. Er wird in der Init()-Funktion\n
+      eingestellt und zusaetzlich in den Timer-Funktionen in time.c
+      benutzt.
+</pre><dl class="section see"><dt>Siehe auch</dt><dd>Defines fuer unseren Asuro immer in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ Hier werden aktuell keine Defines benutzt.</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 22.01.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 25.07.2007 - Sternthaler (Gemeldet von helmut_w)<br/>
+ +++ SerWrite ()<br/>
+<ul>
+<li>Abschalten des Senders nach der Datenuebertragung zum sparen von Energie.<br/>
+</li>
+<li>Erklaerungsversuch fuer die Warteschleife am Ende der Funktion. </li>
+</ul>
+</dd>
+<dd>
+V004 - 31.07.2007 - Sternthaler<br/>
+ +++ SerWrite ()<br/>
+<ul>
+<li>Erklaerungsversuch fuer die Warteschleife mit Bezug zum Forum unter <a href="http://www.roboternetz.de/">http://www.roboternetz.de/</a> </li>
+</ul>
+</dd>
+<dd>
+V005 - 14.08.2007 - m.a.r.v.i.n<br/>
+ Magic Numbers ersetzt durch IO Register Defines </dd>
+<dd>
+V006 - 27.03.2008 - m.a.r.v.i.n<br/>
+ Warteschlefe am Ende SerWrite Funktion entfernt. </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00027_source.html">uart.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="aa15e5d278daf4cdbd6e27eefb52d2e01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SerRead </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lesen von Daten ueber die serielle Schnittstelle. </p>
+<p>Die empfangenen Daten werden in der als Pointer uebergeben Variable data<br/>
+ dem Aufrufer zur verfuegung gestellt.<br/>
+ Der Aufrufer bestimmt ueber den Parameter Timeout, ob diese Funktion im<br/>
+ 'blocking'- oder im 'nonblocking'-Mode laufen soll. Im 'blocking'-Mode<br/>
+ bleibt diese Funktion auf alle Faelle so lange aktiv, bis die, uber den<br/>
+ Parameter length, geforderte Anzahl Zeichen empfamgen wurde.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>Zeiger auf die einzulesenden Daten </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Anzahl der zu lesenden Zeichen </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>0 = blockierender Mode<br/>
+ Wird hier ein Wert groesser 0 uebergeben, wird nur eine gewisse Zeit<br/>
+ lang versucht ein weiteres Zeichen ueber die Schnittstelle zu empfangen.<br/>
+ Kommt in dieser Zeit kein weiteres Zeichen, wird im zurueckgegeben<br/>
+ Parameter date das erste Zeichen auf 'T' gesetzt und die Funktion<br/>
+ kehrt zum Aufrufer zurueck.<br/>
+ Ansonsten wird die Funktion auf alle Faelle verlassen, wenn die als<br/>
+ Parameter length geforderte Anzahl Zeichen empfangen werden konnten.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Empfangen von 5 Zeichen. Aber spaetestens nach 20 Versuchen wieder</span></div>
+<div class="line"><span class="comment">// im Programm weiter machen.</span></div>
+<div class="line"><span class="keywordtype">char</span> emfangene_daten [10];</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00027.html#aa15e5d278daf4cdbd6e27eefb52d2e01" title="Lesen von Daten ueber die serielle Schnittstelle.">SerRead</a> (emfangene_daten, 5, 20);</div>
+<div class="line"><span class="keywordflow">if</span> (emfangene_daten [0] == <span class="charliteral">&#39;T&#39;</span>)</div>
+<div class="line">  <a class="code" href="a00027.html#a35162012d08a613f2915b2885a42aed3" title="Senden von Daten ueber die serielle Schnittstelle.">SerWrite</a> (<span class="stringliteral">&quot;Mist, timeout&quot;</span>, 13);</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">  <a class="code" href="a00027.html#a35162012d08a613f2915b2885a42aed3" title="Senden von Daten ueber die serielle Schnittstelle.">SerWrite</a> (<span class="stringliteral">&quot;5 Zeichen empfangen&quot;</span>, 19);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00027_source.html#l00158">158</a> der Datei <a class="el" href="a00027_source.html">uart.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0;</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  time = 0;</div>
+<div class="line"></div>
+<div class="line">  UCSRB = (1&lt;&lt;RXEN);                         <span class="comment">// Empfaenger einschalten</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (timeout != 0)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">      Die Funktion wird auf alle Faelle, auch ohne empfangene Daten, wieder</span></div>
+<div class="line"><span class="comment">      verlassen. --&gt; nonblocking mode</span></div>
+<div class="line"><span class="comment">    */</span></div>
+<div class="line">    <span class="keywordflow">while</span> (i &lt; length &amp;&amp; time++ &lt; timeout)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">if</span> (UCSRA &amp; (1&lt;&lt;RXC))</div>
+<div class="line">      {</div>
+<div class="line">        data [i++] = UDR;</div>
+<div class="line">        time = 0;</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (time &gt; timeout)</div>
+<div class="line">      data [0] = <span class="charliteral">&#39;T&#39;</span>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">      Die Funktion wird auf alle Faelle erst nach dem Empfang von der</span></div>
+<div class="line"><span class="comment">      vorgegebenen Anzahl Zeichen verlassen. blocking mode</span></div>
+<div class="line"><span class="comment">    */</span></div>
+<div class="line">    <span class="keywordflow">while</span> (i &lt; length)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">if</span> (UCSRA &amp; (1&lt;&lt;RXC))</div>
+<div class="line">        data [i++] = UDR;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a35162012d08a613f2915b2885a42aed3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SerWrite </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Senden von Daten ueber die serielle Schnittstelle. </p>
+<p>Die zu senden Daten werden nicht als 0-terminierter C-String erwartet, sondern<br/>
+ es werden grundsaetzlich so viele Zeichen gesendet wie im 2.ten Parameter<br/>
+ angegeben werden. Deshalb sollte die Funktion eher zum Senden von Rohdaten verwendet werden (keine ASCII Zeichen) Zum Senden von Strings sollte stattdessen die Funktion SerPrint verwendet werden. Bei der aktuellen WinAVR Version (2007055) gibt es eine Warnung, falls ein String als 1. Parameter �bergeben wird</p>
+<dl class="section version"><dt>Version</dt><dd>V003 - 25.07.2007 - Sternthaler (Gemeldet von helmut_w)<br/>
+<ul>
+<li>Abschalten des Senders nach der Datenuebertragung zum sparen von Energie.<br/>
+</li>
+<li>Erklaerungsversuch fuer die Warteschleife am Ende der Funktion. </li>
+</ul>
+</dd>
+<dd>
+V004 - 31.07.2007 - Sternthaler<br/>
+<ul>
+<li>Erklaerungsversuch fuer die Warteschleife mit Bezug zum Forum unter <a href="http://www.roboternetz.de/">http://www.roboternetz.de/</a></li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>Zu sendende Daten </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Die Anzahl der zu sendenden Zeichen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Siehe auch</dt><dd>Die Initialisierung vom Timer 2-Interrupt erfolgt in der Funktion <a class="el" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init()</a>.</dd>
+<dd>
+<a class="el" href="a00004.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a></dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Senden von Rohdaten ueber die Schnittstelle.</span></div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> buf[4] = {0x55, 0xaa, 0xab, 0xcd);</div>
+<div class="line"><a class="code" href="a00027.html#a35162012d08a613f2915b2885a42aed3" title="Senden von Daten ueber die serielle Schnittstelle.">SerWrite</a> (buf, 4);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00027_source.html#l00093">93</a> der Datei <a class="el" href="a00027_source.html">uart.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0;</div>
+<div class="line"></div>
+<div class="line">  UCSRB = (1&lt;&lt;TXEN);                    <span class="comment">// Sender einschalten</span></div>
+<div class="line">  <span class="keywordflow">while</span> (length &gt; 0)                    <span class="comment">// so lange noch Daten da sind</span></div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">if</span> (UCSRA &amp; (1&lt;&lt;UDRE))</div>
+<div class="line">    {                                   <span class="comment">// warten, bis der Sendebuffer leer ist</span></div>
+<div class="line">      UDR = data[i++];</div>
+<div class="line">      length --;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">while</span> (!(UCSRA &amp; (1&lt;&lt;TXC)))           <span class="comment">// abwarten, bis das letzte Zeichen </span></div>
+<div class="line">    ;                                   <span class="comment">// uebertragen wurde.        </span></div>
+<div class="line"></div>
+<div class="line">  UCSRA |= (1&lt;&lt;TXC);                    <span class="comment">// transmission completed Flag setzen</span></div>
+<div class="line"></div>
+<div class="line">  UCSRB &amp;= ~(1&lt;&lt;TXEN);                  <span class="comment">// Sender ausschalten / Powersave</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: encoder_low.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">encoder_low.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Low Level Funktionen für Radencoder und Odometrie.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00019_source.html">myasuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r encoder_low.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00038.png" border="0" usemap="#encoder__low_8c" alt=""/></div>
+<map name="encoder__low_8c" id="encoder__low_8c">
+</map>
+</div>
+</div>
+<p><a href="a00006_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a80ec2c177aa9c2636f797ca881381827"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a80ec2c177aa9c2636f797ca881381827">EncoderInit</a> (void)</td></tr>
+<tr class="memdesc:a80ec2c177aa9c2636f797ca881381827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.  <a href="#a80ec2c177aa9c2636f797ca881381827"></a><br/></td></tr>
+<tr class="separator:a80ec2c177aa9c2636f797ca881381827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4559ec3982822e3e90bae56809df2efa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a4559ec3982822e3e90bae56809df2efa">EncoderStop</a> (void)</td></tr>
+<tr class="memdesc:a4559ec3982822e3e90bae56809df2efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Den Interrupt Betrieb der Odometriesensoren-Messung anhalten.  <a href="#a4559ec3982822e3e90bae56809df2efa"></a><br/></td></tr>
+<tr class="separator:a4559ec3982822e3e90bae56809df2efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c90b4e28ee14ebcc656361b55a115e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a34c90b4e28ee14ebcc656361b55a115e">EncoderStart</a> (void)</td></tr>
+<tr class="memdesc:a34c90b4e28ee14ebcc656361b55a115e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Den Interrupt Betrieb der Odometriesensoren-Messung starten.  <a href="#a34c90b4e28ee14ebcc656361b55a115e"></a><br/></td></tr>
+<tr class="separator:a34c90b4e28ee14ebcc656361b55a115e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0ae5bf0ead1a658440216580887777"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#adf0ae5bf0ead1a658440216580887777">EncoderSet</a> (int setl, int setr)</td></tr>
+<tr class="memdesc:adf0ae5bf0ead1a658440216580887777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interruptbetriebene Odometriesensoren Werte vorbelegen.  <a href="#adf0ae5bf0ead1a658440216580887777"></a><br/></td></tr>
+<tr class="separator:adf0ae5bf0ead1a658440216580887777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Low Level Funktionen für Radencoder und Odometrie. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Defines zum setzen von Port's und Konfigurationen in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ <a class="el" href="a00004.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>, <a class="el" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>, <a class="el" href="a00004.html#a437ef08681e7210d6678427030446a54">LEFT</a>, <a class="el" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a></dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - KEINE original Version von der ASURO CD vom DLR<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ Das Grundgeruest dieser Funktionen wurde von stochri erstellt.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 27.01.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 21.02.2007 - Sternthaler<br/>
+ +++ <a class="el" href="a00006.html#a34c90b4e28ee14ebcc656361b55a115e" title="Den Interrupt Betrieb der Odometriesensoren-Messung starten.">EncoderStart()</a><br/>
+ KEINE Funktionsaenderung<br/>
+ Die Fehlerbeschreibung von Sternthaler ersatzlos gestrichen, da<br/>
+ die Funktionalitaet von stochri durch das Starten des AD-Wandlers<br/>
+ in <a class="el" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit()</a> im sogenannten 'free running'-Mode gegeben ist. </dd>
+<dd>
+V004 - 27.01.2008 - m.a.r.v.i.n<br/>
+ Die Encoder Interrupt Funktion IsrEnc wird in der EncoderInit<br/>
+ Funktion über die Variable AdcIntFunc in den ADC Interrupt<br/>
+ eingebunden und von dort aufgerufen </dd>
+<dd>
+V005 - 29.03.2009 - rossir<br/>
+ A/D Wandler Abfrage ueber Interrupt </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00006_source.html">encoder_low.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a80ec2c177aa9c2636f797ca881381827"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EncoderInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="a00004.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a>, <a class="el" href="a00004.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a></dd></dl>
+<dl class="section user"><dt>Funktionsweise:</dt><dd>Globale Variable autoencode auf TRUE.<br/>
+ Diese Funktion wird nun verlassen und das aufrufende Hauptprogramm arbeit<br/>
+ weiter. In der Zwischenzeit ist der AD-Wandler beschaeftigt um das Mess-<br/>
+ ergebniss zu ermitteln.<br/>
+ Ist der Wandler fertig, wird der Interrupt zum AD-Wandler aufgerufen und in<br/>
+ der dazu vorhandene Interrupt-Funktion aus <a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a> bearbeitet.<br/>
+ Dort wird nun AUTOMATISCH das Messergebnis ausgewertet, ein erkannter<br/>
+ Hell- Dunkel-Wechsel an der Encoderscheibe erkannt und dadurch der Zaehler<br/>
+ in der globalen Variablen encoder[] weitergezaehlt.<br/>
+ Ausserdem wird dort dann der AD-Wandler fuer die andere Seite gestartet.<br/>
+ Da dies dann immer im Wechsel laeuft, kann das Hauptprogramm, ohne<br/>
+ weiters Zutun von nun ab auf die Zaehlerwerte in encoder[] zugreifen.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="keywordtype">int</span> main (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init</a> ();</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit</a> ();</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00017.html#a561935d5de881e56c9ad4592514cf47f" title="Steuert die Drehrichtung der Motoren.">MotorDir</a> (<a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>, <a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>);</div>
+<div class="line">  <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (150, 150);</div>
+<div class="line">  <span class="keywordflow">while</span> (1)</div>
+<div class="line">  (</div>
+<div class="line">    <span class="comment">// Dein Programm</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (encoder [0] &gt; 500)</div>
+<div class="line">    {</div>
+<div class="line">      <a class="code" href="a00006.html#a4559ec3982822e3e90bae56809df2efa" title="Den Interrupt Betrieb der Odometriesensoren-Messung anhalten.">EncoderStop</a> ();</div>
+<div class="line">      <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (0, 0);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00006_source.html#l00094">94</a> der Datei <a class="el" href="a00006_source.html">encoder_low.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    Alle definierten Interrupts im Asuro sperren.</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  cli();</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    Odometrie im Interruptbetrieb weiter bearbeiten.</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  <a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> = <a class="code" href="a00004.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>;</div>
+<div class="line">  </div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    Die Odometrie Hell-/Dunkel-Zaehler zuruecksetzen/initialisieren.</span></div>
+<div class="line"><span class="comment">   */</span> </div>
+<div class="line">  <a class="code" href="a00006.html#adf0ae5bf0ead1a658440216580887777" title="Interruptbetriebene Odometriesensoren Werte vorbelegen.">EncoderSet</a> (0, 0);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    Alle definierten Interrupts im Asuro wieder zulassen.</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  sei();</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adf0ae5bf0ead1a658440216580887777"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EncoderSet </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>setl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>setr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interruptbetriebene Odometriesensoren Werte vorbelegen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">setl</td><td>Wert fuer links</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">setr</td><td>Wert fuer rechts</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Initialisiert die beiden Werte in der globalen Variable encoder.<br/>
+ Normalerweise werden die Zaehlerwerte mit 0 initialisiert. Fuer einige<br/>
+ Anwendungen kann es sinnvoll sein auch schon bestimmte Werte vorzubelegen.</dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd>Die globale Variable <a class="el" href="a00004.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a> wird hier initialisiert.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(siehe unter den examples) </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00006_source.html#l00182">182</a> der Datei <a class="el" href="a00006_source.html">encoder_low.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a> [<a class="code" href="a00004.html#a437ef08681e7210d6678427030446a54">LEFT</a>]  = setl;</div>
+<div class="line">  <a class="code" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a> [<a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>] = setr;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a34c90b4e28ee14ebcc656361b55a115e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EncoderStart </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Den Interrupt Betrieb der Odometriesensoren-Messung starten. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Die globale Variable <a class="el" href="a00004.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> hier auf <a class="el" href="a00004.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a> gesetzt.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(siehe unter EncoderInit bzw. in den examples) </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00006_source.html#l00153">153</a> der Datei <a class="el" href="a00006_source.html">encoder_low.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> = <a class="code" href="a00004.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4559ec3982822e3e90bae56809df2efa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EncoderStop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Den Interrupt Betrieb der Odometriesensoren-Messung anhalten. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Die globale Variable <a class="el" href="a00004.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> hier auf <a class="el" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a> gesetzt.</dd></dl>
+<dl class="section user"><dt>Funktionsweise:</dt><dd>Durch das setzen der globalen Variablen autoencode auf FALSE wird in<br/>
+ der AD-Wandler-Interruptfunktion der Teil zur Bearbeitung uebersprungen.<br/>
+ Dadurch wird der Wandler nicht mehr neu gestartet und somit stopp die<br/>
+ Automatik.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(siehe unter EncoderInit bzw. in den examples) </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00006_source.html#l00135">135</a> der Datei <a class="el" href="a00006_source.html">encoder_low.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a> = <a class="code" href="a00004.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

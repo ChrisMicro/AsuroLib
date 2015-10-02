@@ -1,0 +1,192 @@
+Die Asuro Library
+=================
+
+Die HTML Version dieser Doku befindet sich unter /doc/html/index.html
+
+Einfuehrung
+----------
+Die Asuro Library ist eine Sammlung von C-Funktionen fuer den Roboter Asuro. Der Asuro wurde vom DLR (Deutschen Zentrum fuer Luft und Raumfahrt)
+http://www.dlr.de in Oberpfaffenhofen entwickelt.
+
+Die Ur-Version der Bibliothek wurde von Jan Grewe vom DLR geschrieben. Einige User vom Roboternetz Forum 
+http://www.roboternetz.de/phpBB2 haben die Lib erweitert.
+
+Die Asuro Lib ist ab Version 2.70 nicht mehr nur eine Quellcode Bibliothek sondern eine Objectcode Bibliothek. 
+D.h. die Bibliothek besteht aus einem Archiv von Objekt Files, die normalerweise nicht mehr fuer jedes Projekt 
+neu uebersetzt (compiliert) werden muss, sondern nur noch gelinkt wird. Die Bibliothek selbst muss nur neu uebersetzt werden, 
+wenn an den Bibliotheks Funktionen Änderungen oder Definitionen in den Header Files vorgenommen wurden.
+
+Der Vorteil der Objekt Bibliothek gegenueber der Quellode Bibliothek ist die drastisch reduzierte Groesse der Hex-Files. 
+Im Gegensatz zur Quellcode Bibliothek werden nur die Objekt Files gelinkt, die vom Benutzer Programm aufgerufen werden. 
+Bei der Quellcode Bibliothek werden immer alle Files gelinkt, unabhaengig davon ob sie ueberhaupt benoetigt werden.
+Wichtige Links
+
+    * http://sourceforge.net/projects/asuro Hier findet man immer die aktuelle Version der Asuro Bibliothek
+    * http://www.roboternetz.de/phpBB2/viewforum.php?f=44 Das Asuro Forum im Roboternetz
+    * http://www.asurowiki.de/pmwiki/pmwiki.php Ein Wiki ueber den Asuro
+
+Der Programm Code der Asuro Bibliothek steht unter der General Public License (GPL)
+
+Voraussetzungen
+---------------
+Um die Asuro Lib zu verwenden wird neben dem Asuro eine Entwicklungsumgebung fuer die Atmel AVR Prozessoren benoetigt.
+Der Quelllcode der Bibliothek wurde fuer die AVR-GCC Cross-Compiler Suite geschrieben. Den AVR-GCC ist kostenlos fuer diverse Plattformen
+(Windows, Linux, Mac) verfuegbar. Es wird die Verwendung der jeweils neuesten Version empfohlen. 
+Die Bibliothek kommt aber auch mit alten Versionen klar. Auf der Asuro CD befindet sich z.B. eine sehr alte WinAVR Version (20030913) 
+aus dem Jahre 2003. Die aktuelle WinAVR Version (20070525) ist hier auf jeden Fall vorzuziehen.
+Download Links
+
+    * http://sourceforge.net/projects/winavr/ WinAVR. Der AVR Cross-Compiler fuer Windows.
+    * http://www.avrfreaks.net/wiki/index.php/Documentation:AVR_GCC AVR-GCC Homepage
+
+Installation
+------------
+Es gibt 3 Moeglichkeiten die Asuro Lib zu downzuloaden und zu installieren.
+
+    * Download der AsuroLib-vXXX-Setup.exe Datei. Die Installation startet man durch Doppelklick auf die AsuroLib-vX.XX-Setup.exe Datei.
+    * Download AsuroLib-vXXX.zip Datei. Das Zip-Files wird in ein beliebiges Verzeichnis ausgepackt.
+    * Download ueber Subversion (SVN). 
+      Dazu wird ein SVN Client z.B. SmartSVN http://www.syntevo.com/smartsvn/ oder TortoiseSVN http://tortoisesvn.net/ benoetigt.
+
+   SVN Einstellungen:
+   Hostname: asuro.svn.sourceforge.net
+   Port: 443
+   Protocol: HTTPS
+   Repository Path: /svnroot/asuro
+   Username: SourceForge.net username fuer SVN Schreibrechte, keiner fuer Leserechte
+   Password: SourceForge.net user password fuer SVN Schreibrechte, keines fuer Leserechte
+   
+
+Verzeichnis Struktur
+--------------------
+Nach der Installation befindet sich folgende Verzeichnis Struktur auf der Festplatte.
+Das Installationsverzeichnis im folgenden <INST_DIR> genannt, koennte z.B. C:/ASURO_SRC/AsuroLib lauten.
+
+   C:\ASURO_SRC\AsuroLib                     Das Installations Verzeichnis
+                        \doc                 Dokumentations Verzeichnis. HTML und HTML Help Dateien
+                        \lib                 Bibliotheks Quell Dateien und Objekt Bibiothek
+                        \lib\inc             Bibliotheks Header Dateien
+                        \examples            Beispiel Projekte
+                        \examples\FirstTry   Beispiel Projekt FirstTry
+                        \examples\SelfTest   Beispiel Projekt SelfTest
+   
+
+Wichtig! Anpassen der Makefiles
+-------------------------------
+Die wichtigste Änderung der AsuroLib spielt sich im Hintergrund ab in den Makefiles. Hier wurde aufgeraeumt um die Verwendung 
+der Bibliothek fuer eigene Projekte zu erleichtern. Es gibt nur noch eine einzige Stelle, die man aendern muss um alle Pfadangaben, 
+die mit der Lib zu tun haben, zu aendern. Das ganze kann natuerlich nur funktionieren wenn nur noch diese neuen Makefiles verwendet werden.
+
+Aufgrund der zahlreichen Probleme, die manche Nutzer beimn Installieren der Bibliothek hatten, wurde der Installationsprozess vereinfacht. 
+Die compilierte Asuro Bibliothek 'libasuro.a' muss nun nicht mehr in das Lib-Verzeichnis des AVR-GCC bzw. WinAVR Compilers kopiert werden, 
+sondern verbleibt im Verzeichnis <INST_DIR>/lib. Statt dessen wird im Makefile der Pfad zur Bibliothek eingetragen. 
+Der Verzeichnisname sollte mit normalem Slash (/) angegeben sein nicht mit Backslash (\). In den aktuellen Makefiles 
+geschieht dies (siehe Examples Ordner) durch folgende Zeilen: 
+Hinweis: ein # am Anfang in einer Zeile eines Makefiles bedeutet. Dies ist ein Kommentar, kein Kommando zum Ausfuehren
+
+   # additional Include path for libraries
+   LIBPATH = ../../lib
+   
+
+In vorigen Beipiel wurden relative Pfade verwendet. Das geht solange gut, solange alle Projekte wie die Beispiel Projekte aus der 
+Asuro Lib in der gleichen Verzeichnisebene (2 Verzeichnisebenen tiefer als die lib) liegen. 
+Ist dies nicht der Fall, sollte man statt dessen absolute Pfade verwenden, wie z.B.:
+
+   # additional Include path for libraries
+   LIBPATH = C:/ASURO_SRC/AsuroLib/lib
+   
+
+Falls man die Bibliothek in ein Verzeichnis mit Leerzeichen installiert hat, muss man die Pfadangaben in Hochkommas einfuegen
+
+   # additional Include path for libraries
+   LIBPATH = "C:/Eigene Dateien/ASURO_SRC/AsuroLib/lib"
+   
+
+Neue Projekte
+-------------
+Will man ein eigenes Programm fuer den Asuro erstellen, welches die Asuro Bibliothek verwendet kopiert man besten den kompletten Ordner
+<INST_DIR>/examples/FirstTry in einen neuen Ordner. Dann muss man nur noch das Makefile wie oben beschrieben anpassen, 
+seine Programm schreiben und sollte es dann uebersetzen koennen.
+
+Enthaelt das eigene Projekt zusaetzliche Quelldateien (ausser test.c) muessen diese ebenfalls im Makefile eingetragen werden. 
+Als Beispiel Projekt bietet sich hier das Makefile aus dem Selbsttest an <INST_DIR>/examples/SelfTest. 
+Hier werden noch mehrere Quelldateien dazugefuegt.
+
+  # If there is more than one source file, append them above, or adjust and
+  # uncomment the following:
+  SRC += asuro.c \
+  Test.c main.c \
+  Demo.c LineDemo.c IRDemo.c PCDemo.c RechteckDemo.c 
+   
+
+Auch der Name der Zieldatei (sonst immer test.hex) wurde hier angepasst. Es muss natuerlich eine Quelldatei gleichen Namens existieren.
+
+   # Target file name (without extension).
+   TARGET = SelfTest
+   
+
+Beispiel Projekte
+-----------------
+Im Ordner <INST_DIR>/examples befiden sich einige Beispiel Projekte, die sich fuer eigene Projekte anpassen oder erweitern lassen 
+bzw. als Vorlage fuere eigene Projekte dienen sollen.
+
+    * FirstTry: Ein Dummy Projekt, das nichts tut als die Asuro Hardware zu initialisieren und dann ein Enlosschleife auszufuehren. 
+      Der ideale Einstieg fuer eigene Projekte. Insbesondere das Makefile kann fuer die meissten Projekte verwendet werden.
+    * SelfTest: Der Asuro Selbsttest, wie er sich auch auf eienm fabrikneuem Asuro befindet. Allerdinmgs angepasst fuer die AsuroLib 
+      und mit dem Unterschied, dass nach einmaliger Ausfuehrung des Selbsttests, die versteckten Demo Programme ausgefuehrt werden koennen. 
+      Taste 1 = LineDemo, Taste 2 = RechteckDemo, Taste 3 = PCDemo, Taste 4 = IRDemo (entspricht der RC5Demo).
+    * EncoderTest: Testet die Encoder.
+    * TasterTest: Testet die Tastsensoren und gibt die gedrueckten Tasten auf dem Terminal aus.
+    * LineTest: Liniensensor Test. Entspricht der LineDemo aus dem Selbsttest
+    * RC5Test: Den Asuro ueber eine RC5 kompatible Infrarot Fernbedienung steuern. entspricht der IRDemo aus dem Selbsttest. 
+      Alle programmierbaren Universalfernbedienungen beherschen das RC5 Protokoll von Philips.
+    * MotorTest: Testet die Motor Steuerfunktionen Go und Turn
+    * KollisionTest: Kollisionserkennung ueber die Taster. Bei Kollision faehrt der Asuro ein rueckwaerts Kurve und danmn wieder geradeaus.
+    * IRCollisionTest: Kollisionserkennung ueber die Infrarot Schnittstelle. Benoetigt den Umbau der IR Schnittstelle
+    * I2CLCD: Test eines LCD Moduls. Anbindung erfolgt ueber I2C. Auch fuer die LCD Erweiterung aus dem 2. Asuro Buch verwendbar.
+
+Compilieren der Asuro Library
+-----------------------------
+Nimmt man Änderungen an der Bibliotheks Funktionen oder den Header Files vor, muss die Bibliothek logischerweise neu uebersetzt werden, 
+damit sich die Änderungen in den Programmen auch auswirken.
+
+Um die Lib neu zu uebersetzen startet man den Make Prozess im Verzeichnis <INST_DIR>/lib mit:
+
+   make clean
+   make all
+   
+
+oder man startet die Batch-Datei lib/make-lib.bat. Das kopieren der erzeugten Asuro Objekt Library (wie bei der AsuroLib 2.7.0) 
+in den ACR-GCC Lib Ordner ist nicht mehr notwendig.
+
+Erstellen der ASURO Library Dokumentation
+-----------------------------------------
+Zur Erstellung der Asuro Library Dokumentation wird das Tool Doxygen verwendet. Um die Dokumentation selbst zu aktualisieren:
+
+    * man laedt sich die aktuelle Doxygen Version von http://www.stack.nl/~dimitri/doxygen/ herunter.
+    * Installiert Doxygen
+    * Im Installationsverzeichnis <INST_DIR> der Bibliothek startet man die Batchdatei make_doc.bat, um die Dokumentation zu aktualisieren.
+ Dazu muss man eventuell vorher den Pfad auf die Datei Doxygen.exe aktualisieren.
+
+Die erzeugte HTML Dokumentation befindet sich im Ordner /doc/html. Dort kann die Datei index.html in einen Browser geladen werden.
+
+Die Datei make_doc.log und make_doc.err werden erzeugt um den doxygen-Lauf zu ueberpruefen.
+
+Erstellen einer HTML Help Datei
+-------------------------------
+Doxygen erzeugt neben der HTML Doku zusaetzlich ein HTML Help Projekt File /doc/html/index.hhp. Daraus kann mit Hilfe des 
+HTML Help Workshop von Microsoft eine HTML Help Datei erstellt werden.
+
+    * dazu man laedt sich den HTML Help Workshop von 
+      http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc&DisplayLang=en herunter.
+    * Installiert den HTML Help Workshop durch den Start von htmlhelp.exe
+    * Zum Erzeugen des HTML Help Files startet man die Batchdatei make_hhdoc.bat. Eventuell muss man auch hiervorher den Pfad 
+      auf die Datei hhc.exe aktualisieren.
+
+Das erzeugte HTML Help File befindet sich dann unter /doc/html/index.chm
+
+Thats all folks!
+
+Autoren dieser Doku: Sternthaler, m.a.r.v.i.n
+
+

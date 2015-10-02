@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: leds.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">leds.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00015.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*   This program is free software; you can redistribute it and/or modify     *</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*   it under the terms of the GNU General Public License as published by     *</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*   the Free Software Foundation; either version 2 of the License, or        *</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*   any later version.                                                       *</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="a00004.html#a93d71b825dd56c077d5abcc1c8eec078">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00015.html#a93d71b825dd56c077d5abcc1c8eec078" title="Steuert die (lustige) mehrfarbige Status-LED.">StatusLED</a> (</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> color)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="a00004.html#ae4952024a491a1a21b8d1f954d0c7e35">GREEN_LED_OFF</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="a00004.html#a9ef0d38535a9d4da633d19ad965088a5">RED_LED_OFF</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#acfbc006ea433ad708fdee3e82996e721">GREEN</a>)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="a00004.html#a9b604f9a223b15523d200aad16c3f5bc">GREEN_LED_ON</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="a00004.html#a9ef0d38535a9d4da633d19ad965088a5">RED_LED_OFF</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#abf681265909adf3d3e8116c93c0ba179">YELLOW</a>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="a00004.html#a9b604f9a223b15523d200aad16c3f5bc">GREEN_LED_ON</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="a00004.html#a7e95f7565677b16e473240009845e0b4">RED_LED_ON</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#a8d23feea868a983c8c2b661e1e16972f">RED</a>)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="a00004.html#ae4952024a491a1a21b8d1f954d0c7e35">GREEN_LED_OFF</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="a00004.html#a7e95f7565677b16e473240009845e0b4">RED_LED_ON</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="a00004.html#a6172056141d8849a882e557e4440f1b7">  120</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00015.html#a6172056141d8849a882e557e4440f1b7" title="Steuert die vorne, nach unten zeigende, Front-LED.">FrontLED</a> (</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> status)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  PORTD = (PORTD &amp;~(1 &lt;&lt; PD6)) | (status &lt;&lt; PD6);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="a00004.html#a93d1d19e89aa6b1aab442897b024332a">  155</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED</a> (</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> left,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> right)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordflow">if</span> (left || right)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    PORTD &amp;= ~(1 &lt;&lt; PD7);               <span class="comment">// Rad-LED&#39;s OFF</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    DDRC |= (1 &lt;&lt; PC0) | (1 &lt;&lt; PC1);    <span class="comment">// Port als Output =&gt; KEINE Odometrie</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    PORTC |= (1 &lt;&lt; PC0) | (1 &lt;&lt; PC1);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">if</span> (!left)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    PORTC &amp;= ~(1 &lt;&lt; PC1);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordflow">if</span> (!right)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    PORTC &amp;= ~(1 &lt;&lt; PC0);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

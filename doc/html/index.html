@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: Die Asuro Library</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Die Asuro Library </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="image">
+<img src="asuro1.gif" alt="asuro1.gif"/>
+<div class="caption">
+Der Asuro</div></div>
+ <h1><a class="anchor" id="intro_sec"></a>
+Einfuehrung</h1>
+<p>Die Asuro Library ist eine Sammlung von C-Funktionen fuer den Roboter Asuro. Der Asuro wurde vom DLR (Deutschen Zentrum fuer Luft und Raumfahrt) <a href="http://www.dlr.de">http://www.dlr.de</a> in Oberpfaffenhofen entwickelt.</p>
+<p>Die Ur-Version der Bibliothek wurde von Jan Grewe vom DLR geschrieben. Einige User vom Roboternetz Forum <a href="http://www.roboternetz.de/phpBB2">http://www.roboternetz.de/phpBB2</a> haben die Lib erweitert.</p>
+<p>Die Asuro Lib ist ab Version 2.70 nicht mehr nur eine Quellcode Bibliothek sondern eine Objectcode Bibliothek. D.h. die Bibliothek besteht aus einem Archiv von Objekt Files, die normalerweise nicht mehr fuer jedes Projekt neu uebersetzt (compiliert) werden muss, sondern nur noch gelinkt wird. Die Bibliothek selbst muss nur neu uebersetzt werden, wenn an den Bibliotheks Funktionen Änderungen oder Definitionen in den Header Files vorgenommen wurden.</p>
+<p>Der Vorteil der Objekt Bibliothek gegenueber der Quellode Bibliothek ist die drastisch reduzierte Groesse der Hex-Files. Im Gegensatz zur Quellcode Bibliothek werden nur die Objekt Files gelinkt, die vom Benutzer Programm aufgerufen werden. Bei der Quellcode Bibliothek werden immer alle Files gelinkt, unabhaengig davon ob sie ueberhaupt benoetigt werden.</p>
+<h1><a class="anchor" id="links"></a>
+Wichtige Links</h1>
+<ul>
+<li><a href="http://sourceforge.net/projects/asuro">http://sourceforge.net/projects/asuro</a> Hier findet man immer die aktuelle Version der Asuro Bibliothek </li>
+<li><a href="http://www.roboternetz.de/phpBB2/viewforum.php?f=44">http://www.roboternetz.de/phpBB2/viewforum.php?f=44</a> Das Asuro Forum im Roboternetz </li>
+<li><a href="http://www.asurowiki.de/pmwiki/pmwiki.php">http://www.asurowiki.de/pmwiki/pmwiki.php</a> Ein Wiki ueber den Asuro</li>
+</ul>
+<p>Der Programm Code der Asuro Bibliothek steht unter der General Public License (GPL)</p>
+<h1><a class="anchor" id="preparation_sec"></a>
+Voraussetzungen</h1>
+<p>Um die Asuro Lib zu verwenden wird neben dem Asuro eine Entwicklungsumgebung fuer die Atmel AVR Prozessoren benoetigt. Der Quelllcode der Bibliothek wurde fuer die AVR-GCC Cross-Compiler Suite geschrieben. Den AVR-GCC ist kostenlos fuer diverse Plattformen (Windows, Linux, Mac) verfuegbar. Es wird die Verwendung der jeweils neuesten Version empfohlen. Die Bibliothek kommt aber auch mit alten Versionen klar. Auf der Asuro CD befindet sich z.B. eine sehr alte WinAVR Version (20030913) aus dem Jahre 2003. Die aktuelle WinAVR Version (20070525) ist hier auf jeden Fall vorzuziehen.</p>
+<h1><a class="anchor" id="downloads"></a>
+Download Links</h1>
+<ul>
+<li><a href="http://sourceforge.net/projects/winavr/">http://sourceforge.net/projects/winavr/</a> WinAVR. Der AVR Cross-Compiler fuer Windows. </li>
+<li><a href="http://www.avrfreaks.net/wiki/index.php/Documentation:AVR_GCC">http://www.avrfreaks.net/wiki/index.php/Documentation:AVR_GCC</a> AVR-GCC Homepage</li>
+</ul>
+<h1><a class="anchor" id="install_sec"></a>
+Installation</h1>
+<p>Es gibt 3 Moeglichkeiten die Asuro Lib zu downzuloaden und zu installieren. </p>
+<ul>
+<li>Download der <code>AsuroLib-vXXX-Setup.exe</code> Datei. Die Installation startet man durch Doppelklick auf die <code>AsuroLib-vX.XX-Setup.exe</code> Datei. </li>
+<li>Download <code>AsuroLib-vXXX.zip</code> Datei. Das Zip-Files wird in ein beliebiges Verzeichnis ausgepackt. </li>
+<li>Download ueber Subversion (SVN). Dazu wird ein SVN Client z.B. SmartSVN <a href="http://www.syntevo.com/smartsvn/">http://www.syntevo.com/smartsvn/</a> oder TortoiseSVN <a href="http://tortoisesvn.net/">http://tortoisesvn.net/</a> benoetigt.</li>
+</ul>
+<pre class="fragment">  SVN Einstellungen:
+  Hostname: asuro.svn.sourceforge.net
+  Port: 443
+  Protocol: HTTPS
+  Repository Path: /svnroot/asuro
+  Username: SourceForge.net username fuer SVN Schreibrechte, keiner fuer Leserechte
+  Password: SourceForge.net user password fuer SVN Schreibrechte, keines fuer Leserechte</pre><h1><a class="anchor" id="directory_sec"></a>
+Verzeichnis Struktur</h1>
+<p>Nach der Installation befindet sich folgende Verzeichnis Struktur auf der Festplatte. Das Installationsverzeichnis im folgenden <code>[INST_DIR]</code> genannt, koennte z.B. <code>C:/ASURO_SRC/AsuroLib</code> lauten.</p>
+<pre class="fragment">  C:\ASURO_SRC\AsuroLib                     Das Installations Verzeichnis
+                       \doc                 Dokumentations Verzeichnis. HTML und HTML Help Dateien
+                       \lib                 Bibliotheks Quell Dateien und Objekt Bibiothek
+                       \lib\inc             Bibliotheks Header Dateien
+                       \examples            Beispiel Projekte
+                       \examples\FirstTry   Beispiel Projekt FirstTry
+                       \examples\SelfTest   Beispiel Projekt SelfTest</pre><h1><a class="anchor" id="makefile_sec"></a>
+Wichtig! Anpassen der Makefiles</h1>
+<p>Die wichtigste Änderung der AsuroLib spielt sich im Hintergrund ab in den Makefiles. Hier wurde aufgeraeumt um die Verwendung der Bibliothek fuer eigene Projekte zu erleichtern. Es gibt nur noch eine einzige Stelle, die man aendern muss um alle Pfadangaben, die mit der Lib zu tun haben, zu aendern. Das ganze kann natuerlich nur funktionieren wenn nur noch diese neuen Makefiles verwendet werden.</p>
+<p>Aufgrund der zahlreichen Probleme, die manche Nutzer beimn Installieren der Bibliothek hatten, wurde der Installationsprozess vereinfacht. Die compilierte Asuro Bibliothek <code>'libasuro.a'</code> muss nun nicht mehr in das Lib-Verzeichnis des AVR-GCC bzw. WinAVR Compilers kopiert werden, sondern verbleibt im Verzeichnis <code>[INST_DIR]/lib</code>. Statt dessen wird im Makefile der Pfad zur Bibliothek eingetragen. Der Verzeichnisname sollte mit normalem Slash (/) angegeben sein nicht mit Backslash (). In den aktuellen Makefiles geschieht dies (siehe Examples Ordner) durch folgende Zeilen: Hinweis: ein # am Anfang in einer Zeile eines Makefiles bedeutet. Dies ist ein Kommentar, kein Kommando zum Ausfuehren </p>
+<pre class="fragment">  # additional Include path for libraries
+  LIBPATH = ../../lib</pre><p> In vorigen Beipiel wurden relative Pfade verwendet. Das geht solange gut, solange alle Projekte wie die Beispiel Projekte aus der Asuro Lib in der gleichen Verzeichnisebene (2 Verzeichnisebenen tiefer als die lib) liegen. Ist dies nicht der Fall, sollte man statt dessen absolute Pfade verwenden, wie z.B.: </p>
+<pre class="fragment">  # additional Include path for libraries
+  LIBPATH = C:/ASURO_SRC/AsuroLib/lib</pre><p> Falls man die Bibliothek in ein Verzeichnis mit Leerzeichen installiert hat, muss man die Pfadangaben in Hochkommas einfuegen </p>
+<pre class="fragment">  # additional Include path for libraries
+  LIBPATH = "C:/Eigene Dateien/ASURO_SRC/AsuroLib/lib"</pre><h1><a class="anchor" id="project_sec"></a>
+Neue Projekte</h1>
+<p>Will man ein eigenes Programm fuer den Asuro erstellen, welches die Asuro Bibliothek verwendet kopiert man besten den kompletten Ordner <code>[INST_DIR]/examples/FirstTry</code> in einen neuen Ordner. Dann muss man nur noch das Makefile wie oben beschrieben anpassen, seine Programm schreiben und sollte es dann uebersetzen koennen. In dem Projekt Ordner duerfen sich aber keine Überbleibsel von vorherigen Asuro Libs (<a class="el" href="a00003.html" title="Init- und Interrupt-Funktionen der Asuro Library.  Timer2 wird mit 36 kHz betrieben, im Gegensatz zur ausgelieferten  Version mit 72 kHz.">asuro.c</a>, <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a>) befnden. Der Compiler und Linker uebersetzt/bindet sonst naemlich diese alten Dateien ein. Auch sollte die <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a> immer in Hochkommans eigebunden werden, nicht in spitzen Klammern. Header Dateien in spitzen Klammern werden als System Include Dateien im AVR Include Verzeichnis gesucht.</p>
+<p>Enthaelt das eigene Projekt zusaetzliche Quelldateien (ausser test.c) muessen diese ebenfalls im Makefile eingetragen werden. Als Beispiel Projekt bietet sich hier das Makefile aus dem Selbsttest an <code>[INST_DIR]/examples/SelfTest</code>. Hier werden noch mehrere Quelldateien dazugefuegt. </p>
+<pre class="fragment"> # If there is more than one source file, append them above, or adjust and
+ # uncomment the following:
+ SRC += asuro.c \
+ Test.c main.c \
+ Demo.c LineDemo.c IRDemo.c PCDemo.c RechteckDemo.c </pre><p> Auch der Name der Zieldatei (sonst immer test.hex) wurde hier angepasst. Es muss natuerlich eine Quelldatei geleichen Namens existieren. </p>
+<pre class="fragment">  # Target file name (without extension).
+  TARGET = SelfTest</pre><h1><a class="anchor" id="examples_sec"></a>
+Beispiel Projekte</h1>
+<p>Im Ordner <code>[INST_DIR]/examples</code> befiden sich einige Beispiel Projekte, die sich fuer eigene Projekte anpassen oder erweitern lassen bzw. als Vorlage fuere eigene Projekte dienen sollen.</p>
+<ul>
+<li><b>FirstTry</b>: Ein Dummy Projekt, das nichts tut als die Asuro Hardware zu initialisieren und dann ein Enlosschleife auszufuehren. Der ideale Einstieg fuer eigene Projekte. Insbesondere das Makefile kann fuer die meissten Projekte verwendet werden. </li>
+<li><b>SelfTest</b>: Der Asuro Selbsttest, wie er sich auch auf eienm fabrikneuem Asuro befindet. Allerdinmgs angepasst fuer die AsuroLib und mit * dem Unterschied, dass nach einmaliger Ausfuehrung des Selbsttests, die versteckten Demo Programme ausgefuehrt werden koennen. Taste 1 = LineDemo, Taste 2 = RechteckDemo, Taste 3 = PCDemo, Taste 4 = IRDemo (entspricht der RC5Demo). </li>
+<li><b>EncoderTest</b>: Testet die Encoder. </li>
+<li><b>TasterTest</b>: Testet die Tastsensoren und gibt die gedrueckten Tasten auf dem Terminal aus. </li>
+<li><b>LineTest</b>: Liniensensor Test. Entspricht der LineDemo aus dem Selbsttest </li>
+<li><b>RC5Test</b>: Den Asuro ueber eine RC5 kompatible Infrarot Fernbedienung steuern. entspricht der IRDemo aus dem Selbsttest. Alle programmierbaren Universalfernbedienungen beherschen das RC5 Protokoll von Philips. </li>
+<li><b>MotorTest</b>: Testet die Motor Steuerfunktionen Go und Turn </li>
+<li><b>KollisionTest</b>: Kollisionserkennung ueber die Taster. Bei KLollision faehrt der Asuro ein rueckwaerts Kurve und danmn wieder geradeaus. </li>
+<li><b>IRCollisionTest</b>: Kollisionserkennung ueber die Infrarot Schnittstelle. Benoetigt den Umbau der IR Schnittstelle </li>
+<li><b>I2CLCD</b>: Test eines LCD Moduls. Anbindung erfolgt ueber I2C. Auch fuer die LCD Erweiterung aus dem 2. Asuro Buch verwendbar.</li>
+</ul>
+<h1><a class="anchor" id="compile_sec"></a>
+Compilieren der Asuro Library</h1>
+<p>Nimmt man Änderungen an der Bibliotheks Funktionen oder den Header Files vor, muss die Bibliothek logischerweise neu uebersetzt werden, damit sich die Änderungen in den Programmen auch auswirken.</p>
+<p>Um die Lib neu zu uebersetzen startet man den Make Prozess im Verzeichnis <code>[INST_DIR]/lib</code> mit: </p>
+<pre class="fragment">  make clean
+  make all</pre><p> oder man startet die Batch-Datei <code>lib/make-lib.bat</code>. Das kopieren der erzeugten Asuro Objekt Library (wie bei der AsuroLib 2.7.0) in den ACR-GCC Lib Ordner ist nicht mehr notwendig.</p>
+<h1><a class="anchor" id="make_doc"></a>
+Erstellen der ASURO Library Dokumentation</h1>
+<p>Zur Erstellung der Asuro Library Dokumentation wird das Tool Doxygen verwendet. Um die Dokumentation selbst zu aktualisieren: </p>
+<ul>
+<li>man laedt sich die aktuelle Doxygen Version von <a href="http://www.stack.nl/~dimitri/doxygen/">http://www.stack.nl/~dimitri/doxygen/</a> herunter. </li>
+<li>Installiert Doxygen </li>
+<li>Im Installationsverzeichnis <code>[INST_DIR]</code> der Bibliothek startet man die Batchdatei <code>make_doc.bat</code>, um die Dokumentation zu aktualisieren. Dazu muss man eventuell vorher den Pfad auf die Datei <code>Doxygen.exe</code> aktualisieren.</li>
+</ul>
+<p>Die erzeugte HTML Dokumentation befindet sich im Ordner <code>/doc/html</code>. Dort kann die Datei index.html in einen Browser geladen werden.</p>
+<p>Die Datei <code>make_doc.log</code> und <code>make_doc.err</code> werden erzeugt um den doxygen-Lauf zu ueberpruefen.</p>
+<h1><a class="anchor" id="make_hhdoc"></a>
+Erstellen einer HTML Help Datei</h1>
+<p>Doxygen erzeugt neben der HTML Doku zusaetzlich ein HTML Help Projekt File <code>/doc/html/index.hhp</code>. Daraus kann mit Hilfe des HTML Help Workshop von Microsoft eine HTML Help Datei erstellt werden. </p>
+<ul>
+<li>dazu man laedt sich den HTML Help Workshop von <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc&DisplayLang=en">http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc&amp;DisplayLang=en</a> herunter. </li>
+<li>Installiert den HTML Help Workshop durch den Start von <code>htmlhelp.exe</code> </li>
+<li>Zum Erzeugen des HTML Help Files startet man die Batchdatei <code>make_hhdoc.bat</code>. Eventuell muss man auch hiervorher den Pfad auf die Datei <code>hhc.exe</code> aktualisieren.</li>
+</ul>
+<p>Das erzeugte HTML Help File befindet sich dann unter <code>/doc/html/index.chm</code></p>
+<h1><a class="anchor" id="tshoot"></a>
+Troubleshooting</h1>
+<p>Falls es doch noch zu Fehlern oder Warnungen beim Übersetzen gibt, hier noch einige Hinweise:</p>
+<pre class="fragment"> warning: pointer targets in passing argument 1 of 'SerWrite' differ in signedness</pre><p> Diese Warnung gibt es bei Verwendung des neuesten AVR Compilers. Das bedeutet nur, dass man der Funktion <code>SerWrite</code> einen String als Parameter uebergeben hat. <code>SerWrite</code> erwartet aber <code>unsigned char *</code> als Parameter. Fuer die Ausgabe von Strings ist die Funktion <code>SerPrint</code> besser geeignet. Man spart sich zudem das Zaehlen der auszugebenden Zeichen. </p>
+<pre class="fragment"> make: *** No rule to make target `test.hex', needed by `all'.  Stop. </pre><p> Dieser Fehler kann viele Ursachen haben. Meistens fehlt eine Header-Datei o.ae. Evtl. steht vor dieser Fehlermeldung noch ein Hinweis warum das Übersetzen nicht funktioniert. Kann der Compiler z.B. die <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a> nicht finden, stimmt wahrscheinlich der <code>LIBPATH</code> im Makefile nicht. Naeheres siehe unter Anpassen der Makefiles Oft hilft auch ein Make Clean (durch Aufruf von Make-Clean.bat) und ploetzlich geht das Übersetzen wieder ohne Fehler.</p>
+<h1><a class="anchor" id="history"></a>
+Versions History</h1>
+<pre class="fragment">ASURO Library Versions History 
+==============================
+29.03.2008 Version 2.8.0
+* Anpassungen fuer ATmega168
+* neue Funktion ReadADC zur A/D Wandler Abfrage
+* neue Funktion PrintLCD_p zur Ausgabe von Strings aus dem Programmspeicher
+* neue Funktion SetCharLCD zum Setzen von Sonderzeichen
+* neue Funktion PollSwitchLCD zur Abfrage der Tasten des Arexx LCD 
+* neue Funktion MyMotorSpeed die Korrekturwerte aus der myasuro.h berücksichtigt.
+* neue Funktion SerPrint_p zur Ausgabe von Strings aus dem Programmspeicher
+* UART Baudrate einstellbar durch Define
+* Interrupt User Funktionen für Timer und A/D Wandler      
+* AVR Studio Projektfiles für alle Beispielprojekte
+
+16.11.2007 Version 2.7.1
+* Installationsprogramm vereinfacht (ohne Abfrage ob WinAVR installiert ist)  (Autor: m.a.r.v.i.n)
+* Pfadangaben in Makefiles geändert (Autor: m.a.r.v.i.n)
+* Projekt Files für AVR Studio und Programmers Notepad (Autor: m.a.r.v.i.n)
+* PrintFloat Funktion (Autor: M1.R)
+* Unterstützung der Ultraschallerweiterung (Autor: dopez)
+* kleinere Bugfixes (Variablen volatile gemacht, falls diese in
+Interruptfunktionen verändert werden) (Autoren: Sternthaler, m.a.r.v.i.n)
+09.04.2007 Version 2.7.0rc3
+* I2C Funktionen. I2C Master Emulation (Autor raid_ox)
+* LCD Funktionen. LCD Modul Anschluss ueber I2C Port Erweiterungs Chip PCF8574 (Autor raid_ox) 
+* RC5 Funktionen. Fernbedienung ueber RC5 kompatibel Fernbedienungen (Autor m.ar.v.i.n)
+* SelfTest Demomode wieder mit IRDemo und RechteckDemo. Demomode startet, wenn
+  nach dem Einschalten eine Taste gedrückt wurde.
+* teilweise englische Dokumentation (Autoren: MadMan2k, m.ar.v.i.n, raid_ox)
+
+25.01.2007 Version 2.7.0rc2
+* intro.c fuer Doxygen HTML Doku mainpage (Autor m.a.r.v.i.n)
+* Kommentare zur Doku ueber Doxygen in adc.c (Autor Sternthaler)
+
+19.01.2007 Version 2.7.0rc1
+* Umstellung der Asuro Lib auf eine Objekt Library (Autor m.a.r.v.i.n)
+
+07.01.2007 Version 2.7.0beta
+* void Go(int distance, int power) mm Einheit als Wegstreckenangabe (Autor stochri)
+* void SetMotorPower(int8_t leftpwm, int8_t rightpwm )  (Autor stochri)
+  Funktion zum setzen der PWM Werte, negative Zahlen für Rückwärtsgang. 
+  Vorteil MotorDir muss nicht getrennt aufgerufen werden, der Entwurf von Reglern vereinfacht sich.
+* void SerPrint(unsigned char *data) 0-terminierte Strings ausgeben
+  man muss nicht mehr die Buchstaben von Hand zählen
+* void Sound(uint16_t freq, uint16_t duration_msec, uint8_t amplitude) Einführung einer Sound Funktion (Autor stochri)
+
+20.11.2006 Version 2.6.1
+* Bugfixes: (Autor: m.a.r.v.i.n)
+** PrinInt Funktion: evtl. Fehler beim Flashen mit RS232/IR Transceiver, 
+   wg. Folge von 0-Bytes im erzeugten Hex-File. 
+   Bug Report von francesco 
+** SIGNAL (SIG_ADC): static Variable toggle initialisiert
+   Bug Report von Rolf_Ebert 
+* Warnings entfernt wg. obsolete Header File bei neueren WinAVR Versionen. 
+
+28.09.2005 Version 2.6
+* Doxygen Kommentare. (Autor: m.a.r.v.i.n)
+
+31.07.2005 Version 2.5
+* Turn() Funktion mit speed Parameter. (Autor: Andun)
+ 
+30.07.2005 Version 2.4
+* Erweiterungen, Go() und Turn() Funktionen. (Autoren: stochri, Andun)
+
+10.06.2005 Version 2.3
+* Anpassungen wg. Umbau der Infrarot Schnittstelle als Kollisionsdetektor (Autor: waste)
+	count36kHz ersetzt count72kHz. Timer2 geändert.  
+
+31.03.2005 Version 2.2
+* Erweiterte Funktionen (Autor: weja - Robotrixer Buxtehude)
+	Kurzbeschreibung der Funktionen in der neuen asuro.h, asuro.c vom 31.03.05
+
+  Leider konnten die neuen Funktionen nicht mehr in einer Extradatei untergebracht
+	werden, weil mehrere "alte" Funktionen verändert wurden, damit z.B. die Systemzeit
+	integriert werden konnte. Auch wurde die PollSwitch Funktion vom Ballast der Fließkomma-
+	berechnung befreit. Nun ist wieder mehr Platz für eigenen Code vorhanden.
+** EncoderInit()
+   Dieser Befehl installiert die Interrupt Funktion für den automatischen Wegzähler.
+** EncoderStart()
+   Startet die automatische Zählung nach
+** EncoderStop()
+   neu. Diese Stopp Funktion hält den Zähler an
+** EncoderSet(int,int)
+   Setzt die Variablen encoder[0] und encoder[1]. Z.B.: EncoderSet(0,0) setzt beide
+	 Variablen auf Null.
+** switches
+   ist eine Variable, die, wenn Startswitch() gestartet wurde, auf wahr gesetzt wird, 
+   sobald eine Taste gedrückt wurde. gleichzeitig wird die Tastenüberwachung wieder 
+   abgeschaltet. Beispiel:
+   Start_Switch();
+   while (!switches){;} //wartet auf Tastendruck
+   // an dieser Stelle kann mit Pollswitch geprüft werden
+   // welche Taste gedrückt wurde, wenn nötig.
+   switches=FALSE;  // für eine neuen Aufruf von Startswitch()
+** Msleep(int)
+   wartet die angegebene Zeit in ms. Z.B warte 10 Sekunden: Msleep(10000);
+** Gettime()
+   Gibt die Zeit, die seit dem letzten Start des Asuro vergangen ist als unsigned long zurück.
+   Die Angabe erfolgt auch hier in Millisekunden.
+** PrintInt(int)
+   Eine kleine Ausgabehilfe für Integerwerte.
+   Beispiel Zeilenweise Ausgabe der encoder Werte:
+   PrintInt(encoder[0]);SerWrite("   ",3);PrintInt(encoder[1]);SerWrite("\n\r",2);
+
+10.11.2003 Version 2.1
+* Original Version von der ASURO CD (Autor: Jan Grewe - DLR)
+</pre><h1><a class="anchor" id="authors"></a>
+Autoren der Bibliothek</h1>
+<pre class="fragment">contributors, in alphabetical order:
+
+Andun
+Jan Grewe
+MadMan2k
+m.a.r.v.i.n
+raid_ox 
+Robotrixer
+Sternthaler
+Stochri
+Waste 
+</pre><h1><a class="anchor" id="authors_doc"></a>
+Autoren dieser Doku:</h1>
+<p>m.a.r.v.i.n <br/>
+ Sternthaler </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

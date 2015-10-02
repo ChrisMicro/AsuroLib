@@ -1,0 +1,106 @@
+ASURO Library Versions History 
+==============================
+29.03.2008 Version 2.8.0
+* Anpassungen fuer ATmega168
+* neue Funktion ReadADC zur A/D Wandler Abfrage
+* neue Funktion PrintLCD_p zur Ausgabe von Strings aus dem Programmspeicher
+* neue Funktion SetCharLCD zum Setzen von Sonderzeichen
+* neue Funktion PollSwitchLCD zur Abfrage der Tasten des Arexx LCD 
+* neue Funktion MyMotorSpeed die Korrekturwerte aus der myasuro.h berücksichtigt.
+* neue Funktion SerPrint_p zur Ausgabe von Strings aus dem Programmspeicher
+* UART Baudrate einstellbar durch Define
+* Interrupt User Funktionen für Timer und A/D Wandler      
+* AVR Studio Projektfiles für alle Beispielprojekte
+
+16.11.2007 Version 2.7.1
+* Installationsprogramm vereinfacht (ohne Abfrage ob WinAVR installiert ist)  (Autor: m.a.r.v.i.n)
+* Pfadangaben in Makefiles geändert (Autor: m.a.r.v.i.n)
+* Projekt Files für AVR Studio und Programmers Notepad (Autor: m.a.r.v.i.n)
+* PrintFloat Funktion (Autor: M1.R)
+* Unterstützung der Ultraschallerweiterung (Autor: dopez)
+* kleinere Bugfixes (Variablen volatile gemacht, falls diese in
+Interruptfunktionen verändert werden) (Autoren: Sternthaler, m.a.r.v.i.n)
+09.04.2007 Version 2.7.0rc3
+* I2C Funktionen. I2C Master Emulation (Autor raid_ox)
+* LCD Funktionen. LCD Modul Anschluss ueber I2C Port Erweiterungs Chip PCF8574 (Autor raid_ox) 
+* RC5 Funktionen. Fernbedienung ueber RC5 kompatibel Fernbedienungen (Autor m.ar.v.i.n)
+* SelfTest Demomode wieder mit IRDemo und RechteckDemo. Demomode startet, wenn
+  nach dem Einschalten eine Taste gedrückt wurde.
+* teilweise englische Dokumentation (Autoren: MadMan2k, m.ar.v.i.n, raid_ox)
+
+25.01.2007 Version 2.7.0rc2
+* intro.c fuer Doxygen HTML Doku mainpage (Autor m.a.r.v.i.n)
+* Kommentare zur Doku ueber Doxygen in adc.c (Autor Sternthaler)
+
+19.01.2007 Version 2.7.0rc1
+* Umstellung der Asuro Lib auf eine Objekt Library (Autor m.a.r.v.i.n)
+
+07.01.2007 Version 2.7.0beta
+* void Go(int distance, int power) mm Einheit als Wegstreckenangabe (Autor stochri)
+* void SetMotorPower(int8_t leftpwm, int8_t rightpwm )  (Autor stochri)
+  Funktion zum setzen der PWM Werte, negative Zahlen für Rückwärtsgang. 
+  Vorteil MotorDir muss nicht getrennt aufgerufen werden, der Entwurf von Reglern vereinfacht sich.
+* void SerPrint(unsigned char *data) 0-terminierte Strings ausgeben
+  man muss nicht mehr die Buchstaben von Hand zählen
+* void Sound(uint16_t freq, uint16_t duration_msec, uint8_t amplitude) Einführung einer Sound Funktion (Autor stochri)
+
+20.11.2006 Version 2.6.1
+* Bugfixes: (Autor: m.a.r.v.i.n)
+** PrinInt Funktion: evtl. Fehler beim Flashen mit RS232/IR Transceiver, 
+   wg. Folge von 0-Bytes im erzeugten Hex-File. 
+   Bug Report von francesco 
+** SIGNAL (SIG_ADC): static Variable toggle initialisiert
+   Bug Report von Rolf_Ebert 
+* Warnings entfernt wg. obsolete Header File bei neueren WinAVR Versionen. 
+
+28.09.2005 Version 2.6
+* Doxygen Kommentare. (Autor: m.a.r.v.i.n)
+
+31.07.2005 Version 2.5
+* Turn() Funktion mit speed Parameter. (Autor: Andun)
+ 
+30.07.2005 Version 2.4
+* Erweiterungen, Go() und Turn() Funktionen. (Autoren: stochri, Andun)
+
+10.06.2005 Version 2.3
+* Anpassungen wg. Umbau der Infrarot Schnittstelle als Kollisionsdetektor (Autor: waste)
+	count36kHz ersetzt count72kHz. Timer2 geändert.  
+
+31.03.2005 Version 2.2
+* Erweiterte Funktionen (Autor: weja - Robotrixer Buxtehude)
+	Kurzbeschreibung der Funktionen in der neuen asuro.h, asuro.c vom 31.03.05
+
+  Leider konnten die neuen Funktionen nicht mehr in einer Extradatei untergebracht
+	werden, weil mehrere "alte" Funktionen verändert wurden, damit z.B. die Systemzeit
+	integriert werden konnte. Auch wurde die PollSwitch Funktion vom Ballast der Fließkomma-
+	berechnung befreit. Nun ist wieder mehr Platz für eigenen Code vorhanden.
+** EncoderInit()
+   Dieser Befehl installiert die Interrupt Funktion für den automatischen Wegzähler.
+** EncoderStart()
+   Startet die automatische Zählung nach
+** EncoderStop()
+   neu. Diese Stopp Funktion hält den Zähler an
+** EncoderSet(int,int)
+   Setzt die Variablen encoder[0] und encoder[1]. Z.B.: EncoderSet(0,0) setzt beide
+	 Variablen auf Null.
+** switches
+   ist eine Variable, die, wenn Startswitch() gestartet wurde, auf wahr gesetzt wird, 
+   sobald eine Taste gedrückt wurde. gleichzeitig wird die Tastenüberwachung wieder 
+   abgeschaltet. Beispiel:
+   Start_Switch();
+   while (!switches){;} //wartet auf Tastendruck
+   // an dieser Stelle kann mit Pollswitch geprüft werden
+   // welche Taste gedrückt wurde, wenn nötig.
+   switches=FALSE;  // für eine neuen Aufruf von Startswitch()
+** Msleep(int)
+   wartet die angegebene Zeit in ms. Z.B warte 10 Sekunden: Msleep(10000);
+** Gettime()
+   Gibt die Zeit, die seit dem letzten Start des Asuro vergangen ist als unsigned long zurück.
+   Die Angabe erfolgt auch hier in Millisekunden.
+** PrintInt(int)
+   Eine kleine Ausgabehilfe für Integerwerte.
+   Beispiel Zeilenweise Ausgabe der encoder Werte:
+   PrintInt(encoder[0]);SerWrite("   ",3);PrintInt(encoder[1]);SerWrite("\n\r",2);
+
+10.11.2003 Version 2.1
+* Original Version von der ASURO CD (Autor: Jan Grewe - DLR)

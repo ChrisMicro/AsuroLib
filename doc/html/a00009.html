@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: i2c.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_e28231055b5b43926a736e18480856e7.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">i2c.h-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Definitionen und Funktionen zum I2C Bus.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00019_source.html">myasuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r i2c.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00041.png" border="0" usemap="#i2c_8h" alt=""/></div>
+<map name="i2c_8h" id="i2c_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthÃ¤lt:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00042.png" border="0" usemap="#i2c_8hdep" alt=""/></div>
+<map name="i2c_8hdep" id="i2c_8hdep">
+</map>
+</div>
+</div>
+<p><a href="a00009_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:ada74e7db007a68e763f20c17f2985356"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#ada74e7db007a68e763f20c17f2985356">READ</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ada74e7db007a68e763f20c17f2985356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10f470e996d0f51210d24f442d25e1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#aa10f470e996d0f51210d24f442d25e1e">WRITE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa10f470e996d0f51210d24f442d25e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6489887e08bff4887d0bc5dcf214d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a6f6489887e08bff4887d0bc5dcf214d8">ACK</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a6f6489887e08bff4887d0bc5dcf214d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff3e502ffb5d509612c6c6741de45cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a7ff3e502ffb5d509612c6c6741de45cc">NAK</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a7ff3e502ffb5d509612c6c6741de45cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6890442e1cc24a0d61597a13576b8727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>&#160;&#160;&#160;<a class="el" href="a00019.html#a0e216b818661500e5b22049a74b5fd28">MY_I2C_SDA</a></td></tr>
+<tr class="separator:a6890442e1cc24a0d61597a13576b8727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ffc4751921608954bb7a5687566b2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>&#160;&#160;&#160;<a class="el" href="a00019.html#ada3072d509051c76b9a7020be5737315">MY_I2C_SCL</a></td></tr>
+<tr class="separator:ab5ffc4751921608954bb7a5687566b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bb6708250d17ee2118d29e4865a653"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a16bb6708250d17ee2118d29e4865a653">SDA_DDR</a>&#160;&#160;&#160;DDRC</td></tr>
+<tr class="separator:a16bb6708250d17ee2118d29e4865a653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5020a160f5b8f0a1697cfadbe778424b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a5020a160f5b8f0a1697cfadbe778424b">SCL_DDR</a>&#160;&#160;&#160;DDRC</td></tr>
+<tr class="separator:a5020a160f5b8f0a1697cfadbe778424b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526d580d324bce60a3e964066fae77e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a526d580d324bce60a3e964066fae77e3">SDA_PIN</a>&#160;&#160;&#160;PINC</td></tr>
+<tr class="separator:a526d580d324bce60a3e964066fae77e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c967e78bcedcee909a70764f879433"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a06c967e78bcedcee909a70764f879433">SCL_PIN</a>&#160;&#160;&#160;PINC</td></tr>
+<tr class="separator:a06c967e78bcedcee909a70764f879433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47af8b0e510ef86f6b69e120ac7f9de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#ac47af8b0e510ef86f6b69e120ac7f9de">SDA_PORT</a>&#160;&#160;&#160;PORTC</td></tr>
+<tr class="separator:ac47af8b0e510ef86f6b69e120ac7f9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac290a46b6e8e07654c81d01d5e5f288b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#ac290a46b6e8e07654c81d01d5e5f288b">SCL_PORT</a>&#160;&#160;&#160;PORTC</td></tr>
+<tr class="separator:ac290a46b6e8e07654c81d01d5e5f288b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700f88377bf36711b711f69b06c52f5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>&#160;&#160;&#160;asm volatile(&quot;nop&quot;)         /*&lt;! No Operation */</td></tr>
+<tr class="separator:a700f88377bf36711b711f69b06c52f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7060032aeabf82212034fa3c6734dd03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>&#160;&#160;&#160;<a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>     /*&lt;! 1/4 Delay */</td></tr>
+<tr class="separator:a7060032aeabf82212034fa3c6734dd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75aea9b6d58e7eb9563a6e3692c938d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>&#160;&#160;&#160;<a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>; <a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>                  /*&lt;! 1/2 Delay */</td></tr>
+<tr class="separator:a75aea9b6d58e7eb9563a6e3692c938d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d869494fd825e8faea34ff8d8828c86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>&#160;&#160;&#160;<a class="el" href="a00009.html#ac47af8b0e510ef86f6b69e120ac7f9de">SDA_PORT</a> |= (1 &lt;&lt; <a class="el" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>)</td></tr>
+<tr class="separator:a9d869494fd825e8faea34ff8d8828c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b26531e9d698e80b793be8f1a760633"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>&#160;&#160;&#160;<a class="el" href="a00009.html#ac47af8b0e510ef86f6b69e120ac7f9de">SDA_PORT</a> &amp;= ~(1 &lt;&lt; <a class="el" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>)</td></tr>
+<tr class="separator:a6b26531e9d698e80b793be8f1a760633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5159cadba617a0d6dbb6728a0eff57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>&#160;&#160;&#160;<a class="el" href="a00009.html#ac290a46b6e8e07654c81d01d5e5f288b">SCL_PORT</a> |= (1 &lt;&lt; <a class="el" href="a00009.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>)</td></tr>
+<tr class="separator:a4b5159cadba617a0d6dbb6728a0eff57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69f13e5dfa3f0378b9c5dfcb6be7870"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a>&#160;&#160;&#160;<a class="el" href="a00009.html#ac290a46b6e8e07654c81d01d5e5f288b">SCL_PORT</a> &amp;= ~(1 &lt;&lt; <a class="el" href="a00009.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>)</td></tr>
+<tr class="separator:ab69f13e5dfa3f0378b9c5dfcb6be7870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44543a9be6cb1c221137bd8f774df69f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a44543a9be6cb1c221137bd8f774df69f">SCL_TOGGLE</a>&#160;&#160;&#160;<a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>; <a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>; <a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>; <a class="el" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a></td></tr>
+<tr class="separator:a44543a9be6cb1c221137bd8f774df69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b22ba2f26e18d7a0b9b8d91c9ff1cb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a4b22ba2f26e18d7a0b9b8d91c9ff1cb8">I2C_START</a>&#160;&#160;&#160;<a class="el" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>; <a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>; <a class="el" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a></td></tr>
+<tr class="separator:a4b22ba2f26e18d7a0b9b8d91c9ff1cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97924b7877c5f26955e82ab97470b95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#ae97924b7877c5f26955e82ab97470b95">I2C_STOP</a>&#160;&#160;&#160;<a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>; <a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>; <a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>; <a class="el" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>; <a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a></td></tr>
+<tr class="separator:ae97924b7877c5f26955e82ab97470b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:adfa0a56b08e1b36bd8bc3ae554bf4624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#adfa0a56b08e1b36bd8bc3ae554bf4624">InitI2C</a> (void)</td></tr>
+<tr class="memdesc:adfa0a56b08e1b36bd8bc3ae554bf4624"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Bus Initialisieren.  <a href="#adfa0a56b08e1b36bd8bc3ae554bf4624"></a><br/></td></tr>
+<tr class="separator:adfa0a56b08e1b36bd8bc3ae554bf4624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3f6123280d57eda2f8eea70e662f18"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#abc3f6123280d57eda2f8eea70e662f18">WriteI2C</a> (unsigned char byte)</td></tr>
+<tr class="memdesc:abc3f6123280d57eda2f8eea70e662f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Daten ueber I2C schreiben.  <a href="#abc3f6123280d57eda2f8eea70e662f18"></a><br/></td></tr>
+<tr class="separator:abc3f6123280d57eda2f8eea70e662f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889a923c8dda51bd915113a5323ce382"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a889a923c8dda51bd915113a5323ce382">ReadI2C</a> (unsigned char nak)</td></tr>
+<tr class="memdesc:a889a923c8dda51bd915113a5323ce382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Daten aus I2C Bus lesen.  <a href="#a889a923c8dda51bd915113a5323ce382"></a><br/></td></tr>
+<tr class="separator:a889a923c8dda51bd915113a5323ce382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399a9027813f17cccb71b601d265c31e"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a399a9027813f17cccb71b601d265c31e">StartI2C</a> (unsigned char device)</td></tr>
+<tr class="memdesc:a399a9027813f17cccb71b601d265c31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Datenaustausch starten.  <a href="#a399a9027813f17cccb71b601d265c31e"></a><br/></td></tr>
+<tr class="separator:a399a9027813f17cccb71b601d265c31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d356873f4a3abafb7687a2ca57663c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html#a7d356873f4a3abafb7687a2ca57663c7">StopI2C</a> (void)</td></tr>
+<tr class="memdesc:a7d356873f4a3abafb7687a2ca57663c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Datenaustausch Stoppen.  <a href="#a7d356873f4a3abafb7687a2ca57663c7"></a><br/></td></tr>
+<tr class="separator:a7d356873f4a3abafb7687a2ca57663c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Definitionen und Funktionen zum I2C Bus. </p>
+<dl class="section user"><dt>I2C Einfuehrung</dt><dd>I2C ist ein 2 Draht Bus-System das von Philips entwickelt wurde. Dazu wird lediglich eine Datenleitung und eine Taktleitung benötigt (und natuerlich eine gemeinsame Masseleitung). Es gibt eine Reihe von ICs mit I2C Bus Schnittstelle (Digital Port Erweiterungen, A/D Wandler, EEPROMs etc.) Damit ergibt sich eine Vielzahl von Moeglichkeiten um die begrenzten IO Ressourcen des ASUROs zu erweitern. Bis zu 127 Teilnehmer sind an einem I2C Bus anschliessbar. Dazu werden lediglich 2 Port Pis des ASUROs benötigt. Bie meissten ATmel AVR Prozessoren unterstuetzen die I2C Schnittstelle per Hardware, TWI (Two Wire Interface) genannt.</dd></dl>
+<dl class="section user"><dt>I2C am ASURO</dt><dd>Die Hardware TWI (I2C) Ports sind beim ASURO leider durch den Batterie Abfrage A/D Port und dem Tastsensor A/D Port belegt. Um die I2C Schnittstelle ohne Umbau des ASUROs zu realisieren, wird der I2C BUs mit Software emuliert. Dabei werden füer den I2C Bus die Ports der ASURO Erweiterungsplatine verwendet. Dies sind ADC2 fuer die I2C Taktleitung (SCL) und ADC3 fuer die I2C Datenleitung (SDA). Leider geht dadurch die Funktion des Liniensensors verloren. Da die beiden Fototransistoren ebenfalls die Ports ADC2 und ADC3 belegen. Ausloeten braucht man die Fototransistoren zum Glueck nicht.</dd></dl>
+<dl class="section user"><dt>I2C Anwendungen</dt><dd>Ueber den I2C Bus lassen sich z.B. folgende Erweiterungen realisieren. <ul>
+<li>Eine Digitalport Erweiterung, z.B. 8 IO Ports mit dem PCF8574 </li>
+<li>Eine Analogport Erweiterung, z.B. 4 A/D Ports und 1 D/A Port mit dem PCF8594 </li>
+<li>Ein LCD Modul mithilfe der Digitalporterweiterung </li>
+<li>Ein weiterer AVR Prozessor als I2C Slave, als universelle Porterweiterung.</li>
+</ul>
+</dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>raid_ox</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V001 - 17.02.2007 - raid_ox<br/>
+ Erste Implementierung </dd>
+<dd>
+V002 - 10.02.2007 - m.a.r.v.i.n<br/>
+ Absplittung von <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a> in eigene Header-Datei,<br/>
+ Doxygen Kommentare (KEINE Funktionsänderung) </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+</div><h2 class="groupheader">Makro-Dokumentation</h2>
+<a class="anchor" id="a6f6489887e08bff4887d0bc5dcf214d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACK&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00075">75</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75aea9b6d58e7eb9563a6e3692c938d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HDEL&#160;&#160;&#160;<a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>; <a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>                  /*&lt;! 1/2 Delay */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00092">92</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b22ba2f26e18d7a0b9b8d91c9ff1cb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_START&#160;&#160;&#160;<a class="el" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>; <a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>; <a class="el" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00101">101</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae97924b7877c5f26955e82ab97470b95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_STOP&#160;&#160;&#160;<a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>; <a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>; <a class="el" href="a00009.html#a7060032aeabf82212034fa3c6734dd03">QDEL</a>; <a class="el" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>; <a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00102">102</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ff3e502ffb5d509612c6c6741de45cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAK&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00076">76</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a700f88377bf36711b711f69b06c52f5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOP&#160;&#160;&#160;asm volatile(&quot;nop&quot;)         /*&lt;! No Operation */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00090">90</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7060032aeabf82212034fa3c6734dd03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QDEL&#160;&#160;&#160;<a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>; <a class="el" href="a00009.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>     /*&lt;! 1/4 Delay */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00091">91</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ada74e7db007a68e763f20c17f2985356"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00073">73</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5ffc4751921608954bb7a5687566b2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL&#160;&#160;&#160;<a class="el" href="a00019.html#ada3072d509051c76b9a7020be5737315">MY_I2C_SCL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00081">81</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5020a160f5b8f0a1697cfadbe778424b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_DDR&#160;&#160;&#160;DDRC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00084">84</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b5159cadba617a0d6dbb6728a0eff57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_HI&#160;&#160;&#160;<a class="el" href="a00009.html#ac290a46b6e8e07654c81d01d5e5f288b">SCL_PORT</a> |= (1 &lt;&lt; <a class="el" href="a00009.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00097">97</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab69f13e5dfa3f0378b9c5dfcb6be7870"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_LO&#160;&#160;&#160;<a class="el" href="a00009.html#ac290a46b6e8e07654c81d01d5e5f288b">SCL_PORT</a> &amp;= ~(1 &lt;&lt; <a class="el" href="a00009.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00098">98</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06c967e78bcedcee909a70764f879433"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_PIN&#160;&#160;&#160;PINC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00086">86</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac290a46b6e8e07654c81d01d5e5f288b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_PORT&#160;&#160;&#160;PORTC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00088">88</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44543a9be6cb1c221137bd8f774df69f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_TOGGLE&#160;&#160;&#160;<a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>; <a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>; <a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>; <a class="el" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00100">100</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6890442e1cc24a0d61597a13576b8727"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA&#160;&#160;&#160;<a class="el" href="a00019.html#a0e216b818661500e5b22049a74b5fd28">MY_I2C_SDA</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00080">80</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16bb6708250d17ee2118d29e4865a653"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_DDR&#160;&#160;&#160;DDRC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00083">83</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d869494fd825e8faea34ff8d8828c86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_HI&#160;&#160;&#160;<a class="el" href="a00009.html#ac47af8b0e510ef86f6b69e120ac7f9de">SDA_PORT</a> |= (1 &lt;&lt; <a class="el" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00094">94</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b26531e9d698e80b793be8f1a760633"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_LO&#160;&#160;&#160;<a class="el" href="a00009.html#ac47af8b0e510ef86f6b69e120ac7f9de">SDA_PORT</a> &amp;= ~(1 &lt;&lt; <a class="el" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00095">95</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a526d580d324bce60a3e964066fae77e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_PIN&#160;&#160;&#160;PINC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00085">85</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac47af8b0e510ef86f6b69e120ac7f9de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_PORT&#160;&#160;&#160;PORTC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00087">87</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa10f470e996d0f51210d24f442d25e1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definiert in Zeile <a class="el" href="a00009_source.html#l00074">74</a> der Datei <a class="el" href="a00009_source.html">i2c.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="adfa0a56b08e1b36bd8bc3ae554bf4624"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitI2C </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C Bus Initialisieren. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>, SCLHI</dd></dl>
+<dl class="section user"><dt>Funktionsweise:</dt><dd>Schaltet PC2 und PC3 als Ausgang. und Setze die Pins als High </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00008_source.html#l00042">42</a> der Datei <a class="el" href="a00008_source.html">i2c.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00009.html#a16bb6708250d17ee2118d29e4865a653">SDA_DDR</a> |= (1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>);        </div>
+<div class="line">  <a class="code" href="a00009.html#a5020a160f5b8f0a1697cfadbe778424b">SCL_DDR</a> |= (1 &lt;&lt; <a class="code" href="a00009.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>);        </div>
+<div class="line">  <a class="code" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>;             </div>
+<div class="line">  <a class="code" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>;             </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a889a923c8dda51bd915113a5323ce382"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char ReadI2C </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>ack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Daten aus I2C Bus lesen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ack</td><td>NAK oder ACK</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>erhaltene Daten</dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>, <a class="el" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>, <a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>, <a class="el" href="a00009.html#a44543a9be6cb1c221137bd8f774df69f">SCL_TOGGLE</a>, <a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00008_source.html#l00109">109</a> der Datei <a class="el" href="a00008_source.html">i2c.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i, byte = 0;</div>
+<div class="line">  </div>
+<div class="line">  <a class="code" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>;</div>
+<div class="line">  <a class="code" href="a00009.html#a16bb6708250d17ee2118d29e4865a653">SDA_DDR</a> &amp;= ~(1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>);</div>
+<div class="line">  </div>
+<div class="line">  <span class="keywordflow">for</span> (i=0; i&lt;8; i++)</div>
+<div class="line">  {</div>
+<div class="line">  <a class="code" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>;</div>
+<div class="line">    <a class="code" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>;</div>
+<div class="line">    byte &lt;&lt;= 1;</div>
+<div class="line">    byte |= (<a class="code" href="a00009.html#a526d580d324bce60a3e964066fae77e3">SDA_PIN</a> &amp; (1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>)) &gt;&gt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>;</div>
+<div class="line">    <a class="code" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>;</div>
+<div class="line">    <a class="code" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a>;</div>
+<div class="line">  }</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00009.html#a16bb6708250d17ee2118d29e4865a653">SDA_DDR</a> |= (1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (ack)</div>
+<div class="line">    <a class="code" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>;                             <span class="comment">// ack</span></div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    <a class="code" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>;                             <span class="comment">// nak</span></div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00009.html#a44543a9be6cb1c221137bd8f774df69f">SCL_TOGGLE</a>;</div>
+<div class="line">  <a class="code" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> byte;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a399a9027813f17cccb71b601d265c31e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char StartI2C </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Datenaustausch starten. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>Addresse der I2C Gerät</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>antwort </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00008_source.html#l00153">153</a> der Datei <a class="el" href="a00008_source.html">i2c.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00009.html#a4b22ba2f26e18d7a0b9b8d91c9ff1cb8">I2C_START</a>;</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code" href="a00008.html#abc3f6123280d57eda2f8eea70e662f18" title="Daten ueber I2C schreiben.">WriteI2C</a> (device);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7d356873f4a3abafb7687a2ca57663c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopI2C </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Datenaustausch Stoppen. </p>
+
+<p>Definiert in Zeile <a class="el" href="a00008_source.html#l00168">168</a> der Datei <a class="el" href="a00008_source.html">i2c.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>;</div>
+<div class="line">  <a class="code" href="a00009.html#ae97924b7877c5f26955e82ab97470b95">I2C_STOP</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abc3f6123280d57eda2f8eea70e662f18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char WriteI2C </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>byte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Daten ueber I2C schreiben. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>daten</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>antwort</dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>, <a class="el" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>, <a class="el" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>, <a class="el" href="a00009.html#a44543a9be6cb1c221137bd8f774df69f">SCL_TOGGLE</a>, <a class="el" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00008_source.html#l00066">66</a> der Datei <a class="el" href="a00008_source.html">i2c.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i;</div>
+<div class="line">  </div>
+<div class="line">  <span class="keywordflow">for</span> (i=8; i&gt;0; i--)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">if</span> ( byte &amp; (1&lt;&lt;(i-1)) )</div>
+<div class="line">      <a class="code" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">      <a class="code" href="a00009.html#a6b26531e9d698e80b793be8f1a760633">SDA_LO</a>;         </div>
+<div class="line">    <a class="code" href="a00009.html#a44543a9be6cb1c221137bd8f774df69f">SCL_TOGGLE</a>;         </div>
+<div class="line">  }</div>
+<div class="line">  <a class="code" href="a00009.html#a9d869494fd825e8faea34ff8d8828c86">SDA_HI</a>;             </div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00009.html#a16bb6708250d17ee2118d29e4865a653">SDA_DDR</a> &amp;= ~(1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>);</div>
+<div class="line">  <a class="code" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>;</div>
+<div class="line">  <a class="code" href="a00009.html#a4b5159cadba617a0d6dbb6728a0eff57">SCL_HI</a>;</div>
+<div class="line">  byte = <a class="code" href="a00009.html#a526d580d324bce60a3e964066fae77e3">SDA_PIN</a> &amp; (1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>);</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>;</div>
+<div class="line">  <a class="code" href="a00009.html#ab69f13e5dfa3f0378b9c5dfcb6be7870">SCL_LO</a>;</div>
+<div class="line">  <a class="code" href="a00009.html#a16bb6708250d17ee2118d29e4865a653">SDA_DDR</a> |= (1 &lt;&lt; <a class="code" href="a00009.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>);</div>
+<div class="line">  <a class="code" href="a00009.html#a75aea9b6d58e7eb9563a6e3692c938d7">HDEL</a>;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> (byte == 0);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

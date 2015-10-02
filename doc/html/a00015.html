@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: leds.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">leds.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funktionen zur Steuerung der LED's.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für leds.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00049.png" border="0" usemap="#leds_8c" alt=""/></div>
+<map name="leds_8c" id="leds_8c">
+</map>
+</div>
+</div>
+<p><a href="a00015_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a93d71b825dd56c077d5abcc1c8eec078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#a93d71b825dd56c077d5abcc1c8eec078">StatusLED</a> (unsigned char color)</td></tr>
+<tr class="memdesc:a93d71b825dd56c077d5abcc1c8eec078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steuert die (lustige) mehrfarbige Status-LED.  <a href="#a93d71b825dd56c077d5abcc1c8eec078"></a><br/></td></tr>
+<tr class="separator:a93d71b825dd56c077d5abcc1c8eec078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6172056141d8849a882e557e4440f1b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#a6172056141d8849a882e557e4440f1b7">FrontLED</a> (unsigned char status)</td></tr>
+<tr class="memdesc:a6172056141d8849a882e557e4440f1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steuert die vorne, nach unten zeigende, Front-LED.  <a href="#a6172056141d8849a882e557e4440f1b7"></a><br/></td></tr>
+<tr class="separator:a6172056141d8849a882e557e4440f1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d1d19e89aa6b1aab442897b024332a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a">BackLED</a> (unsigned char left, unsigned char right)</td></tr>
+<tr class="memdesc:a93d1d19e89aa6b1aab442897b024332a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steuert die beiden hinteren Back-LED's<br/>
+ Wenn diese Funktion aufgerufen wird, funktioniert die Odometriemessung<br/>
+ <b>nicht</b> mehr, da die gleichen Port-Pins (Port C:Pin 0 und 1) des Prozessors<br/>
+ hierfuer verwendet werden.  <a href="#a93d1d19e89aa6b1aab442897b024332a"></a><br/></td></tr>
+<tr class="separator:a93d1d19e89aa6b1aab442897b024332a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Funktionen zur Steuerung der LED's. </p>
+<p>Die Port-Pin's zu den LED's werden so manipuliert, dass sie die daran<br/>
+ angeschlossenen LED's mit Strom versorgen oder eben nicht. Dazu muessen die<br/>
+ entsprechenden Ports als Ausgang konfiguriert sein. Dies erfolgt entweder<br/>
+ schon in der <a class="el" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init()</a>-Funktion, oder wird im Falle der <a class="el" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED()</a>-Funktion<br/>
+ dort vorgenommen.</p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Defines fuer die Auswahl der ADC-Kanaele in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ <a class="el" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="el" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="el" href="a00004.html#acfbc006ea433ad708fdee3e82996e721">GREEN</a>, <a class="el" href="a00004.html#abf681265909adf3d3e8116c93c0ba179">YELLOW</a>, <a class="el" href="a00004.html#a8d23feea868a983c8c2b661e1e16972f">RED</a></dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 05.02.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00015_source.html">leds.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a93d1d19e89aa6b1aab442897b024332a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BackLED </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Steuert die beiden hinteren Back-LED's<br/>
+ Wenn diese Funktion aufgerufen wird, funktioniert die Odometriemessung<br/>
+ <b>nicht</b> mehr, da die gleichen Port-Pins (Port C:Pin 0 und 1) des Prozessors<br/>
+ hierfuer verwendet werden. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>Schaltet die linke LED an bzw. aus. [ ON | OFF ] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>Schaltet die rechte LED an bzw. aus. [ ON | OFF ]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>nichts</dd></dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Obwohl die uebergebenen Parameter nicht geprueft werden, treten hier keine<br/>
+ unerwarteten Reaktionen am Port C auf.<br/>
+</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Linke LED aus; Rechte LED an</span></div>
+<div class="line"><a class="code" href="a00015.html#a93d1d19e89aa6b1aab442897b024332a" title="Steuert die beiden hinteren Back-LED&#39;s  Wenn diese Funktion aufgerufen wird, funktioniert die Odometr...">BackLED</a> (<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00015_source.html#l00155">155</a> der Datei <a class="el" href="a00015_source.html">leds.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (left || right)</div>
+<div class="line">  {</div>
+<div class="line">    PORTD &amp;= ~(1 &lt;&lt; PD7);               <span class="comment">// Rad-LED&#39;s OFF</span></div>
+<div class="line">    DDRC |= (1 &lt;&lt; PC0) | (1 &lt;&lt; PC1);    <span class="comment">// Port als Output =&gt; KEINE Odometrie</span></div>
+<div class="line">    PORTC |= (1 &lt;&lt; PC0) | (1 &lt;&lt; PC1);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">if</span> (!left)</div>
+<div class="line">    PORTC &amp;= ~(1 &lt;&lt; PC1);</div>
+<div class="line">  <span class="keywordflow">if</span> (!right)</div>
+<div class="line">    PORTC &amp;= ~(1 &lt;&lt; PC0);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6172056141d8849a882e557e4440f1b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FrontLED </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Steuert die vorne, nach unten zeigende, Front-LED. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Schaltet die LED an bzw. aus. [ ON | OFF ]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>nichts</dd></dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Diese Funktion ist als 'inline'-Funktion definiert.</dd></dl>
+<dl class="section user"><dt>Achtung:</dt><dd>Der uebergeben Parameter wird nicht geprueft, und kann evl. zu unerwarteten<br/>
+ Reaktionen fuehren, da der Port D anhand dieses Wertes manipuliert wird.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// schalte die Front-LED an.</span></div>
+<div class="line"><a class="code" href="a00015.html#a6172056141d8849a882e557e4440f1b7" title="Steuert die vorne, nach unten zeigende, Front-LED.">FrontLED</a> (<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00015_source.html#l00120">120</a> der Datei <a class="el" href="a00015_source.html">leds.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  PORTD = (PORTD &amp;~(1 &lt;&lt; PD6)) | (status &lt;&lt; PD6);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a93d71b825dd56c077d5abcc1c8eec078"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatusLED </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Steuert die (lustige) mehrfarbige Status-LED. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Zu setzende Farbe. [ OFF | GREEN | RED | YELLOW ] Bei einem nicht definierten Wert von 'color' aendert sich nichts an der LED.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>nichts</dd></dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Diese Funktion ist als 'inline'-Funktion definiert.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Schaltet die Status-LED abwechselnd auf gruen und rot. </span></div>
+<div class="line"><span class="keywordflow">while</span> (1)</div>
+<div class="line">{ </div>
+<div class="line">  <a class="code" href="a00015.html#a93d71b825dd56c077d5abcc1c8eec078" title="Steuert die (lustige) mehrfarbige Status-LED.">StatusLED</a> (<a class="code" href="a00004.html#acfbc006ea433ad708fdee3e82996e721">GREEN</a>);</div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a> (500);</div>
+<div class="line">  <a class="code" href="a00015.html#a93d71b825dd56c077d5abcc1c8eec078" title="Steuert die (lustige) mehrfarbige Status-LED.">StatusLED</a> (<a class="code" href="a00004.html#a8d23feea868a983c8c2b661e1e16972f">RED</a>);</div>
+<div class="line">  MSleep (500);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00015_source.html#l00068">68</a> der Datei <a class="el" href="a00015_source.html">leds.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="a00004.html#ae4952024a491a1a21b8d1f954d0c7e35">GREEN_LED_OFF</a>;</div>
+<div class="line">    <a class="code" href="a00004.html#a9ef0d38535a9d4da633d19ad965088a5">RED_LED_OFF</a>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#acfbc006ea433ad708fdee3e82996e721">GREEN</a>)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="a00004.html#a9b604f9a223b15523d200aad16c3f5bc">GREEN_LED_ON</a>;</div>
+<div class="line">    <a class="code" href="a00004.html#a9ef0d38535a9d4da633d19ad965088a5">RED_LED_OFF</a>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#abf681265909adf3d3e8116c93c0ba179">YELLOW</a>)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="a00004.html#a9b604f9a223b15523d200aad16c3f5bc">GREEN_LED_ON</a>;</div>
+<div class="line">    <a class="code" href="a00004.html#a7e95f7565677b16e473240009845e0b4">RED_LED_ON</a>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">if</span> (color == <a class="code" href="a00004.html#a8d23feea868a983c8c2b661e1e16972f">RED</a>)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="a00004.html#ae4952024a491a1a21b8d1f954d0c7e35">GREEN_LED_OFF</a>;</div>
+<div class="line">    <a class="code" href="a00004.html#a7e95f7565677b16e473240009845e0b4">RED_LED_ON</a>;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

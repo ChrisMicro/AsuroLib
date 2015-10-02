@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: my_motor_low.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">my_motor_low.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Low Level Funktionen zur Steuerung der Motoren.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00019_source.html">myasuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für my_motor_low.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052.png" border="0" usemap="#my__motor__low_8c" alt=""/></div>
+<map name="my__motor__low_8c" id="my__motor__low_8c">
+</map>
+</div>
+</div>
+<p><a href="a00018_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a201e9f82507f205d15167bffe32af00b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a201e9f82507f205d15167bffe32af00b">MyMotorSpeed</a> (unsigned char left_speed, unsigned char right_speed)</td></tr>
+<tr class="memdesc:a201e9f82507f205d15167bffe32af00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steuert die Geschwindigkeit der Motoren.  <a href="#a201e9f82507f205d15167bffe32af00b"></a><br/></td></tr>
+<tr class="separator:a201e9f82507f205d15167bffe32af00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Low Level Funktionen zur Steuerung der Motoren. </p>
+<p>Die Motorsteuerung erfolgt grundsaetzlich ueber die auf der Asuro-Platine<br/>
+ aufgebauten H-Bruecken. Dies ist eine Schaltung, ueber die ein Strom in<br/>
+ verschiedene Richtungen durch die Motoren geleitet werden kann.<br/>
+ Zur Geschwindigkeitssteuerung werden die beiden im Prozessor vorhandenen<br/>
+ PWM-Kanaele genutzt, deren Ausgangssignale die Staerke des Stromflusses in<br/>
+ den H-Bruecken beinflusst.<br/>
+ Die Initialisierung der PWM-Funktionalitaet erfolgt in der Funktion <a class="el" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init()</a>.</p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Defines fuer die Auswahl der ADC-Kanaele in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ <a class="el" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>, <a class="el" href="a00004.html#a0c3c1353638d84aafe3b0f52882c540f">RWD</a>, <a class="el" href="a00004.html#abe022c8f09db1f0680a92293523f25dd">BREAK</a>, <a class="el" href="a00004.html#a9a8e700d56e7d858108b755ad3edb52e">FREE</a></dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V001 - 05.02.2007 - Sternthaler<br/>
+ +++ <a class="el" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed()</a><br/>
+ Der Wert vom Define MY_MOTOR_DIFF wird zur Haelfte auf die beiden Motoren verteilt. Es werden die Grenzen von 0 und 255 beruecksichtigt. So lange es geht, wird die angegebene Differenz aus MY_MOTOR_DIFF erhalten. V002 - 27.03.2008 - m.a.r.v.i.n<br/>
+ Funktion in eigenen Datei abgesplittet und in MyMotorSpeed umbenannt. </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00018_source.html">my_motor_low.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a201e9f82507f205d15167bffe32af00b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyMotorSpeed </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>left_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>right_speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Steuert die Geschwindigkeit der Motoren. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">left_speed</td><td>Geschwindigkeit linker Motor (Bereich 0..255) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right_speed</td><td>Geschwindigkeit rechter Motor (Bereich 0..255)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>nichts</dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd>Die Initialisierung der PWM-Funktionalitaet erfolgt in der Funktion <a class="el" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init()</a>.</dd></dl>
+<dl class="section user"><dt>Arbeitsweise:</dt><dd>Ueber die Parameter werden die beiden Kanaele der PWM-Funktionalitaet im<br/>
+ Prozessor angesteuert. Diese Art der Geschwindigkeitsreglung beruht darauf,<br/>
+ dass ein digitaler Output-Pin in schneller Folge an- und ausgeschaltet wird.<br/>
+ Mit dem Parameter wird nun gesteuert wie <b>lange</b> der Strom im <b>Verhaeltniss</b> <br/>
+ zur Zykluszeit <b>angeschaltet</b> ist.<br/>
+ Wird z.B. ein Wert von 150 fuer einen Parameter uebergeben, dann wird fuer<br/>
+ 150 / 255-tel der Zykluszeit der Port auf 1 geschaltet und somit ist die<br/>
+ Motorleistung entsprechend reduziert.<br/>
+ Daraus ergibt sich auch dass der Asuro <b>noch</b> <b>nicht</b> bei einem Wert von<br/>
+ 20 fahren wird, da diese Leistung nicht ausreicht ihn 'anzuschieben'.<br/>
+ (PWM = Pulsweitenmodulation)<br/>
+ Der Define MY_MOTOR_DIFF aus <a class="el" href="a00019.html" title="Benutzerspezische Definitionen der ASURO Bibliothek.">myasuro.h</a> wird jeweils zur Haelfte auf die<br/>
+ beiden Motoren verteilt. Es werden die Grenzen von 0 und 255 beruecksichtigt.<br/>
+ So lange es geht, wird die angegebene Differenz aus MY_MOTOR_DIFF erhalten.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Setzt die Geschwindigkeit fuer den linken Motor</span></div>
+<div class="line"><span class="comment">// auf 150 und stoppt den rechten Motor.</span></div>
+<div class="line"><a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (150, 0);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00018_source.html#l00080">80</a> der Datei <a class="el" href="a00018_source.html">my_motor_low.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">           <span class="keywordtype">int</span>  l_speed;</div>
+<div class="line">           <span class="keywordtype">int</span>  r_speed;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code" href="a00019.html#a01eb32bcf068a954c4350c8757c13174">MY_MOTOR_DIFF</a> != 0)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">      Das Ganze macht nur Sinn, wenn mindestens ein Motor fahren soll.</span></div>
+<div class="line"><span class="comment">    */</span></div>
+<div class="line">    <span class="keywordflow">if</span> (left_speed  &gt; 0  ||</div>
+<div class="line">        right_speed &gt; 0)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="comment">/*</span></div>
+<div class="line"><span class="comment">        Bei positivem MY_MOTOR_DIFF wird der rechte Motor verstaerkt.</span></div>
+<div class="line"><span class="comment">        Bei negativem MY_MOTOR_DIFF wird der linke  Motor verstaerkt.</span></div>
+<div class="line"><span class="comment">      */</span></div>
+<div class="line">      l_speed = left_speed  - <a class="code" href="a00019.html#a01eb32bcf068a954c4350c8757c13174">MY_MOTOR_DIFF</a> / 2;</div>
+<div class="line">      r_speed = right_speed + <a class="code" href="a00019.html#a01eb32bcf068a954c4350c8757c13174">MY_MOTOR_DIFF</a> / 2;</div>
+<div class="line"></div>
+<div class="line">      <span class="comment">/*</span></div>
+<div class="line"><span class="comment">        Wertebereich von 0 bis 255 pruefen.</span></div>
+<div class="line"><span class="comment">        Unterscheiden nach positiver, bzw. negativer Vorgabe.</span></div>
+<div class="line"><span class="comment">      */</span></div>
+<div class="line">      <span class="keywordflow">if</span> (<a class="code" href="a00019.html#a01eb32bcf068a954c4350c8757c13174">MY_MOTOR_DIFF</a> &gt; 0)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="comment">/*</span></div>
+<div class="line"><span class="comment">          Bei positivem MY_MOTOR_DIFF kann nur die rechte Seite &gt; 255 werden.</span></div>
+<div class="line"><span class="comment">        */</span></div>
+<div class="line">        <span class="keywordflow">if</span> (r_speed &gt; 255)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="comment">/*</span></div>
+<div class="line"><span class="comment">            Um die Differenz von MY_MOTOR_DIFF weiterhin zu erhalten, wird nun</span></div>
+<div class="line"><span class="comment">            die linke Seite noch weiter reduziert, und die rechte Seite auf</span></div>
+<div class="line"><span class="comment">            das zulaessige Maximum gesetzt.</span></div>
+<div class="line"><span class="comment">          */</span></div>
+<div class="line">          l_speed -= (r_speed - 255);</div>
+<div class="line">          r_speed  = 255;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span> (l_speed &lt; 0)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="comment">/*</span></div>
+<div class="line"><span class="comment">            Die linke Seite ist nun unter dem zulaessige Minimum von 0.</span></div>
+<div class="line"><span class="comment">            Auch dies muss korrigiert werden.</span></div>
+<div class="line"><span class="comment">          */</span></div>
+<div class="line">          l_speed = 0;</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">      {</div>
+<div class="line">        <span class="comment">/*</span></div>
+<div class="line"><span class="comment">          Bei negativem MY_MOTOR_DIFF kann nur die linke Seite &gt; 255 werden.</span></div>
+<div class="line"><span class="comment">        */</span></div>
+<div class="line">        <span class="keywordflow">if</span> (l_speed &gt; 255)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="comment">/*</span></div>
+<div class="line"><span class="comment">            Um die Differenz von MY_MOTOR_DIFF weiterhin zu erhalten, wird nun</span></div>
+<div class="line"><span class="comment">            die rechte Seite noch weiter reduziert, und die linke Seite auf</span></div>
+<div class="line"><span class="comment">            das zulaessige Maximum gesetzt.</span></div>
+<div class="line"><span class="comment">          */</span></div>
+<div class="line">          r_speed -= (l_speed - 255);</div>
+<div class="line">          l_speed  = 255;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span> (r_speed &lt; 0)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="comment">/*</span></div>
+<div class="line"><span class="comment">            Die rechte Seite ist nun unter dem zulaessige Minimum von 0.</span></div>
+<div class="line"><span class="comment">            Auch dies muss korrigiert werden.</span></div>
+<div class="line"><span class="comment">          */</span></div>
+<div class="line">          r_speed = 0;</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line"></div>
+<div class="line">      left_speed  = l_speed;</div>
+<div class="line">      right_speed = r_speed;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a>(left_speed, right_speed);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

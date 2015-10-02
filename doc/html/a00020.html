@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: print.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">print.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Print Ausgabe Funktionen.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r print.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00054.png" border="0" usemap="#print_8c" alt=""/></div>
+<map name="print_8c" id="print_8c">
+</map>
+</div>
+</div>
+<p><a href="a00020_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a0ea020d2b90dba65e262b644cd706a3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a0ea020d2b90dba65e262b644cd706a3b">PrintInt</a> (int wert)</td></tr>
+<tr class="memdesc:a0ea020d2b90dba65e262b644cd706a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ausgabe eines Integer Wertes als String ueber die serielle Schnittstelle.  <a href="#a0ea020d2b90dba65e262b644cd706a3b"></a><br/></td></tr>
+<tr class="separator:a0ea020d2b90dba65e262b644cd706a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a0f341920adbff13acf77b073cf622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a57a0f341920adbff13acf77b073cf622">PrintLong</a> (long wert)</td></tr>
+<tr class="memdesc:a57a0f341920adbff13acf77b073cf622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ausgabe eines Long Wertes als String ueber die serielle Schnittstelle.  <a href="#a57a0f341920adbff13acf77b073cf622"></a><br/></td></tr>
+<tr class="separator:a57a0f341920adbff13acf77b073cf622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526d22cc646f28698e95c231d39330b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a526d22cc646f28698e95c231d39330b9">UartPutc</a> (unsigned char zeichen)</td></tr>
+<tr class="memdesc:a526d22cc646f28698e95c231d39330b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sendet einen einzelnen Character über die serielle Schnittstelle.  <a href="#a526d22cc646f28698e95c231d39330b9"></a><br/></td></tr>
+<tr class="separator:a526d22cc646f28698e95c231d39330b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cc8cffc6bf9ffaa3850dcf33526021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021">SerPrint</a> (char *data)</td></tr>
+<tr class="memdesc:aa2cc8cffc6bf9ffaa3850dcf33526021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Funktion wird bei dieser Funktion kein Parameter mit der Anzahl der zu sendenden Zeichne benötigt. Es wird einfach bis zum Stringende (0-Character) gesendet.  <a href="#aa2cc8cffc6bf9ffaa3850dcf33526021"></a><br/></td></tr>
+<tr class="separator:aa2cc8cffc6bf9ffaa3850dcf33526021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c5c4545c51c3934fcf3ffea7ac43e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a28c5c4545c51c3934fcf3ffea7ac43e1">SerPrint_p</a> (const char *data)</td></tr>
+<tr class="memdesc:a28c5c4545c51c3934fcf3ffea7ac43e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sendet einen null-terminierten String aus dem FLASH Speicher ueber die serielle Schnittstelle.  <a href="#a28c5c4545c51c3934fcf3ffea7ac43e1"></a><br/></td></tr>
+<tr class="separator:a28c5c4545c51c3934fcf3ffea7ac43e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Print Ausgabe Funktionen. </p>
+<p>Die Ausgabe der Zeichen erfolgt ueber die IR LED an der seriellen Schnittstelle.<br/>
+ Ueber den IR Transceiver koennen die Zeichen empfangen und in einem Terminalprogramm<br/>
+ vom PC dargestellt werden.<br/>
+ Dazu muss bei den Einstellungen des Terminalprogramms die COM Schnittstelle<br/>
+ ausgewaehlt werden, an der der IR Transceiver haengt.<br/>
+ Die weiteren Schnittstellenparameter sind:<br/>
+ 2400 Baud, 8 Databits, no parity, 1 Stopbit, Hardware Handshake none<br/>
+</p>
+<dl class="section user"><dt>Hinweis:</dt><dd>Wer den USB IR Transceiver mit einem Terminalprogramm benutzen will,<br/>
+ muss dazu die aktuellen USB Treiber von der FTDI Homepage verwenden.<br/>
+ Diese CDM Treiber enthalten sowohl die VCP Treiber,<br/>
+ die das Terminalprogramm verwendet, als auch die D2XX Treiber,<br/>
+ die das Flasher Tool verwendet.<br/>
+ Zu finden sind die Treiber unter <a href="http://www.ftdichip.com/FTDrivers.htm">http://www.ftdichip.com/FTDrivers.htm</a> .</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 09.02.2007 - m.a.r.v.i.n<br/>
+ +++ PrintLong () NEU<br/>
+ Ausgabe eines Long Wertes als String ueber die serielle Schnittstelle.<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version<br/>
+ </dd>
+<dd>
+V003 - 14.02.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentare einheitlicher zu den anderen Sourcen.<br/>
+ </dd>
+<dd>
+V004 - 25.07.2007 - Sternthaler (Gemeldet von helmut_w)<br/>
+ +++ UartPutc ()<br/>
+ Abschalten des Senders nach der Datenuebertragung zum sparen von Energie. </dd>
+<dd>
+V005 - 18.08.2007 - marvin<br/>
+ +++ SerPrint ()<br/>
+ signed char als Parameter wg. Compilerwarnungen </dd>
+<dd>
+V006 - 27.01.2008 - marvin<br/>
+ neue Funktion SerPrint_p<br/>
+ zur Ausgabe von Strings aus dem Programmspeicher </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00020_source.html">print.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a0ea020d2b90dba65e262b644cd706a3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wert</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ausgabe eines Integer Wertes als String ueber die serielle Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">wert</td><td>Auszugebender Integer Wert (16Bit)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Robotrixer, marvin</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>beta - 31.03.2005 - Robotrixer<br/>
+ first implementation </dd>
+<dd>
+2.60 - 28.09.2005 - m.a.r.v.i.n<br/>
+ strlen verwenden, anstelle fester Laenge </dd>
+<dd>
+2.61 - 20.11.2006 - m.a.r.v.i.n<br/>
+ Initialisierung text String kann zu Fehler<br/>
+ beim Flashen mit RS232/IR Adapter fuehren<br/>
+ (Bug report von francesco) </dd>
+<dd>
+2.70b- 07.01.2007 - m.a.r.v.i.n<br/>
+ SerPrint Funktion anstelle SerWrite verwenden </dd>
+<dd>
+2.70rc2- 09.02.2007 - m.a.r.v.i.n<br/>
+ Text Laenge auf 7 erhoeht, fuer Ausgabe negativer Werte (Bug Report von HermannSW)</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Beispiel fuer zeilenweise Ausgabe der Encoder Werte</span></div>
+<div class="line"><a class="code" href="a00006.html#a80ec2c177aa9c2636f797ca881381827" title="Den Interrupt Betrieb der Odometriesensoren-Messung initialisieren und starten.">EncoderInit</a>();</div>
+<div class="line">While(1)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="a00020.html#a0ea020d2b90dba65e262b644cd706a3b" title="Ausgabe eines Integer Wertes als String ueber die serielle Schnittstelle.">PrintInt</a> (<a class="code" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a> [0]);</div>
+<div class="line">  <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (<span class="stringliteral">&quot;   &quot;</span>);</div>
+<div class="line">  <a class="code" href="a00020.html#a0ea020d2b90dba65e262b644cd706a3b" title="Ausgabe eines Integer Wertes als String ueber die serielle Schnittstelle.">PrintInt</a> (<a class="code" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a> [1]);</div>
+<div class="line">  <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (<span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line">  MSleep (500); <span class="comment">//0,5sek. warten</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00020_source.html#l00102">102</a> der Datei <a class="el" href="a00020_source.html">print.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">char</span> text [7];                        <span class="comment">// &quot;-12345&quot;</span></div>
+<div class="line"></div>
+<div class="line">  itoa (wert, text, 10);</div>
+<div class="line">  <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (text);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a57a0f341920adbff13acf77b073cf622"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintLong </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>wert</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ausgabe eines Long Wertes als String ueber die serielle Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">wert</td><td>Auszugebender Long Wert (32Bit)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>HermannSW, marvin</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.70rc2 - 09.02.2007 m.a.r.v.i.n<br/>
+ first implementation (Idee von HermannSW)</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Beispiel fuer Ausgabe der Batterie Werte</span></div>
+<div class="line"><span class="keywordtype">long</span> data;</div>
+<div class="line">While(1)</div>
+<div class="line">{</div>
+<div class="line">  data = <a class="code" href="a00004.html#ac63a12317283a1cd9912902c7a42604c">Batterie</a> ();</div>
+<div class="line">  <a class="code" href="a00020.html#a57a0f341920adbff13acf77b073cf622" title="Ausgabe eines Long Wertes als String ueber die serielle Schnittstelle.">PrintLong</a> (data);</div>
+<div class="line">  <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (<span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line">  MSleep (500); <span class="comment">//0,5sek. warten</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00020_source.html#l00141">141</a> der Datei <a class="el" href="a00020_source.html">print.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">char</span> text [12];                       <span class="comment">// &#39;-&#39;1234567891&#39;\0&#39;</span></div>
+<div class="line"></div>
+<div class="line">  ltoa (wert, text, 10);</div>
+<div class="line">  <a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (text);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa2cc8cffc6bf9ffaa3850dcf33526021"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SerPrint </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Funktion wird bei dieser Funktion kein Parameter mit der Anzahl der zu sendenden Zeichne benötigt. Es wird einfach bis zum Stringende (0-Character) gesendet. </p>
+<p>Zum Senden von Rohdaten (keine ASCII Zeichen) sollte sattdessen die Funktion SerWrite verwendet werden.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>null-terminierter String</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="a00004.html#a35162012d08a613f2915b2885a42aed3" title="Senden von Daten ueber die serielle Schnittstelle.">SerWrite</a></dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>stochri</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>sto1 - 07.01.2007 - stochri<br/>
+ first implementation </dd>
+<dd>
+V005 - 18.08.2007 - marvin<br/>
+ signed char als Parameter wg. Compilerwarnungen</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Beispiel fuer SerPrint</span></div>
+<div class="line"><a class="code" href="a00020.html#aa2cc8cffc6bf9ffaa3850dcf33526021" title="Sendet einen null-terminierten String ueber die serielle Schnittstelle. Im Gegensatz zur SerWrite Fun...">SerPrint</a> (<span class="stringliteral">&quot;Hallo ASURO!\r\n&quot;</span>);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00020_source.html#l00224">224</a> der Datei <a class="el" href="a00020_source.html">print.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">while</span> (data [i] != 0x00)</div>
+<div class="line">    <a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (data [i++]);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a28c5c4545c51c3934fcf3ffea7ac43e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SerPrint_p </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sendet einen null-terminierten String aus dem FLASH Speicher ueber die serielle Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>null-terminierter String</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>marvin</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V001 - 07.02.2008 - marvin<br/>
+ first implementation </dd></dl>
+<dl class="section user"><dt>Erlaeuterung:</dt><dd>Alle String Variablen belegen normalerweise neben dem Speicherplatz im<br/>
+ Programmspeicher (FLASH) zusätzlich denselben Speicherplatz im RAM.<br/>
+ Den Speicherplatz im RAM laesst sich vermeiden, indem man den Bezeichner<br/>
+ PROGMEM bei der Deklaration des Strings angibt.<br/>
+ Zum Auslesen einzelner Zeichen des Strings aus dem Programmspeicher<br/>
+ wird die Funktion pgm_read_byte aus der Standard Library verwendet.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Beispiel fuer SerPrint_p</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> Text_im_FLASH[] PROGMEM = <span class="stringliteral">&quot;FLASH String&quot;</span>;</div>
+<div class="line"><a class="code" href="a00020.html#a28c5c4545c51c3934fcf3ffea7ac43e1" title="Sendet einen null-terminierten String aus dem FLASH Speicher ueber die serielle Schnittstelle.">SerPrint_p</a> (Text_im_FLASH);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00020_source.html#l00263">263</a> der Datei <a class="el" href="a00020_source.html">print.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">char</span> c;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">while</span> ((c = pgm_read_byte(data)) != 0)</div>
+<div class="line">  {  </div>
+<div class="line">    <a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (c);</div>
+<div class="line">    data++;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a526d22cc646f28698e95c231d39330b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UartPutc </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>zeichen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sendet einen einzelnen Character über die serielle Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">zeichen</td><td>auszugebendes Zeichen</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>stochri</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>sto1 - 07.01.2006 stochri<br/>
+ first implementation </dd>
+<dd>
+V004 - 25.07.2007 - Sternthaler (Gemeldet von helmut_w)<br/>
+ Abschalten des Senders nach der Datenuebertragung zum sparen von Energie.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// &#39;wunderbaren&#39; Text als einzelne Zeichen senden.</span></div>
+<div class="line"><a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (<span class="charliteral">&#39;H&#39;</span>);</div>
+<div class="line"><a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (<span class="charliteral">&#39;e&#39;</span>);</div>
+<div class="line"><a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (<span class="charliteral">&#39;l&#39;</span>);</div>
+<div class="line"><a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (<span class="charliteral">&#39;l&#39;</span>);</div>
+<div class="line"><a class="code" href="a00020.html#a526d22cc646f28698e95c231d39330b9" title="Sendet einen einzelnen Character über die serielle Schnittstelle.">UartPutc</a> (<span class="charliteral">&#39;o&#39;</span>);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00020_source.html#l00179">179</a> der Datei <a class="el" href="a00020_source.html">print.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  UCSRB  = 0x08;                        <span class="comment">// enable transmitter</span></div>
+<div class="line">  UCSRA |= 0x40;                        <span class="comment">// clear transmitter flag</span></div>
+<div class="line">  <span class="keywordflow">while</span> (!(UCSRA &amp; 0x20))               <span class="comment">// wait for empty transmit buffer</span></div>
+<div class="line">    ;</div>
+<div class="line">  UDR = zeichen;</div>
+<div class="line">  <span class="keywordflow">while</span> (!(UCSRA &amp; 0x40))               <span class="comment">// Wait for transmit complete flag (TXC)</span></div>
+<div class="line">    ;</div>
+<div class="line">  UCSRB  = 0x00;                        <span class="comment">// disable transmitter / powersave</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

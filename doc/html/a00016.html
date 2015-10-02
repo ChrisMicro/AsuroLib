@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: motor.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">motor.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funktionen zur Steuerung der Motoren.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r motor.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00050.png" border="0" usemap="#motor_8c" alt=""/></div>
+<map name="motor_8c" id="motor_8c">
+</map>
+</div>
+</div>
+<p><a href="a00016_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a60da36fdcb39c99bed2b24c7a0e366ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00016.html#a60da36fdcb39c99bed2b24c7a0e366ab">SetMotorPower</a> (int8_t leftpwm, int8_t rightpwm)</td></tr>
+<tr class="memdesc:a60da36fdcb39c99bed2b24c7a0e366ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steuert die Motorgeschwindigkeit und Drehrichtung der Motoren.  <a href="#a60da36fdcb39c99bed2b24c7a0e366ab"></a><br/></td></tr>
+<tr class="separator:a60da36fdcb39c99bed2b24c7a0e366ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Funktionen zur Steuerung der Motoren. </p>
+<p>Die Motorsteuerung erfolgt grundsaetzlich ueber die auf der Asuro-Platine<br/>
+ aufgebauten H-Bruecken. Dies ist eine Schaltung, ueber die ein Strom in<br/>
+ verschiedene Richtungen durch die Motoren geleitet werden kann.<br/>
+ Zur Geschwindigkeitssteuerung werden die beiden im Prozessor vorhandenen<br/>
+ PWM-Kanaele genutzt, deren Ausgangssignale die Staerke des Stromflusses in<br/>
+ den H-Bruecken beinflusst.<br/>
+ Die Initialisierung der PWM-Funktionalitaet erfolgt in der Funktion <a class="el" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init()</a>.</p>
+<dl class="section see"><dt>Siehe auch</dt><dd>Defines fuer die Auswahl der ADC-Kanaele in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ <a class="el" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>, <a class="el" href="a00004.html#a0c3c1353638d84aafe3b0f52882c540f">RWD</a>, <a class="el" href="a00004.html#abe022c8f09db1f0680a92293523f25dd">BREAK</a>, <a class="el" href="a00004.html#a9a8e700d56e7d858108b755ad3edb52e">FREE</a></dd></dl>
+<dl class="section version"><dt>Version</dt><dd>sto1 - 07.01.2006 - stochri<br/>
+ +++ <a class="el" href="a00016.html#a60da36fdcb39c99bed2b24c7a0e366ab" title="Steuert die Motorgeschwindigkeit und Drehrichtung der Motoren.">SetMotorPower()</a><br/>
+ first implementation </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 05.02.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 18.02.2007 - m.a.r.v.i.n<br/>
+ Datei gesplitted in <a class="el" href="a00017.html" title="Low Level Funktionen zur Steuerung der Motoren.">motor_low.c</a> und <a class="el" href="a00016.html" title="Funktionen zur Steuerung der Motoren.">motor.c</a> </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00016_source.html">motor.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a60da36fdcb39c99bed2b24c7a0e366ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetMotorPower </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>leftpwm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>rightpwm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Steuert die Motorgeschwindigkeit und Drehrichtung der Motoren. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">leftpwm</td><td>linker Motor (-rückwaerts, + vorwaerts) (Wertebereich -128...127)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rightpwm</td><td>rechter Motor (-rückwaerts, + vorwaerts) (Wertebereich -128...127)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Hinweis:</dt><dd>Da der Wertebereich dieser Funktion nur von -128 bis +127 reicht, aber die<br/>
+ urspruengliche Funktion <a class="el" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed()</a> einen Wertebereich bis +255 hat, werden<br/>
+ die hier uebergebene Parameter als Absolutwert mit 2 multipliziert<br/>
+ weitergegeben.<br/>
+</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Setzt die Geschwindigkeit fuer den linken Motor auf 60 (vorwaerts),</span></div>
+<div class="line"><span class="comment">// und für den rechten Motor auf -60 (rueckwaerts)</span></div>
+<div class="line"><span class="comment">// Asuro soll auf der Stelle drehen.</span></div>
+<div class="line"><a class="code" href="a00016.html#a60da36fdcb39c99bed2b24c7a0e366ab" title="Steuert die Motorgeschwindigkeit und Drehrichtung der Motoren.">SetMotorPower</a> (60, -600);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00016_source.html#l00089">89</a> der Datei <a class="el" href="a00016_source.html">motor.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> left, right;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (leftpwm &lt; 0)                      <span class="comment">// Ein negativer Wert fuehrt ...</span></div>
+<div class="line">  {</div>
+<div class="line">    left = <a class="code" href="a00004.html#a0c3c1353638d84aafe3b0f52882c540f">RWD</a>;                         <span class="comment">// ... zu einer Rueckwaertsfahrt, ...</span></div>
+<div class="line">    leftpwm = -leftpwm;                 <span class="comment">// aber immer positiv PWM-Wert</span></div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    left = <a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>;                         <span class="comment">// ... sonst nach vorne, ...</span></div>
+<div class="line">  <span class="keywordflow">if</span> (leftpwm == 0)</div>
+<div class="line">    left = <a class="code" href="a00004.html#abe022c8f09db1f0680a92293523f25dd">BREAK</a>;                       <span class="comment">// ... oder bei 0 zum Bremsen.</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (rightpwm &lt; 0)</div>
+<div class="line">  {</div>
+<div class="line">    right = <a class="code" href="a00004.html#a0c3c1353638d84aafe3b0f52882c540f">RWD</a>;</div>
+<div class="line">    rightpwm = -rightpwm;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    right = <a class="code" href="a00004.html#aa02f16883c5ce325e2dbb8c3835aa9a1">FWD</a>;</div>
+<div class="line">  <span class="keywordflow">if</span> (rightpwm == 0)</div>
+<div class="line">    right = <a class="code" href="a00004.html#abe022c8f09db1f0680a92293523f25dd">BREAK</a>;</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00017.html#a561935d5de881e56c9ad4592514cf47f" title="Steuert die Drehrichtung der Motoren.">MotorDir</a> (left, right);                 <span class="comment">// Drehrichtung setzen</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    Die Geschwindigkeitsparameter mit 2 multiplizieren, da der Absolutwert</span></div>
+<div class="line"><span class="comment">    der Parameter dieser Funktion nur genau die Haelfte von der MotorSpeed()-</span></div>
+<div class="line"><span class="comment">    Funktion betraegt.</span></div>
+<div class="line"><span class="comment">  */</span></div>
+<div class="line">  <a class="code" href="a00017.html#a72bb9f060fd3b5a9a9471b84bef882cd" title="Steuert die Geschwindigkeit der Motoren.">MotorSpeed</a> (leftpwm * 2, rightpwm * 2);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

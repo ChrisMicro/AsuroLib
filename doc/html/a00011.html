@@ -1,0 +1,834 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: lcd.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">lcd.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Funktionen zur Ansteurung eines LCD Moduls ueber die I2C Schnittstelle. Diese Bibliothek unterstützt HD44870 kompatible LCD Module mit einem I2C Port Expander Chip PCF8574P<br/>
+ Die Pinbelegung des I2C Portexpanders ist folgende:<br/>
+ P0-P3 - BD4-DB7<br/>
+ P4 - RS<br/>
+ P4 - R/W<br/>
+ P6 - Backlight (optional)<br/>
+ P7 - EN<br/>
+ Es wird zudem die I2C Emulations Bibliothek benötigt.<br/>
+.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00012_source.html">lcd.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00009_source.html">i2c.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-AbhÃ¤ngigkeitsdiagramm fÃ¼r lcd.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00043.png" border="0" usemap="#lcd_8c" alt=""/></div>
+<map name="lcd_8c" id="lcd_8c">
+</map>
+</div>
+</div>
+<p><a href="a00011_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a51c2d2e6bc532dffc967a2dbb5b9f103"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a51c2d2e6bc532dffc967a2dbb5b9f103">InitLCD</a> (void)</td></tr>
+<tr class="memdesc:a51c2d2e6bc532dffc967a2dbb5b9f103"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Initialisierung.  <a href="#a51c2d2e6bc532dffc967a2dbb5b9f103"></a><br/></td></tr>
+<tr class="separator:a51c2d2e6bc532dffc967a2dbb5b9f103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94650c2f7c109d50e4ef4cbc961e0b7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a94650c2f7c109d50e4ef4cbc961e0b7b">BacklightLCD</a> (unsigned char state)</td></tr>
+<tr class="memdesc:a94650c2f7c109d50e4ef4cbc961e0b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Backlight an oder ausschalten.  <a href="#a94650c2f7c109d50e4ef4cbc961e0b7b"></a><br/></td></tr>
+<tr class="separator:a94650c2f7c109d50e4ef4cbc961e0b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2302c482f825d62695c46c80281f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a6c2302c482f825d62695c46c80281f27">SetDataLCD</a> (unsigned char data)</td></tr>
+<tr class="memdesc:a6c2302c482f825d62695c46c80281f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Daten schreiben.  <a href="#a6c2302c482f825d62695c46c80281f27"></a><br/></td></tr>
+<tr class="separator:a6c2302c482f825d62695c46c80281f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bcb9ecd227f5fe83230bca00209387"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387">SetIOLCD</a> (unsigned char setCommand, unsigned char bits)</td></tr>
+<tr class="memdesc:a26bcb9ecd227f5fe83230bca00209387"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD IO Ports schreiben.  <a href="#a26bcb9ecd227f5fe83230bca00209387"></a><br/></td></tr>
+<tr class="separator:a26bcb9ecd227f5fe83230bca00209387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa701c9b27046a96fac89dc688f84cdd8"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#aa701c9b27046a96fac89dc688f84cdd8">GetIOLCD</a> (void)</td></tr>
+<tr class="memdesc:aa701c9b27046a96fac89dc688f84cdd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD IO Ports lesen.  <a href="#aa701c9b27046a96fac89dc688f84cdd8"></a><br/></td></tr>
+<tr class="separator:aa701c9b27046a96fac89dc688f84cdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f16d2216f863427459edbe9210909f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a7f16d2216f863427459edbe9210909f8">SetCursorLCD</a> (unsigned char cursor, unsigned char line)</td></tr>
+<tr class="memdesc:a7f16d2216f863427459edbe9210909f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Cursor setzen.  <a href="#a7f16d2216f863427459edbe9210909f8"></a><br/></td></tr>
+<tr class="separator:a7f16d2216f863427459edbe9210909f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8501bbbb424e9935eb256b968565ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec">CommandLCD</a> (unsigned char command)</td></tr>
+<tr class="memdesc:a0d8501bbbb424e9935eb256b968565ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Kommando ausgeben.  <a href="#a0d8501bbbb424e9935eb256b968565ec"></a><br/></td></tr>
+<tr class="separator:a0d8501bbbb424e9935eb256b968565ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af995dbf3ccb8c8961526ffa9521baf39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#af995dbf3ccb8c8961526ffa9521baf39">ClearLCD</a> (void)</td></tr>
+<tr class="memdesc:af995dbf3ccb8c8961526ffa9521baf39"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD loeschen und Cursor auf 1 Postion der ersten Zeile.  <a href="#af995dbf3ccb8c8961526ffa9521baf39"></a><br/></td></tr>
+<tr class="separator:af995dbf3ccb8c8961526ffa9521baf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b159eec8ecfde4b630464ee1aceb79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a63b159eec8ecfde4b630464ee1aceb79">WriteLCD</a> (unsigned char data)</td></tr>
+<tr class="memdesc:a63b159eec8ecfde4b630464ee1aceb79"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Daten schreiben.  <a href="#a63b159eec8ecfde4b630464ee1aceb79"></a><br/></td></tr>
+<tr class="separator:a63b159eec8ecfde4b630464ee1aceb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0baffd4e646cac9139dbdf5f4a62e743"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a0baffd4e646cac9139dbdf5f4a62e743">PrintLCD</a> (char *string, unsigned char wrap)</td></tr>
+<tr class="memdesc:a0baffd4e646cac9139dbdf5f4a62e743"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD String ausgeben optional mit Zeilenumbruch.  <a href="#a0baffd4e646cac9139dbdf5f4a62e743"></a><br/></td></tr>
+<tr class="separator:a0baffd4e646cac9139dbdf5f4a62e743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00cd99f006ad762c1401196d3402648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#af00cd99f006ad762c1401196d3402648">PrintSetLCD</a> (unsigned char cursor, unsigned char line, char *string)</td></tr>
+<tr class="memdesc:af00cd99f006ad762c1401196d3402648"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD String ausgeben an bestimmter Position.  <a href="#af00cd99f006ad762c1401196d3402648"></a><br/></td></tr>
+<tr class="separator:af00cd99f006ad762c1401196d3402648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6abbdd42d165a30715b481248edd72b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#ad6abbdd42d165a30715b481248edd72b">PrintIntLCD</a> (int value)</td></tr>
+<tr class="memdesc:ad6abbdd42d165a30715b481248edd72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Integer Wert ausgeben.  <a href="#ad6abbdd42d165a30715b481248edd72b"></a><br/></td></tr>
+<tr class="separator:ad6abbdd42d165a30715b481248edd72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40004f4c7edc9cc365eb22a615d146a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a40004f4c7edc9cc365eb22a615d146a8">PrintAlignLCD</a> (unsigned char alignment, unsigned char line, char *string)</td></tr>
+<tr class="memdesc:a40004f4c7edc9cc365eb22a615d146a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Stringausgabe mit Ausrichtung (links, mitte, rechts)  <a href="#a40004f4c7edc9cc365eb22a615d146a8"></a><br/></td></tr>
+<tr class="separator:a40004f4c7edc9cc365eb22a615d146a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bed0dae4651434d9fa41ebeeae1c6bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a2bed0dae4651434d9fa41ebeeae1c6bb">PrintLCD_p</a> (const char *progmem_s)</td></tr>
+<tr class="memdesc:a2bed0dae4651434d9fa41ebeeae1c6bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Stringausgabe aus dem Program Memory (Flash)  <a href="#a2bed0dae4651434d9fa41ebeeae1c6bb"></a><br/></td></tr>
+<tr class="separator:a2bed0dae4651434d9fa41ebeeae1c6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade403e7283eb694da5611841add18b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#ade403e7283eb694da5611841add18b45">SetCharLCD_p</a> (unsigned char AsciiCode, const char *progmem_s)</td></tr>
+<tr class="memdesc:ade403e7283eb694da5611841add18b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonderzeichen an das Display senden.  <a href="#ade403e7283eb694da5611841add18b45"></a><br/></td></tr>
+<tr class="separator:ade403e7283eb694da5611841add18b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e2ff9cac13b66135a75986dff0939e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#ae5e2ff9cac13b66135a75986dff0939e">PollSwitchLCD</a> (void)</td></tr>
+<tr class="memdesc:ae5e2ff9cac13b66135a75986dff0939e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abfrage der Taserdes Arexx LCD Moduls.  <a href="#ae5e2ff9cac13b66135a75986dff0939e"></a><br/></td></tr>
+<tr class="separator:ae5e2ff9cac13b66135a75986dff0939e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Funktionen zur Ansteurung eines LCD Moduls ueber die I2C Schnittstelle. Diese Bibliothek unterstützt HD44870 kompatible LCD Module mit einem I2C Port Expander Chip PCF8574P<br/>
+ Die Pinbelegung des I2C Portexpanders ist folgende:<br/>
+ P0-P3 - BD4-DB7<br/>
+ P4 - RS<br/>
+ P4 - R/W<br/>
+ P6 - Backlight (optional)<br/>
+ P7 - EN<br/>
+ Es wird zudem die I2C Emulations Bibliothek benötigt.<br/>
+. </p>
+<dl class="section author"><dt>Autor</dt><dd>Rizqi Ahmad (raid_ox)</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V001 - 17-02-2007 - Rizqi Ahmad (raid_ox) Erste Version </dd>
+<dd>
+V002 - 08.04.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 21.01.2008 - m.a.r.v.i.n<br/>
+ Anpassung an ATmega168 neue Funktion PrintLCD_p zur Ausgabe von Strings aus dem Programmspeicher<br/>
+ neue Funktion SetCharLCD zum Setzen von Sonderzeichen<br/>
+ neue Funktion PollSwitchLCD zur Abfrage der Tasten des Arexx LCD Moduls </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a94650c2f7c109d50e4ef4cbc961e0b7b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BacklightLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Backlight an oder ausschalten. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>Backlight an oder aus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00100">100</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(state, <a class="code" href="a00012.html#a179007c8bbcc74e0f56c774d71d732f0">LCD_BL</a>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af995dbf3ccb8c8961526ffa9521baf39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearLCD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD loeschen und Cursor auf 1 Postion der ersten Zeile. </p>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00228">228</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>(<a class="code" href="a00012.html#a6aa8aa2057294b7d06088e834299b369">LCD_CLEAR</a>);</div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>(<a class="code" href="a00012.html#ae0e309ccad89222eb3457f2da9f2bb8d">LCD_HOME</a>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0d8501bbbb424e9935eb256b968565ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommandLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Kommando ausgeben. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>auszugebendes Kommando </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00215">215</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (command == <a class="code" href="a00012.html#ae0e309ccad89222eb3457f2da9f2bb8d">LCD_HOME</a>)</div>
+<div class="line">    <a class="code" href="a00012.html#a8ec35e5cecfd65bcae7b78be73ea6ee0">lineLCD</a> = <a class="code" href="a00012.html#a938dfba1cfe6c55b9a8c83ff27f18ae4">cursorLCD</a> = 0x00;</div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00012.html#a4781e073871c6f27f89b9463ad3a4ed1">LCD_RS</a>);</div>
+<div class="line">  <a class="code" href="a00011.html#a6c2302c482f825d62695c46c80281f27" title="LCD Daten schreiben.">SetDataLCD</a>(command);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa701c9b27046a96fac89dc688f84cdd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char GetIOLCD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD IO Ports lesen. </p>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>LCD IO Port </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00168">168</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> data = 0x00;</div>
+<div class="line">  <a class="code" href="a00008.html#a399a9027813f17cccb71b601d265c31e" title="Datenaustausch starten.">StartI2C</a>(<a class="code" href="a00012.html#a15c4be88848f63523f5e19329ba172f0">LCD_DEV</a>+1);</div>
+<div class="line">  data = <a class="code" href="a00008.html#a443731431c829d18fd6937652fc2a247" title="Daten aus I2C Bus lesen.">ReadI2C</a>(0);</div>
+<div class="line">  <a class="code" href="a00008.html#a7d356873f4a3abafb7687a2ca57663c7" title="Datenaustausch Stoppen.">StopI2C</a>();</div>
+<div class="line">  <span class="keywordflow">return</span> data;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a51c2d2e6bc532dffc967a2dbb5b9f103"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitLCD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Initialisierung. </p>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00067">67</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> init[] = <a class="code" href="a00012.html#a8d4a9596af8bbfbd7472da7812ca6fc6">LCD_INIT</a>;</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0;</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00012.html#a1640ffbc0d8ec0f7edb04a2b93918072">LCD_EN</a>);              <span class="comment">// Start LCD Control, EN=0</span></div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a>(1);                          <span class="comment">// Wait LCD Ready</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Initialize LCD</span></div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( <a class="code" href="a00012.html#a57d84af8cf61ceee4eb91db77889f071">LCD_8BIT</a> | (<a class="code" href="a00012.html#a57d84af8cf61ceee4eb91db77889f071">LCD_8BIT</a> &gt;&gt; 4) );</div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( <a class="code" href="a00012.html#a57d84af8cf61ceee4eb91db77889f071">LCD_8BIT</a> | (<a class="code" href="a00012.html#a31e1c14e8c2845dec3301f0ebd36b43c">LCD_4BIT</a> &gt;&gt; 4) );</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">while</span> (init[i] != 0x00)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>(init[i]);</div>
+<div class="line">    i++;</div>
+<div class="line">  }</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( <a class="code" href="a00012.html#a76236ae8317b34bbc98ea56bc0a2639c">LCD_DISPLAYON</a> );        <span class="comment">// Display on/off Control (Entry Display,Cursor off,Cursor not Blink)</span></div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( <a class="code" href="a00012.html#a39d1b2b516dc1d91680b427a21576cbd">LCD_INCREASE</a> );         <span class="comment">// Entry Mode Set (I/D=1 Increment,S=0 Cursor Shift)</span></div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( <a class="code" href="a00012.html#a6aa8aa2057294b7d06088e834299b369">LCD_CLEAR</a> );            <span class="comment">// Clear Display</span></div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( <a class="code" href="a00012.html#ae0e309ccad89222eb3457f2da9f2bb8d">LCD_HOME</a> );             <span class="comment">// Home Cursor</span></div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a>(1);                          <span class="comment">// Wait Initial Complete</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae5e2ff9cac13b66135a75986dff0939e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PollSwitchLCD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abfrage der Taserdes Arexx LCD Moduls. </p>
+<dl class="section return"><dt>RÃ¼ckgabe</dt><dd>gibt den Wert aller gedrueckten Tasten zurueck<br/>
+ bit kodiert </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00373">373</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">int</span> key = 0;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//taster pins auf input schalten</span></div>
+<div class="line">  <span class="comment">//  OC2 PIN deaktivieren, aber 36kHz Timer weiterlaufen lassen (z.B. für Sleep(void) )</span></div>
+<div class="line"><span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2A = _BV(WGM21);</div>
+<div class="line">  TCCR2B = _BV(CS20);</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2 = (1 &lt;&lt; WGM21) | (1 &lt;&lt; CS20); </div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span>  DDRD &amp;= ~((1&lt;&lt;PD2)|(1&lt;&lt;PD6));      <span class="comment">// roten und gelben Taster als Eingang definieren</span></div>
+<div class="line">  DDRB &amp;= ~(1&lt;&lt;PB3);                 <span class="comment">// blauen Taster als Eingang definieren</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//taster abfragen</span></div>
+<div class="line"></div>
+<div class="line">  key  |= (PIND&amp;<a class="code" href="a00012.html#a2d73d3bc428ca5b90965747befc6d564">LCD_KEY_YELLOW</a>);</div>
+<div class="line">  key  |= (PIND&amp;<a class="code" href="a00012.html#a52cf1e577f199be99ba30eeb9a789106">LCD_KEY_RED</a>);</div>
+<div class="line">  key  |= (PINB&amp;<a class="code" href="a00012.html#a63d6c6179621406f174a07d1c0838817">LCD_KEY_BLUE</a>);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//taster pins auf output schalten</span></div>
+<div class="line"><span class="preprocessor">#if defined(__AVR_ATmega168__)</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2A = _BV(WGM20) | _BV(WGM21) | _BV(COM2A0) | _BV(COM2A1);</div>
+<div class="line">  TCCR2B = _BV(CS20);</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor"></span>  TCCR2 = (1 &lt;&lt; WGM20) | (1 &lt;&lt; WGM21) | (1 &lt;&lt; COM20) | (1 &lt;&lt; COM21) | (1 &lt;&lt; CS20);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line">  DDRD |= ((1&lt;&lt;PD2)|(1&lt;&lt;PD6));     <span class="comment">// roten und gelben Taster als ausgang definieren</span></div>
+<div class="line">  DDRB |= (1&lt;&lt;PB3);                <span class="comment">// blauen Taster als ausgang definieren</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//tasterwert zurückgeben</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> key;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a40004f4c7edc9cc365eb22a615d146a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintAlignLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Stringausgabe mit Ausrichtung (links, mitte, rechts) </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td>Ausrichtung (links, mitte, rechts) </td></tr>
+    <tr><td class="paramname">line</td><td>Zeilennummer </td></tr>
+    <tr><td class="paramname">string</td><td>auszugebender String </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00308">308</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0;</div>
+<div class="line">  <span class="keywordflow">while</span> (<span class="keywordtype">string</span>[i] != 0x00)</div>
+<div class="line">    i++;</div>
+<div class="line">  <span class="keywordflow">if</span> (alignment == <a class="code" href="a00004.html#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>)</div>
+<div class="line">    <a class="code" href="a00011.html#af00cd99f006ad762c1401196d3402648" title="LCD String ausgeben an bestimmter Position.">PrintSetLCD</a>(<a class="code" href="a00012.html#a44fe86ff84c75f8a1f043d9e602296e1">LCD_CHARS</a>-i, line, <span class="keywordtype">string</span>);</div>
+<div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alignment == <a class="code" href="a00004.html#a824fea1f256659e11e6cd8c82cb13338">CENTER</a>)</div>
+<div class="line">    <a class="code" href="a00011.html#af00cd99f006ad762c1401196d3402648" title="LCD String ausgeben an bestimmter Position.">PrintSetLCD</a>((<a class="code" href="a00012.html#a44fe86ff84c75f8a1f043d9e602296e1">LCD_CHARS</a>-i)/2, line, <span class="keywordtype">string</span>);</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    <a class="code" href="a00011.html#af00cd99f006ad762c1401196d3402648" title="LCD String ausgeben an bestimmter Position.">PrintSetLCD</a>(0, line, <span class="keywordtype">string</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad6abbdd42d165a30715b481248edd72b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintIntLCD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Integer Wert ausgeben. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>auszugebender Integer Wert </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00292">292</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">char</span> text[6];</div>
+<div class="line">  itoa(value,text,10);</div>
+<div class="line">  <a class="code" href="a00011.html#a0baffd4e646cac9139dbdf5f4a62e743" title="LCD String ausgeben optional mit Zeilenumbruch.">PrintLCD</a>(text, <a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0baffd4e646cac9139dbdf5f4a62e743"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintLCD </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>wrap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD String ausgeben optional mit Zeilenumbruch. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>auszugebender String </td></tr>
+    <tr><td class="paramname">wrap</td><td>Zeilenumbruch ja oder nein </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00255">255</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0;</div>
+<div class="line">  <span class="keywordflow">while</span> (<span class="keywordtype">string</span>[i] != 0x00)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="a00012.html#a938dfba1cfe6c55b9a8c83ff27f18ae4">cursorLCD</a> &gt;= <a class="code" href="a00012.html#a44fe86ff84c75f8a1f043d9e602296e1">LCD_CHARS</a>)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">if</span> (wrap)</div>
+<div class="line">        <a class="code" href="a00011.html#a7f16d2216f863427459edbe9210909f8" title="LCD Cursor setzen.">SetCursorLCD</a>(0, <a class="code" href="a00012.html#a8ec35e5cecfd65bcae7b78be73ea6ee0">lineLCD</a>+1);</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code" href="a00011.html#a63b159eec8ecfde4b630464ee1aceb79" title="LCD Daten schreiben.">WriteLCD</a>(<span class="keywordtype">string</span>[i]);</div>
+<div class="line">    i++;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2bed0dae4651434d9fa41ebeeae1c6bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintLCD_p </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>progmem_s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Stringausgabe aus dem Program Memory (Flash) </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progmem_s</td><td>auszugebender String </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00330">330</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keyword">register</span> <span class="keywordtype">char</span> c;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">while</span> ( (c = pgm_read_byte(progmem_s++)) ) </div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="a00011.html#a63b159eec8ecfde4b630464ee1aceb79" title="LCD Daten schreiben.">WriteLCD</a>(c);</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af00cd99f006ad762c1401196d3402648"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintSetLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>cursor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD String ausgeben an bestimmter Position. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>Cursor Position </td></tr>
+    <tr><td class="paramname">line</td><td>Zeilen Nummer </td></tr>
+    <tr><td class="paramname">string</td><td>auszugebender String </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00280">280</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00011.html#a7f16d2216f863427459edbe9210909f8" title="LCD Cursor setzen.">SetCursorLCD</a>(cursor, line);</div>
+<div class="line">  <a class="code" href="a00011.html#a0baffd4e646cac9139dbdf5f4a62e743" title="LCD String ausgeben optional mit Zeilenumbruch.">PrintLCD</a>(<span class="keywordtype">string</span>, <a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ade403e7283eb694da5611841add18b45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCharLCD_p </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>AsciiCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>progmem_s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sonderzeichen an das Display senden. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progmem_s</td><td>auszugebender String</td></tr>
+    <tr><td class="paramname">AsciiCode</td><td>Ascii Code des zu erzeugenden Sonderzeichens </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00353">353</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i;</div>
+<div class="line">        </div>
+<div class="line">        <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>( 0x40|(AsciiCode&lt;&lt;3));</div>
+<div class="line">        <span class="keywordflow">for</span>(i=0;i&lt;=7;i++)</div>
+<div class="line">        {</div>
+<div class="line">                <a class="code" href="a00011.html#a63b159eec8ecfde4b630464ee1aceb79" title="LCD Daten schreiben.">WriteLCD</a>(pgm_read_byte(progmem_s++));</div>
+<div class="line">        }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7f16d2216f863427459edbe9210909f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCursorLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>cursor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Cursor setzen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>Cursor Position </td></tr>
+    <tr><td class="paramname">line</td><td>Zeilen Nummer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00184">184</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00012.html#a938dfba1cfe6c55b9a8c83ff27f18ae4">cursorLCD</a>   = cursor;</div>
+<div class="line">  <a class="code" href="a00012.html#a8ec35e5cecfd65bcae7b78be73ea6ee0">lineLCD</a>   = line;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">if</span> (line == 0)</div>
+<div class="line">    line = <a class="code" href="a00012.html#ac30f9eb729142201bec6ef0aa45e5c07">LCD_LINE1</a>;</div>
+<div class="line"><span class="preprocessor">#if LCD_LINES&gt;=2</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (line == 1)</div>
+<div class="line">    line = <a class="code" href="a00012.html#aee2c59879d4dca634a1ba6a2769e4ee6">LCD_LINE2</a>;</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor">#if LCD_LINES&gt;=3</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (line == 2)</div>
+<div class="line">    line = <a class="code" href="a00012.html#a3a2ee32835c7649e5da01563407d8665">LCD_LINE3</a>;</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor">#if LCD_LINES&gt;=4</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (line == 3)</div>
+<div class="line">    line = <a class="code" href="a00012.html#a11fc99e0a8ac2eb3504e94b0a771234f">LCD_LINE4</a>;</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span>  <span class="keywordflow">else</span></div>
+<div class="line">    line = <a class="code" href="a00012.html#ac30f9eb729142201bec6ef0aa45e5c07">LCD_LINE1</a>;</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00011.html#a0d8501bbbb424e9935eb256b968565ec" title="LCD Kommando ausgeben.">CommandLCD</a>(<a class="code" href="a00012.html#ae54acf3ccc45b7d6be334a03627740c6">LCD_DDRAM</a> | (line+cursor));</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6c2302c482f825d62695c46c80281f27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDataLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Daten schreiben. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>auszugebende Date </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00111">111</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> dataPins;             <span class="comment">// Pin Compatibility</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Set First Nibble Data to DataPins on PCF8574</span></div>
+<div class="line">  dataPins &amp;= 0x00;</div>
+<div class="line">  dataPins |= ((data &amp; 0x80) &gt;&gt; 7) &lt;&lt; <a class="code" href="a00012.html#a49bb5a99cc438fcf855a7179cb0e5b65">LD7</a>;</div>
+<div class="line">  dataPins |= ((data &amp; 0x40) &gt;&gt; 6) &lt;&lt; <a class="code" href="a00012.html#a1eea6a814dd82dd68aa4864b9660379d">LD6</a>;</div>
+<div class="line">  dataPins |= ((data &amp; 0x20) &gt;&gt; 5) &lt;&lt; <a class="code" href="a00012.html#a755d7396c27fe1851298071dc2433dfa">LD5</a>;</div>
+<div class="line">  dataPins |= ((data &amp; 0x10) &gt;&gt; 4) &lt;&lt; <a class="code" href="a00012.html#ad2c9fbbb064442b1c569680d5ba0231c">LD4</a>;</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00012.html#ade7e247311032a474711416da480ed8b">LCD_D4</a> | <a class="code" href="a00012.html#a5b91fe480c768d4f246f3890207bfbfc">LCD_D5</a> | <a class="code" href="a00012.html#a72e105fcda5fd1c07b5f391379a439d4">LCD_D6</a> | <a class="code" href="a00012.html#abd65075e01c7413419581aedee5bcc24">LCD_D7</a>);     <span class="comment">// Clear old LCD Data (Bit[7..4])</span></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, dataPins);             <span class="comment">// Strobe High Nibble Command</span></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00012.html#a1640ffbc0d8ec0f7edb04a2b93918072">LCD_EN</a>);               <span class="comment">// Enable ON</span></div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a>(1);</div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00012.html#a1640ffbc0d8ec0f7edb04a2b93918072">LCD_EN</a>);              <span class="comment">// Enable OFF</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Set Second Nibble Data to DataPins on PCF8574</span></div>
+<div class="line">  dataPins &amp;= 0x00;</div>
+<div class="line">  dataPins |= ((data &amp; 0x08) &gt;&gt; 3) &lt;&lt; <a class="code" href="a00012.html#a49bb5a99cc438fcf855a7179cb0e5b65">LD7</a>;</div>
+<div class="line">  dataPins |= ((data &amp; 0x04) &gt;&gt; 2) &lt;&lt; <a class="code" href="a00012.html#a1eea6a814dd82dd68aa4864b9660379d">LD6</a>;</div>
+<div class="line">  dataPins |= ((data &amp; 0x02) &gt;&gt; 1) &lt;&lt; <a class="code" href="a00012.html#a755d7396c27fe1851298071dc2433dfa">LD5</a>;</div>
+<div class="line">  dataPins |= ((data &amp; 0x01) &gt;&gt; 0) &lt;&lt; <a class="code" href="a00012.html#ad2c9fbbb064442b1c569680d5ba0231c">LD4</a>;</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00012.html#ade7e247311032a474711416da480ed8b">LCD_D4</a> | <a class="code" href="a00012.html#a5b91fe480c768d4f246f3890207bfbfc">LCD_D5</a> | <a class="code" href="a00012.html#a72e105fcda5fd1c07b5f391379a439d4">LCD_D6</a> | <a class="code" href="a00012.html#abd65075e01c7413419581aedee5bcc24">LCD_D7</a>);     <span class="comment">// Clear old LCD Data (Bit[7..4])</span></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, dataPins);             <span class="comment">// Strobe Low Nibble Command</span></div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00012.html#a1640ffbc0d8ec0f7edb04a2b93918072">LCD_EN</a>);               <span class="comment">// Enable ON</span></div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a>(1);</div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a>, <a class="code" href="a00012.html#a1640ffbc0d8ec0f7edb04a2b93918072">LCD_EN</a>);              <span class="comment">// Enable OFF</span></div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a>(1);                          <span class="comment">// Wait LCD Busy</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a26bcb9ecd227f5fe83230bca00209387"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIOLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>setCommand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>bits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD IO Ports schreiben. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setCommand</td><td>an - oder auschalten </td></tr>
+    <tr><td class="paramname">bits</td><td>zu setzende bits </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00151">151</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (setCommand == <a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>)</div>
+<div class="line">    <a class="code" href="a00012.html#ad13616fda4b75fb01a7a525b54c2f50e">portLCD</a> |= bits;</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    <a class="code" href="a00012.html#ad13616fda4b75fb01a7a525b54c2f50e">portLCD</a> &amp;= ~bits;</div>
+<div class="line">  <a class="code" href="a00008.html#a399a9027813f17cccb71b601d265c31e" title="Datenaustausch starten.">StartI2C</a>(<a class="code" href="a00012.html#a15c4be88848f63523f5e19329ba172f0">LCD_DEV</a>);</div>
+<div class="line">  <a class="code" href="a00008.html#abc3f6123280d57eda2f8eea70e662f18" title="Daten ueber I2C schreiben.">WriteI2C</a>(<a class="code" href="a00012.html#ad13616fda4b75fb01a7a525b54c2f50e">portLCD</a>);</div>
+<div class="line">  <a class="code" href="a00008.html#a7d356873f4a3abafb7687a2ca57663c7" title="Datenaustausch Stoppen.">StopI2C</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a63b159eec8ecfde4b630464ee1aceb79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteLCD </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD Daten schreiben. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>auszugebende Date </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="a00011_source.html#l00241">241</a> der Datei <a class="el" href="a00011_source.html">lcd.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code" href="a00011.html#a26bcb9ecd227f5fe83230bca00209387" title="LCD IO Ports schreiben.">SetIOLCD</a>(<a class="code" href="a00004.html#ad76d1750a6cdeebd506bfcd6752554d2">ON</a>, <a class="code" href="a00012.html#a4781e073871c6f27f89b9463ad3a4ed1">LCD_RS</a>);</div>
+<div class="line">  <a class="code" href="a00011.html#a6c2302c482f825d62695c46c80281f27" title="LCD Daten schreiben.">SetDataLCD</a>(data);</div>
+<div class="line">  <a class="code" href="a00012.html#a938dfba1cfe6c55b9a8c83ff27f18ae4">cursorLCD</a>++;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 fÃ¼r ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

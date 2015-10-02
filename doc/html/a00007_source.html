@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: globals.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">globals.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00007.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*   This program is free software; you can redistribute it and/or modify     *</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*   it under the terms of the GNU General Public License as published by     *</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*   the Free Software Foundation; either version 2 of the License, or        *</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*   any later version.                                                       *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*                                                                            *</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="a00004.html#a3f85635d367e540986605ba72db6f950">   50</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a3f85635d367e540986605ba72db6f950" title="Flag, dass der Interrupt SIG_INTERRUPT1 durch eine gedrueckte Taste  ausgeloesst wurde. 0 = keine Taste, 1 = Taste gedrueckt.  Kann im eigenen Programm immer abgefragt werden.">switched</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="a00004.html#ab60e52bf003ad9b344c264c5bf8c71e3">   65</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#ab60e52bf003ad9b344c264c5bf8c71e3" title="Odometriesensor Zaehler bei Interrupt Betrieb.  encoder[0] = links; encoder[1] = rechts.">encoder</a> [2];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="a00004.html#a61610ea211b4bea5cc5ce6136c3fa4f8">   78</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="a00004.html#a8f07cc475f4e813c344e44a6efce8bc2">   91</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00007.html#a8f07cc475f4e813c344e44a6efce8bc2" title="Sytemzeit in ms.">timebase</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="a00004.html#ae76207f3fd37582724c51dc31b0e729b">  104</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#ae76207f3fd37582724c51dc31b0e729b" title="Steuert, ob die Odometrie-Sensor Abfrage im Interrupt Betrieb laufen soll.">autoencode</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="a00004.html#ab3982e6520803bb438468a0352755a28">  115</a></span>&#160;<span class="keyword">volatile</span> <a class="code" href="a00004.html#a44181537ab6ea5631069dcd97b51bcff">voidFuncPtr</a> <a class="code" href="a00007.html#ab3982e6520803bb438468a0352755a28" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">Ovr2IntFunc</a>; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="a00004.html#acb2dd119fea212b6ce56cd76e1076825">  126</a></span>&#160;<span class="keyword">volatile</span> <a class="code" href="a00004.html#a44181537ab6ea5631069dcd97b51bcff">voidFuncPtr</a> <a class="code" href="a00007.html#acb2dd119fea212b6ce56cd76e1076825" title="Zeiger auf User Funktion die von der Interupt Funktion aus aufgerufen wird.">AdcIntFunc</a>; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

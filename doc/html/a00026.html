@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: time.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">time.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Zeit- und Delay Funktionen.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für time.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00061.png" border="0" usemap="#time_8c" alt=""/></div>
+<map name="time_8c" id="time_8c">
+</map>
+</div>
+</div>
+<p><a href="a00026_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a68ae1ca3314f529719933f506ebdd49d"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#a68ae1ca3314f529719933f506ebdd49d">Gettime</a> (void)</td></tr>
+<tr class="memdesc:a68ae1ca3314f529719933f506ebdd49d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt die aktuelle Zeit in ms zurueck.  <a href="#a68ae1ca3314f529719933f506ebdd49d"></a><br/></td></tr>
+<tr class="separator:a68ae1ca3314f529719933f506ebdd49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b57953c558fb6618e2bd10ef291546"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#a99b57953c558fb6618e2bd10ef291546">Sleep</a> (unsigned char time36kHz)</td></tr>
+<tr class="memdesc:a99b57953c558fb6618e2bd10ef291546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartefunktion.  <a href="#a99b57953c558fb6618e2bd10ef291546"></a><br/></td></tr>
+<tr class="separator:a99b57953c558fb6618e2bd10ef291546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c23edeb03966f9b72b12a86d7c648a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a">Msleep</a> (unsigned int ms)</td></tr>
+<tr class="memdesc:a01c23edeb03966f9b72b12a86d7c648a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartefunktion in ms.  <a href="#a01c23edeb03966f9b72b12a86d7c648a"></a><br/></td></tr>
+<tr class="separator:a01c23edeb03966f9b72b12a86d7c648a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Zeit- und Delay Funktionen. </p>
+<pre class="fragment">      Erzeugt Zeiteinheiten anhand des laufenden Timer 2-Interrupts.\n
+      Dieser ist auf 36 kHz eingestellt um die Hardware der serielle\n
+      Schnittstelle zu bedienen (siehe in asuro.c unter
+      SIGNAL (SIG_OVERFLOW2)).\n
+      Die globalen Variablen \b count36kHz und \b timebase werden dort
+      bearbeitet.\n
+      In den hier vorhandenen Funktionen werden diese Variablen genutzt\n
+      um Zeiten und Verzoegerungen zu erzeugen.
+</pre><dl class="section see"><dt>Siehe auch</dt><dd>Defines fuer unseren Asuro immer in <a class="el" href="a00004.html" title="Definitionen und Funktionen der ASURO Bibliothek.">asuro.h</a><br/>
+ Hier werden aktuell keine Defines benutzt.</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V&mdash; - 10.11.2003 - Jan Grewe - DLR<br/>
+ Original Version von der ASURO CD<br/>
+ </dd>
+<dd>
+V&mdash; - bis zum 07.01.2007 - <br/>
+ Bitte in Datei CHANGELOG nachsehen.<br/>
+ </dd>
+<dd>
+V001 - 13.01.2007 - m.a.r.v.i.n<br/>
+ +++ Alle Funktionen<br/>
+ Zerlegte Sourcen in einzelne Dateien fuer eine echte Library. </dd>
+<dd>
+V002 - 22.01.2007 - Sternthaler<br/>
+ +++ Alle Funktionen<br/>
+ Kommentierte Version (KEINE Funktionsaenderung) </dd>
+<dd>
+V003 - 26.03.2010 - Sternthaler<br/>
+ +++ <a class="el" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep()</a><br/>
+ Parameter von "int" auf "unsigned int" umgestellt. (Tip von Valen) </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00026_source.html">time.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a68ae1ca3314f529719933f506ebdd49d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long Gettime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gibt die aktuelle Zeit in ms zurueck. </p>
+<p>Da der Asuro keine Atomuhr hat, ist es die vergangene Zeit seitdem er eingeschaltet wurde.<br/>
+ Genauer: nachdem der Interrupt Timer2 aktiviert wurde.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Einschaltzeit in Millisekunden (Bereich: unsigned long 0..286331153)<br/>
+ Das sind ca. 79.5 Stunden. Fuer die, die ihren Asuro also ohne Solarzellen<br/>
+ betreiben, reicht diese Zeitangabe bevor der Accu leer ist.</dd></dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// Alle 500 ms die Front-LED umschalten.</span></div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> zeit;</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> on_off = <a class="code" href="a00004.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>;</div>
+<div class="line"></div>
+<div class="line">zeit = <a class="code" href="a00026.html#a68ae1ca3314f529719933f506ebdd49d" title="Gibt die aktuelle Zeit in ms zurueck.">Gettime</a> ();</div>
+<div class="line"><span class="keywordflow">while</span> (1)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code" href="a00026.html#a68ae1ca3314f529719933f506ebdd49d" title="Gibt die aktuelle Zeit in ms zurueck.">Gettime</a> () &gt; zeit + 500)</div>
+<div class="line">  {</div>
+<div class="line">    zeit = <a class="code" href="a00026.html#a68ae1ca3314f529719933f506ebdd49d" title="Gibt die aktuelle Zeit in ms zurueck.">Gettime</a> ();</div>
+<div class="line">    <a class="code" href="a00015.html#a6172056141d8849a882e557e4440f1b7" title="Steuert die vorne, nach unten zeigende, Front-LED.">FrontLED</a> (on_off);</div>
+<div class="line">    on_off ^= 1;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00026_source.html#l00078">78</a> der Datei <a class="el" href="a00026_source.html">time.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordflow">return</span> ((<a class="code" href="a00007.html#a8f07cc475f4e813c344e44a6efce8bc2" title="Sytemzeit in ms.">timebase</a> * 256) + <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>) / 36;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a01c23edeb03966f9b72b12a86d7c648a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Msleep </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wartefunktion in ms. </p>
+<p>Diese Funktion nutzt die <a class="el" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep()</a>-Funktion um mit dem uebergeben Parameter<br/>
+ Pausen in ms-Einheiten zu erhalten.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dauer</td><td>Wartezeit in Millisekunden.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// 1.5 Sekunde warten</span></div>
+<div class="line"><a class="code" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep</a> (1500);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00026_source.html#l00137">137</a> der Datei <a class="el" href="a00026_source.html">time.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> z;</div>
+<div class="line">  <span class="keywordflow">for</span> (z = 0; z &lt; ms; z++)</div>
+<div class="line">    <a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a> (36);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a99b57953c558fb6618e2bd10ef291546"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sleep </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>time36kHz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wartefunktion. </p>
+<p>Die maximale Wartezeit betraegt 7ms. Fuer laengere Wartezeiten siehe <a class="el" href="a00026.html#a01c23edeb03966f9b72b12a86d7c648a" title="Wartefunktion in ms.">Msleep()</a>.<br/>
+ Diese Funktion nutzt den Timer 2-Interrupt um ein 'zeitgefuehl' zu erhalten.<br/>
+ Der Interrupt wird mit 36 kHz, durch die <a class="el" href="a00003.html#a7ce0a14b6e7779fbb2d9a05333792c41" title="Initialisiert die Hardware: Ports, A/D Wandler, Serielle Schnittstelle, PWM  Die Init Funktion muss v...">Init()</a>-Funktion initialisiert,<br/>
+ aufgerufen und zaehlt dort die globale Variablen <b>count36kHz</b> weiter.<br/>
+ Diese Funktion nutzt diesen Zaehler und berechnet daraus mit dem uebergeben<br/>
+ Parameter den Zeitpunkt wann die Pausenzeit erreicht ist, Danach bricht sie<br/>
+ ab, und im Hauptprogramm ist eben eine Wartezeit eingelegt worden.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time36kHz</td><td>Wartezeit x/36kHz (sec)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Beispiel:</dt><dd>(Nur zur Demonstration der Parameter/Returnwerte) <div class="fragment"><div class="line"><span class="comment">// 1 Millisekunde warten</span></div>
+<div class="line"><a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a> (36);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00026_source.html#l00108">108</a> der Datei <a class="el" href="a00026_source.html">time.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ziel = (time36kHz + <a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a>) &amp; 0x00FF;</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">while</span> (<a class="code" href="a00007.html#a61610ea211b4bea5cc5ce6136c3fa4f8" title="Counter fuer 36kHz.">count36kHz</a> != ziel)</div>
+<div class="line">    ;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

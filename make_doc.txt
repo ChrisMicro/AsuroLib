@@ -1,0 +1,18 @@
+Erstellen der ASURO Library Dokumentation
+=========================================
+
+Zur Erstellung der Asuro Library Dokumentation wird das Tool Doxygen verwendet.
+Um die Dokumentation selbst zu aktualisieren:
+
+* man laed sich die aktuelle Doxygen Version von http://www.stack.nl/~dimitri/doxygen/ herunter.
+* Installiert Doxygen
+* Im Verzeichnis / startet man die Batchdatei 'make_doc.bat', um die Dokumentation zu aktualisieren. Eventuell muss man vorher den Pfad auf die Datei Doxygen.exe aktualisieren.
+
+Die erzeugte HTML Dokumentation befindet sich im Ordner /doc/html.
+Dort kann die Datei index.html in einen Browser geladen werden.
+
+Die Datei /make_doc.log und make_doc.err werden erzeugt um den doxygen-Lauf zu überprüfen.
+
+m.a.r.v.i.n 16.01.2007
+Sternthaler 22.01.2007
+

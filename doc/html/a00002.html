@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ASURO Library: adc_low.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ASURO Library
+   &#160;<span id="projectnumber">2.80</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">adc_low.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Low Level Funktion zum Auslesen der ADC-Wandler.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00004_source.html">asuro.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für adc_low.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00033.png" border="0" usemap="#adc__low_8c" alt=""/></div>
+<map name="adc__low_8c" id="adc__low_8c">
+</map>
+</div>
+</div>
+<p><a href="a00002_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a96137125ebfec159b1ac171ee2fe92ae"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html#a96137125ebfec159b1ac171ee2fe92ae">ReadADC</a> (unsigned int mux, unsigned int sleep)</td></tr>
+<tr class="memdesc:a96137125ebfec159b1ac171ee2fe92ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals<br/>
+.  <a href="#a96137125ebfec159b1ac171ee2fe92ae"></a><br/></td></tr>
+<tr class="separator:a96137125ebfec159b1ac171ee2fe92ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Low Level Funktion zum Auslesen der ADC-Wandler. </p>
+<dl class="section version"><dt>Version</dt><dd>V001 - 20.01.2008 - m.a.r.v.i.n<br/>
+ </dd>
+<dd>
+V002 - 29.03.2009 - rossir<br/>
+ A/D Wandler Abfrage ueber Interrupt </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="a00002_source.html">adc_low.c</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a96137125ebfec159b1ac171ee2fe92ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ReadADC </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>mux</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>sleep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liest die A/D Multiplexer Interupt Werte des gewuenschten A/D Kanals<br/>
+. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mux</td><td>Nummer des A/D Kanal Multiplexer </td></tr>
+    <tr><td class="paramname">sleep</td><td>optionale Wartezeit</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>10 Bit A/D Wert (Bereich 0..1023) </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="a00002_source.html#l00034">34</a> der Datei <a class="el" href="a00002_source.html">adc_low.c</a>.</p>
+<div class="fragment"><div class="line">{  </div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> adc;</div>
+<div class="line">        </div>
+<div class="line">  <span class="keywordflow">if</span> (sleep)</div>
+<div class="line">    <a class="code" href="a00026.html#a99b57953c558fb6618e2bd10ef291546" title="Wartefunktion.">Sleep</a>(sleep);</div>
+<div class="line"></div>
+<div class="line">        cli();</div>
+<div class="line">        adc=<a class="code" href="a00003.html#a96d1662336df94f7822af3790984c9b8">adcValue</a>[mux];</div>
+<div class="line">        sei();</div>
+<div class="line">        </div>
+<div class="line">        <span class="keywordflow">return</span> adc&gt;&gt;6;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Mit Nov 27 2013 22:55:08 für ASURO Library von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>
